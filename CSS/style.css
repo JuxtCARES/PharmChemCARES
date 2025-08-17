@@ -1,11 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   padding: 0;
   margin: 0;
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
-  text-decoration: none;
-  color: white;
   box-sizing: border-box;
 }
 
@@ -30,9 +25,6 @@
   gap: 1.75rem;
   width: 27rem;
 }
-.nav-bar .nav-options * {
-  text-align: center;
-}
 .nav-bar .nav-options .nav-to-areas {
   border: none;
   background-color: transparent;
@@ -41,8 +33,7 @@
 
 .carousel {
   width: 100vw;
-  max-height: calc(100vh - 6rem);
-  background-color: red;
+  max-height: calc(100vh - 10rem);
   display: grid;
   grid-template-columns: 100vw 100vw 100vw 100vw 100vw;
   position: relative;
@@ -50,7 +41,7 @@
 }
 .carousel .logo {
   position: absolute;
-  width: 35rem;
+  width: 30vw;
   left: 50%;
   transform: translateX(-50%);
   top: 3rem;
@@ -65,9 +56,6 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.carousel .slide-controls i {
-  font-size: 4.5rem;
-}
 .carousel .slide-controls.prev-slide {
   left: 0rem;
 }
@@ -78,7 +66,7 @@
   display: none;
 }
 .carousel .slide {
-  height: calc(100vh - 6rem);
+  height: calc(100vh - 10rem);
   width: 100vw;
   -o-object-fit: cover;
      object-fit: cover;
@@ -139,9 +127,23 @@
 
 .about-cares {
   width: 100%;
-  height: calc(100vh - 6rem);
+  height: calc(100vh - 10rem);
   background-color: blue;
-  padding-inline: 10rem;
+  padding-inline: 8rem;
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  gap: 1rem;
+  place-items: center;
+}
+.about-cares .cares-rx-logo {
+  width: 100%;
+}
+.about-cares .about-cares-article {
+  display: flex;
+  flex-direction: column;
+}
+.about-cares .about-cares-article .about-cares-subtitle {
+  margin-bottom: 1rem;
 }
 
 .footer {

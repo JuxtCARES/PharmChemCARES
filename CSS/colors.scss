@@ -8,16 +8,14 @@ body {
 
 .nav-bar {
     background-color: $purpleDark;
-    .nav-options {
-        .nav-to-home,
-        .nav-to-podcares,
-        .nav-to-areas {
-            color: white;
 
-            &:hover {
-                color: $purpleLight;
-                font-weight: 500;
-            }
+    .nav-to-home,
+    .nav-to-podcares,
+    .nav-to-areas {
+        color: white;
+
+        &:hover {
+            color: $purpleLight;
         }
     }
 }
@@ -80,4 +78,16 @@ body {
             }
         }
     }
+}
+
+.about-cares {
+    background-color: $purpleMid;
+
+    a:hover {
+        color: $purpleLight
+    }
+}
+
+.footer {
+    background-color: $purpleDark;
 }

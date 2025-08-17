@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bar {
+    .nav-cares-logo-container {
+        font-size: 1rem;
+    }
+
+    .nav-to-home,
+    .nav-to-podcares,
+    .nav-to-areas {
+        text-align: center;
+
+        &:hover {
+            font-weight: 500;
+        }
+    }
+}
+
+.carousel {
+    .slide-controls {
+        i {
+            font-size: 4.5rem;
+        }
+    }
+}
+
+.about-cares {
+    .about-cares-header {
+        font-size: 2.25rem;
+        text-decoration: underline;
+    }
+
+    .about-cares-subtitle {
+        font-size: 1.25rem;
+        opacity: .75;
+    }
+
+    p {
+        text-align: justify;
+        
+        a:hover {
+            text-decoration: underline;       
+        }
+    }
+
+
+}

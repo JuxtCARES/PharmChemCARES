@@ -5,16 +5,15 @@ body {
 .nav-bar {
   background-color: #614071;
 }
-.nav-bar .nav-options .nav-to-home,
-.nav-bar .nav-options .nav-to-podcares,
-.nav-bar .nav-options .nav-to-areas {
+.nav-bar .nav-to-home,
+.nav-bar .nav-to-podcares,
+.nav-bar .nav-to-areas {
   color: white;
 }
-.nav-bar .nav-options .nav-to-home:hover,
-.nav-bar .nav-options .nav-to-podcares:hover,
-.nav-bar .nav-options .nav-to-areas:hover {
+.nav-bar .nav-to-home:hover,
+.nav-bar .nav-to-podcares:hover,
+.nav-bar .nav-to-areas:hover {
   color: #e6bbfa;
-  font-weight: 500;
 }
 
 .carousel .slide-controls i {
@@ -42,4 +41,15 @@ body {
 }
 .carousel[data-slide="4"] .slide-indicator .slide-dot.sociocultural {
   background-color: #e6bbfa;
+}
+
+.about-cares {
+  background-color: #ae8abf;
+}
+.about-cares a:hover {
+  color: #e6bbfa;
+}
+
+.footer {
+  background-color: #614071;
 }/*# sourceMappingURL=colors.css.map */
