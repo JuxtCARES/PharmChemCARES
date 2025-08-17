@@ -1,314 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$navbarHeight: 4rem;
+$fullSectionHeight: calc(100vh - 6rem);
+$footerHeight: calc(60vh - 6rem);
+
 * {
-    border-width: 0;
     padding: 0;
     margin: 0;
+    font-size: 1rem;
     font-family: "Poppins", sans-serif;
-    box-sizing: border-box;
-
-    --nav-bar-option-font-size: 1rem;
-    --nav-bar-option-font-size-hovered: 1.05rem;
-    --nav-bar-background-color: #614071;
-    --nav-bar-options-color: white;
-    --nav-bar-options-color-hovered: #5c700c;
-
-    --slide-show-button-color: white; 
-    --slide-show-button-color-active: #614071; 
-
-    --odd-section-container-background-color: #5c700c;
-    --even-section-container-background-color: #614071;
-
-    --article-background-color: white;
-
-    --footer-background-color: #614071;
-
-    --paragraph-line-height: 2rem;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    background-color: #16091d;
+    text-decoration: none;
+    color: white
 }
 
 .nav-bar {
-    background-color: var(--nav-bar-background-color);
     display: flex;
-    justify-content: center;
-    padding-block: 1rem;
-    height: 4.05rem;
-    align-self: stretch;
-    .options {
-        width: 80%;
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        justify-content: space-between;
-
-        a {
-            color: var(--nav-bar-options-color);
-            text-decoration: none;
-            transition: color 200ms ease-out;
-            transition: font-size 200ms ease-out;
-            font-size: var(--nav-bar-option-font-size);
-            &:hover {
-                color: var(--nav-bar-options-color-hovered);
-                font-size: var(--nav-bar-option-font-size-hovered);
-            }
-        }
-    }
-}
-
-main.content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+    height: $navbarHeight;
     align-items: center;
-    width: 100vw;
-    .cares-logo {
-        position: absolute;
-        z-index: 100;
-        height: 15rem;
-        aspect-ratio: 3 / 1;
-        left: 3rem;
-        top: 3rem;
-        object-fit: cover;
-        object-position: center;
-    }
-}
-
-section.slide-show {
-    width: 100vw;
-    display: grid;
-    place-items: center;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 2.5rem solid var(--even-section-container-background-color);
-
-    .slide-show-button {
-        position: absolute;
-        background-color: transparent;
-        z-index: 100;
-        i {
-            font-size: 3rem;
-            color: var(--slide-show-button-color);
-            transition: all 200ms ease-out;
-
-        }
-
-        &:disabled {
-            opacity: .5;
-        }
-
-        &:hover:not(:disabled) {
-            i {
-                font-size: 4rem;
-            }
-        }
-        &:active:not(:disabled) {
-            i {
-                color: var(--slide-show-button-color-active);
-            }
-        }
-
-        &.prev {
-            left: 2.5rem;
-        }
-
-        &.next {
-            right: 2.5rem;
-        }
-    }
-    
-    &.slide-2 {
-        .slide-show-image {
-            transform: translateX(-100%);
-        }
-    }
-    &.slide-3 {
-        .slide-show-image {
-            transform: translateX(-200%);
-        }
-    }
-    &.slide-4 {
-        .slide-show-image {
-            transform: translateX(-300%);
-        }
-    }
-    &.slide-5 {
-        .slide-show-image {
-            transform: translateX(-400%);
-        }
-    }
-
-    .slide-show-image {
-        width: 100vw;
-        height: calc(100vh - 7.05rem);
-        grid-row: 1;
-        object-fit: cover;
-        transition: all ease-in-out 500ms;
-    }
-}
-
-.content-container {
-    width: 85vw;
-    padding-inline: 3rem;
-
-    &.officer-carousel {
-        padding-inline: 2.5rem;
-    }
-
-    &.areas-carousel,
-    &.officer-carousel {
-        border-top: 2.5rem solid var(--even-section-container-background-color);
-        border-bottom: 2.5rem solid var(--even-section-container-background-color);
-        width: 100vw;
-    }
-
-    h1, h2 {
-        text-align: center;
-    }
-
-    p {
-        text-indent: .75in;
-        text-align: justify;
-        line-height: var(--paragraph-line-height);
-    }
-
-    &:nth-child(odd) {
-        background-color: var(--odd-section-container-background-color);
-    }
-
-    &:nth-child(even) {
-        background-color: var(--even-section-container-background-color);
-    }
-
-    article {
-        background-color: var(--article-background-color);
-        padding-inline: 6rem;
-        padding-block: 2rem;
-        position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            background-color: white;
-            width: 100%;
-            top: -1.25rem;
-            left: 0;
-            height: 1.25rem;
-            border-radius: 2rem 2rem 0 0;
-        }
-        &:not(.about-the-officers)::after {
-            content: '';
-            position: absolute;
-            background-color: white;
-            width: 100%;
-            bottom: -1.25rem;
-            left: 0;
-            height: 1.25rem;
-            border-radius: 0 0 2rem 2rem;
-        }
-    }
-}
-
-.the-areas {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: baseline;
-    gap: 1rem;
-    padding: 2rem;
-    height: 15rem;
-    
-    .the-areas-caption {
-        flex-basis: 100%;
-    }
-
-    img {
-        aspect-ratio: 1;
-        width: 8rem;
-        border-radius: 50%;
-        object-fit: cover;
-        object-position: center;
-        transition: all 300ms ease-out;
-
-        &:hover {
-            transform: scale(125%);
-            margin-inline: 1rem;
-        }
-    }
-
-}
-
-.the-officers {
-    height: 13rem;
-    overflow: hidden;
-    .the-officers-caption {
-        flex-basis: 100%;
-    }
-
-    div {
-        display: grid;
-        grid-template-columns: repeat(26, 7rem);
-        grid-template-rows: 7rem 1rem;
-        overflow-x: scroll;
-        height: 13rem;
-        gap: .5rem 1rem;
-
-        &::-webkit-scrollbar {
-            display: none;
-        }
-
-        img {
-            aspect-ratio: 1;
-            width: 7rem;
-            background-color: red;
-            border-radius: 50%;
-        }
-
-        h4 {
-            text-align: center;
-            width: 7rem;
-        }
-    }
-    
-
-}
-
-footer.footer {
-    background-color: var(--footer-background-color);
-    width: 100vw;
-    padding-block: .75rem 1rem;
     padding-inline: 5rem;
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
     justify-content: space-between;
 
-    section {
-        flex: 0 0 26%;
+    .nav-cares-logo {
+        height: 3rem;
     }
 
-    .motto-container {
-        h2 {
-            font-size: 2.5rem;
-        }
-    }
+    .nav-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+        gap: 1.75rem;
+        width: 27rem;
 
-    .contacts-container {
-        p {
-            font-size: .8rem;
-            line-height: 1.5rem;
-            font-style: normal;
+        * {
+            text-align: center;
         }
-    }
 
-    .recruitment-container {
-        h2 {
-            max-width: 16rem;
+        .nav-to-areas {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
         }
     }
+} 
+
+.carousel {
+    width: 100%;
+    height: $fullSectionHeight;
+    background-color: red;
+}
+
+.about-cares {
+    width: 100%;
+    height: $fullSectionHeight;
+    background-color: blue;
+}
+
+.footer {
+    padding-inline: 5rem;
+    height: $footerHeight;
+    background-color: green;
 }

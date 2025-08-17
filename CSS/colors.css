@@ -1,0 +1,18 @@
+body {
+  background-color: #614071;
+}
+
+.nav-bar {
+  background-color: #614071;
+}
+.nav-bar .nav-options .nav-to-home,
+.nav-bar .nav-options .nav-to-podcares,
+.nav-bar .nav-options .nav-to-areas {
+  color: white;
+}
+.nav-bar .nav-options .nav-to-home:hover,
+.nav-bar .nav-options .nav-to-podcares:hover,
+.nav-bar .nav-options .nav-to-areas:hover {
+  color: #e6bbfa;
+  font-weight: 500;
+}/*# sourceMappingURL=colors.css.map */

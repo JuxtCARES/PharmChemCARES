@@ -3,257 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operation EVERYWHERE</title>
-    <!-- Styles and assets -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>The PharmChem CARES - Home</title>
+
     <link rel="stylesheet" href="/CSS/style.css">
-    <script src="https://kit.fontawesome.com/0a0709fcf8.js" crossorigin="anonymous"></script>
-    <!-- Javascript -->
-     <script type="module" src="/JS/carousel.js"></script>
+    <link rel="stylesheet" href="/CSS/colors.css">
 
-    <!-- 
-    make alt texts more descriptive. 
-    add tab indices
-
-    -->
+    <script src="./JS/navigation.js"></script>
+    <script src="./JS/carousel.js"></script>
+    
 </head>
-<body>
+<body data-page="Home">
     <nav class="nav-bar">
-        <ul class="options">
-            <li class="option" 
-                role="button" 
-                id="ToHome">
-                <a href="./index.html">Home</a>
-            </li>
-            <li class="option" 
-                role="button" 
-                id="ToDirectory">
-                <a href="">Directory</a>
-            </li>
-            <li class="option" 
-                role="button" 
-                id="ToCommunity">
-                <a href="">Community</a>
-            </li>
-            <li class="option" 
-                role="button" 
-                id="ToAcademics">
-                <a href="">Academics</a>
-            </li>
-            <li class="option"
-                role="button" 
-                id="ToReligious">
-                <a href="">Religious</a>
-            </li>
-            <li class="option"
-                role="button" 
-                id="ToEnvironment">
-                <a href="">Environment</a>
-            </li>
-            <li class="option" 
-                role="button" 
-                id="ToSociocultural">
-                <a href="">Sociocultural</a>
-            </li>
-            <li class="option" 
-                role="button" 
-                id="toFAQ">
-                <a href="">FAQ</a>
-            </li>
-        </ul>
+        <img src="./Assets/Logo/PharmChemCARES Logo.png" alt="Full Logo" class="nav-cares-logo">    
+        <div class="nav-options">
+            <a href="./index.html" class="nav-to-home">Home</a>
+            <a href="" class="nav-to-podcares">PodCARES</a>
+            <select name="NavigateAreas" id="NavigateAreas" class="nav-to-areas">
+                <option selected disabled value="Areas">Areas</option>
+                <option value="Community">Community</option>
+                <option value="Academics">Academics</option>
+                <option value="Religious">Religious</option>
+                <option value="Environment">Environment</option>
+                <option value="Sociocultural">Sociocultural</option>
+            </select>
+        </div>
     </nav>
-    <main class="content">
-        <img src="./Assets/Logo/PharmChemCARES.png" 
-             alt="The PharmChem CARES" 
-             class="cares-logo">
-        <section class="slide-show slide-1"
-                 id="Slideshow">
-            <button class="slide-show-button prev" 
-                    id="PreviousSlide">
-                    <i class="fa-solid fa-angle-left"
-                    aria-hidden="true"></i>
-            </button>
-            <button class="slide-show-button next" 
-                    id="NextSlide">
-                    <i class="fa-solid fa-angle-right"
-                       aria-hidden="true"></i>
-                </button>
-            <img src="./Assets/Slideshow/Community.jpeg" 
-                 alt="Community Highlight"     
-                 class="slide-show-image slide-community" 
-                 aria-hidden="false">
-            <img src="./Assets/Slideshow/Academics.jpeg" 
-                 alt="Academics Highlight"     
-                 class="slide-show-image slide-academics" 
-                 aria-hidden="true">
-            <img src="./Assets/Slideshow/Religious.jpeg" 
-                 alt="Religious Highlight"     
-                 class="slide-show-image slide-religious" 
-                 aria-hidden="true">
-            <img src="./Assets/Slideshow/Environment.jpeg" 
-                 alt="Environment Highlight"   
-                 class="slide-show-image slide-environment" 
-                 aria-hidden="true">
-            <img src="./Assets/Slideshow/Sociocultural.jpeg" 
-                 alt="Sociocultural Highlight" 
-                 class="slide-show-image slide-sociocultural" 
-                 aria-hidden="true">
-        </section>
-        <section class="content-container" >
-            <article class="content about-cares" 
-                     id="AboutCARES"
-                     aria-labelledby="AboutCaresLabel">
-                <h1 id="AboutCaresLabel">About PharmChem CARES</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, natus iusto reiciendis totam porro laboriosam reprehenderit inventore temporibus harum in. Laudantium corporis veritatis distinctio numquam earum quisquam laborum eum omnis!
-                    Expedita, amet esse, nihil similique laborum rerum ea, reprehenderit temporibus officia a quia? Qui enim delectus tenetur tempora omnis quae cupiditate vero laborum nemo! Qui consequuntur minima officiis molestias perspiciatis.
-                    Cum maiores expedita beatae tempore. Ad labore commodi, aliquam a consectetur magnam soluta, facere repudiandae dolor quae iusto perspiciatis! Dolorum impedit odio minus autem placeat distinctio sit mollitia adipisci soluta.
-                    Dolorem, obcaecati qui fugit ex perspiciatis at debitis quo. Earum, saepe nulla et ab, commodi vel dolorum sit nisi perferendis voluptates illum fugiat optio. Consequatur veniam delectus et perspiciatis officia.
-                    Magnam obcaecati ut ipsam consequuntur porro nisi dignissimos alias odit unde inventore fugiat soluta dolore, cupiditate fugit earum animi praesentium laboriosam! Quod aliquid id perspiciatis optio sunt commodi sapiente non.
-                </p>
-            </article>
-        </section>
-        <section class="content-container areas-carousel">
-            <figure class="the-areas">
-                <figcaption class="the-areas-caption">
-                    <h2>The Areas</h2>
-                </figcaption>
-                <img src="./Assets/Sigils/Community.jpg" 
-                     alt="Community Area"
-                     class="area" 
-                     role="button">
-                <img src="./Assets/Sigils/Academics.jpg" 
-                     alt="Academics Area"
-                     class="area"
-                     role="button">
-                <img src="./Assets/Sigils/Religious.png"
-                     alt="Religious Area"
-                     class="area"
-                     role="button">
-                <img src="./Assets/Sigils/Environment.jpg" 
-                     alt="Environment Area"
-                     class="area"
-                     role="button">
-                <img src="./Assets/Sigils/Sociocultural.jpg" 
-                     alt="Sociocultural Area"
-                     class="area"
-                     role="button">
-            </figure>
-        </section>
-        <section class="content-container">
-            <article class="content about-the-areas" 
-                     id="AboutTheAreas" 
-                     aria-labelledby="AboutTheAreasLabel">
-                <h2 id="AboutTheAreasLabel">About The Areas</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, natus iusto reiciendis totam porro laboriosam reprehenderit inventore temporibus harum in. Laudantium corporis veritatis distinctio numquam earum quisquam laborum eum omnis!
-                    Expedita, amet esse, nihil similique laborum rerum ea, reprehenderit temporibus officia a quia? Qui enim delectus tenetur tempora omnis quae cupiditate vero laborum nemo! Qui consequuntur minima officiis molestias perspiciatis.
-                    Cum maiores expedita beatae tempore. Ad labore commodi, aliquam a consectetur magnam soluta, facere repudiandae dolor quae iusto perspiciatis! Dolorum impedit odio minus autem placeat distinctio sit mollitia adipisci soluta.
-                    Dolorem, obcaecati qui fugit ex perspiciatis at debitis quo. Earum, saepe nulla et ab, commodi vel dolorum sit nisi perferendis voluptates illum fugiat optio. Consequatur veniam delectus et perspiciatis officia.
-                    Magnam obcaecati ut ipsam consequuntur porro nisi dignissimos alias odit unde inventore fugiat soluta dolore, cupiditate fugit earum animi praesentium laboriosam! Quod aliquid id perspiciatis optio sunt commodi sapiente non.
+    <section class="carousel">
 
-                </p>
-            </article>
-        </section>
-        <section class="content-container officer-carousel">
-            <figure class="the-officers">
-                <figcaption class="the-officers-caption">
-                    <h2>The Officers</h2>
-                </figcaption>
-                <div>
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <img src="" alt="" class="officer">
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                    <h4>Position</h4>
-                </div>
-            </figure>
-        </section>
-        <section class="content-container">
-            <article class="content about-the-officers" 
-                     id="AboutTheOfficers" 
-                     aria-labelledby="AboutTheOfficersLabel">
-                <h2 id="AboutTheOfficersLabel">About The Officers</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, natus iusto reiciendis totam porro laboriosam reprehenderit inventore temporibus harum in. Laudantium corporis veritatis distinctio numquam earum quisquam laborum eum omnis!
-                    Expedita, amet esse, nihil similique laborum rerum ea, reprehenderit temporibus officia a quia? Qui enim delectus tenetur tempora omnis quae cupiditate vero laborum nemo! Qui consequuntur minima officiis molestias perspiciatis.
-                    Cum maiores expedita beatae tempore. Ad labore commodi, aliquam a consectetur magnam soluta, facere repudiandae dolor quae iusto perspiciatis! Dolorum impedit odio minus autem placeat distinctio sit mollitia adipisci soluta.
-                    Dolorem, obcaecati qui fugit ex perspiciatis at debitis quo. Earum, saepe nulla et ab, commodi vel dolorum sit nisi perferendis voluptates illum fugiat optio. Consequatur veniam delectus et perspiciatis officia.
-                    Magnam obcaecati ut ipsam consequuntur porro nisi dignissimos alias odit unde inventore fugiat soluta dolore, cupiditate fugit earum animi praesentium laboriosam! Quod aliquid id perspiciatis optio sunt commodi sapiente non.
-
-                </p>
-            </article>
-        </section>
-    </main>
+    </section>
+    <section class="about-cares">
+        
+    </section>
     <footer class="footer">
-        <section class="motto-container">
-            <h2 class="motto">Servire Est Vincere</h2>
-        </section>
-        <section class="contacts-container" 
-                 aria-labelledby="ContactsHeading">
-            <h2 id="ContactsHeading">Contact us on:</h2>
-            <address class="contact-info">
-                <p class="x"><i class="fa-brands fa-x-twitter"></i>@pharmchemcares</p>
-                <p class="tiktok"><i class="fa-brands fa-tiktok"></i>@pharmchem_cares</p>
-                <p class="facebook"><i class="fa-brands fa-facebook"></i>The PharmChem CARES</p>
-                <p class="gmail"><i class="fa-solid fa-envelope"></i>pharmchem_cares@uic.edu.ph</p>
-                <p class="spotify"><i class="fa-brands fa-spotify"></i></p>
-                <p class="instagram"><i class="fa-brands fa-instagram"></i></p>
-            </address>
-        </section>
-        <section class="recruitment-container">
-            <h2 class="recruitment">Wanna be a part of PharmChem CARES?</h2>
-            <p>Register Now!<br>Click <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZyUFnEJ0SZ5zX3os6qbzbM35SjXJ2Kcg2X1cpVcnXNPq4ng/viewform">here</a>!</p>
-        </section>
+
     </footer>
 </body>
 </html>

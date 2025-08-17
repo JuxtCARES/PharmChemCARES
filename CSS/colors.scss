@@ -1,0 +1,23 @@
+$purpleDark: #614071;
+$purpleMid: #ae8abf;
+$purpleLight: #e6bbfa;
+
+body {
+    background-color: $purpleDark;
+}
+
+.nav-bar {
+    background-color: $purpleDark;
+    .nav-options {
+        .nav-to-home,
+        .nav-to-podcares,
+        .nav-to-areas {
+            color: white;
+
+            &:hover {
+                color: $purpleLight;
+                font-weight: 500;
+            }
+        }
+    }
+}
