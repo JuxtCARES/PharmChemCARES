@@ -7,9 +7,10 @@
 
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="/CSS/colors.css">
+    <script src="https://kit.fontawesome.com/0a0709fcf8.js" crossorigin="anonymous"></script>
 
-    <script src="./JS/navigation.js"></script>
-    <script src="./JS/carousel.js"></script>
+    <script defer src="./JS/navigation.js"></script>
+    <script defer src="./JS/carousel.js"></script>
     
 </head>
 <body data-page="Home">
@@ -28,8 +29,23 @@
             </select>
         </div>
     </nav>
-    <section class="carousel">
-
+    <section class="carousel" id="Carousel" data-slide="0">
+        <img src="./Assets/Logo/PharmChemCARES Logo.png" alt="PharmChemCARES" class="logo">
+        <img class="slide community" src="./Assets/Slideshow/Community.jpg" alt="Community">
+        <img class="slide acadamics" src="./Assets/Slideshow/Academics.jpg" alt="Academics">
+        <img class="slide religious" src="./Assets/Slideshow/Religious.JPEG" alt="Religious">
+        <img class="slide environment" src="./Assets/Slideshow/Environment.JPEG" alt="Environment">
+        <img class="slide sociocultural" src="./Assets/Slideshow/Sociocultural.JPEG" alt="Sociocultural">
+        <img class="slide community" src="./Assets/Slideshow/Community.jpg" alt="Community">
+        <div class="slide-indicator">
+            <div class="slide-dot community"></div>
+            <div class="slide-dot academics"></div>
+            <div class="slide-dot religious"></div>
+            <div class="slide-dot environment"></div>
+            <div class="slide-dot sociocultural"></div>
+        </div>
+        <button class="slide-controls prev-slide" id="PrevSlide"><i class="fa-solid fa-angle-left"></i></button>
+        <button class="slide-controls next-slide" id="NextSlide"><i class="fa-solid fa-angle-right"></i></button>
     </section>
     <section class="about-cares">
         

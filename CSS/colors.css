@@ -15,4 +15,31 @@ body {
 .nav-bar .nav-options .nav-to-areas:hover {
   color: #e6bbfa;
   font-weight: 500;
+}
+
+.carousel .slide-controls i {
+  color: white;
+  transition: color 100ms ease-out;
+}
+.carousel .slide-controls:active i {
+  color: #e6bbfa;
+}
+.carousel .slide-indicator .slide-dot {
+  background-color: #ae8abf;
+  transition: all 100ms ease-in-out;
+}
+.carousel[data-slide="0"] .slide-indicator .slide-dot.community {
+  background-color: #e6bbfa;
+}
+.carousel[data-slide="1"] .slide-indicator .slide-dot.academics {
+  background-color: #e6bbfa;
+}
+.carousel[data-slide="2"] .slide-indicator .slide-dot.religious {
+  background-color: #e6bbfa;
+}
+.carousel[data-slide="3"] .slide-indicator .slide-dot.environment {
+  background-color: #e6bbfa;
+}
+.carousel[data-slide="4"] .slide-indicator .slide-dot.sociocultural {
+  background-color: #e6bbfa;
 }/*# sourceMappingURL=colors.css.map */

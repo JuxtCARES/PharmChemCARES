@@ -6,6 +6,7 @@
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   color: white;
+  box-sizing: border-box;
 }
 
 .nav-bar {
@@ -17,6 +18,7 @@
   align-items: center;
   padding-inline: 5rem;
   justify-content: space-between;
+  z-index: 2000;
 }
 .nav-bar .nav-cares-logo {
   height: 3rem;
@@ -38,15 +40,108 @@
 }
 
 .carousel {
-  width: 100%;
-  height: calc(100vh - 6rem);
+  width: 100vw;
+  max-height: calc(100vh - 6rem);
   background-color: red;
+  display: grid;
+  grid-template-columns: 100vw 100vw 100vw 100vw 100vw;
+  position: relative;
+  overflow: hidden;
+}
+.carousel .logo {
+  position: absolute;
+  width: 35rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3rem;
+  box-shadow: inset;
+  z-index: 100;
+}
+.carousel .slide-controls {
+  position: absolute;
+  z-index: 100;
+  border: none;
+  background-color: transparent;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel .slide-controls i {
+  font-size: 4.5rem;
+}
+.carousel .slide-controls.prev-slide {
+  left: 0rem;
+}
+.carousel .slide-controls.next-slide {
+  right: 0rem;
+}
+.carousel .slide-controls:disabled {
+  display: none;
+}
+.carousel .slide {
+  height: calc(100vh - 6rem);
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: all 300ms ease-in-out;
+}
+.carousel .slide.community {
+  -o-object-position: 0rem -4rem;
+     object-position: 0rem -4rem;
+}
+.carousel .slide-indicator {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 1rem 1rem 1rem 1rem 1rem;
+  grid-row: 1rem;
+  gap: 1rem;
+  z-index: 200;
+}
+.carousel .slide-indicator .slide-dot {
+  width: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.carousel[data-slide="0"] .slide {
+  transform: translateX(0%);
+}
+.carousel[data-slide="0"] .slide-indicator .slide-dot.community {
+  transform: scale(125%);
+}
+.carousel[data-slide="1"] .slide {
+  transform: translateX(-100%);
+}
+.carousel[data-slide="1"] .slide-indicator .slide-dot.academics {
+  transform: scale(125%);
+}
+.carousel[data-slide="2"] .slide {
+  transform: translateX(-200%);
+}
+.carousel[data-slide="2"] .slide-indicator .slide-dot.religious {
+  transform: scale(125%);
+}
+.carousel[data-slide="3"] .slide {
+  transform: translateX(-300%);
+}
+.carousel[data-slide="3"] .slide-indicator .slide-dot.environment {
+  transform: scale(125%);
+}
+.carousel[data-slide="4"] .slide {
+  transform: translateX(-400%);
+}
+.carousel[data-slide="4"] .slide-indicator .slide-dot.sociocultural {
+  transform: scale(125%);
 }
 
 .about-cares {
   width: 100%;
   height: calc(100vh - 6rem);
   background-color: blue;
+  padding-inline: 10rem;
 }
 
 .footer {
