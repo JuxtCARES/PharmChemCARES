@@ -13,7 +13,7 @@ body {
 .nav-bar .nav-to-home:hover,
 .nav-bar .nav-to-podcares:hover,
 .nav-bar .nav-to-areas:hover {
-  color: #e6bbfa;
+  color: #c1e62e;
 }
 
 .carousel .slide-controls i {
@@ -47,7 +47,26 @@ body {
   background-color: #ae8abf;
 }
 .about-cares a:hover {
-  color: #e6bbfa;
+  color: #c1e62e;
+}
+
+.areas-display {
+  background-color: #614071;
+}
+
+.about-the-areas {
+  background-color: #ae8abf;
+}
+.about-the-areas a:hover {
+  color: #c1e62e;
+}
+
+.the-officers {
+  background-color: #e6bbfa;
+}
+
+.call-to-action {
+  background-color: #ae8abf;
 }
 
 .footer {

@@ -1,6 +1,9 @@
 $purpleDark: #614071;
 $purpleMid: #ae8abf;
 $purpleLight: #e6bbfa;
+$greenDark: #97bd00;
+$greenMid: #c1e62e;
+$greenLight: #d6eb84;
 
 body {
     background-color: $purpleDark;
@@ -15,7 +18,7 @@ body {
         color: white;
 
         &:hover {
-            color: $purpleLight;
+            color: $greenMid;
         }
     }
 }
@@ -84,8 +87,28 @@ body {
     background-color: $purpleMid;
 
     a:hover {
-        color: $purpleLight
+        color: $greenMid;
     }
+}
+
+.areas-display {
+    background-color: $purpleDark;
+}
+
+.about-the-areas {
+    background-color: $purpleMid;
+    
+    a:hover {
+        color: $greenMid;
+    }
+}
+
+.the-officers {
+    background-color: $purpleLight;
+}
+
+.call-to-action {
+    background-color: $purpleMid;
 }
 
 .footer {

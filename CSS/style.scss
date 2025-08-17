@@ -1,5 +1,6 @@
 $navbarHeight: 4rem;
 $fullSectionHeight: calc(100vh - 10rem);
+$halfSectionHeight: calc(65vh - 10rem);
 $footerHeight: calc(60vh - 6rem);
 
 * {
@@ -31,6 +32,7 @@ $footerHeight: calc(60vh - 6rem);
         width: 27rem;
 
         .nav-to-areas {
+            -webkit-appearance: none;
             border: none;
             background-color: transparent;
             cursor: pointer;
@@ -191,6 +193,44 @@ $footerHeight: calc(60vh - 6rem);
             margin-bottom: 1rem;
         }
     }
+}
+
+.areas-display {
+    height: $halfSectionHeight;
+}
+
+.about-the-areas {
+    width: 100%;
+    height: $fullSectionHeight;
+    background-color: blue;
+    padding-inline: 8rem;
+
+    display: grid;
+    grid-template-columns: .6fr .4fr;
+    gap: 1rem;
+    place-items: center;
+
+    .cares-rx-logo {
+        width: 100%;
+
+    }
+
+    .about-the-areas-article {
+        display: flex;
+        flex-direction: column;
+
+        .about-the-areas-subtitle {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.the-officers {
+    height: $fullSectionHeight;
+}
+
+.call-to-action {
+    height: $halfSectionHeight;
 }
 
 .footer {

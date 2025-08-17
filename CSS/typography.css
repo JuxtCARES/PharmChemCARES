@@ -13,11 +13,12 @@
 .nav-bar .nav-to-podcares,
 .nav-bar .nav-to-areas {
   text-align: center;
+  transition: font-weight 200ms ease-in-out;
 }
 .nav-bar .nav-to-home:hover,
 .nav-bar .nav-to-podcares:hover,
 .nav-bar .nav-to-areas:hover {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .carousel .slide-controls i {
@@ -36,5 +37,20 @@
   text-align: justify;
 }
 .about-cares p a:hover {
+  text-decoration: underline;
+}
+
+.about-the-areas .about-the-areas-header {
+  font-size: 2.25rem;
+  text-decoration: underline;
+}
+.about-the-areas .about-the-areas-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.75;
+}
+.about-the-areas p {
+  text-align: justify;
+}
+.about-the-areas p a:hover {
   text-decoration: underline;
 }/*# sourceMappingURL=typography.css.map */
