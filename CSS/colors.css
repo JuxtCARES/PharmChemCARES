@@ -24,23 +24,23 @@ body {
   color: #e6bbfa;
 }
 .carousel .slide-indicator .slide-dot {
-  background-color: #ae8abf;
+  background-color: white;
   transition: all 100ms ease-in-out;
 }
-.carousel[data-slide="0"] .slide-indicator .slide-dot.community {
-  background-color: #e6bbfa;
+.carousel .join-cares {
+  background-color: #c1e62e;
+  transition: background-color 200ms;
+  color: blacK;
 }
-.carousel[data-slide="1"] .slide-indicator .slide-dot.academics {
-  background-color: #e6bbfa;
+.carousel .join-cares:active {
+  background-color: #97bd00;
 }
-.carousel[data-slide="2"] .slide-indicator .slide-dot.religious {
-  background-color: #e6bbfa;
+
+.catch-up-with-cares {
+  background-color: #614071;
 }
-.carousel[data-slide="3"] .slide-indicator .slide-dot.environment {
-  background-color: #e6bbfa;
-}
-.carousel[data-slide="4"] .slide-indicator .slide-dot.sociocultural {
-  background-color: #e6bbfa;
+.catch-up-with-cares .catch-up-with-cares-subheader:hover a {
+  color: #d6eb84;
 }
 
 .about-cares {

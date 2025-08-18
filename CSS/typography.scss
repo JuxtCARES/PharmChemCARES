@@ -32,6 +32,28 @@
     }
 }
 
+.catch-up-with-cares {
+    .catch-up-with-cares-header {
+        font-size: 2rem;
+    }
+
+    .catch-up-with-cares-subheader {
+        a {
+            font-size: 1.5rem;
+        }
+
+        &:hover {
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    .catch-up-with-cares-date {
+        font-style: italic;
+    }
+}
+
 .about-cares {
     .about-cares-header {
         font-size: 2.25rem;
