@@ -206,4 +206,14 @@ body {
 
 .footer {
     background-color: $purpleDark;
+
+    .motto {
+        .motto-latin {
+            color: white
+        }
+
+        .motto-translation {
+            color: $greenMid;
+        }
+    }
 }

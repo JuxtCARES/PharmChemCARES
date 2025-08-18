@@ -252,6 +252,18 @@ body {
 
 .footer {
   padding-inline: 5rem;
-  flex: 0 0 calc(60vh - 6rem);
-  background-color: green;
+  flex: 0 0 calc(40vh - 6rem);
+  display: grid;
+  padding-inline: 10rem;
+  padding-top: 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+.footer .contacts {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer .contacts span {
+  flex: 1 1 20%;
 }/*# sourceMappingURL=style.css.map */

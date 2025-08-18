@@ -1,7 +1,7 @@
 $navbarHeight: 4rem;
 $fullSectionHeight: calc(100vh - 10rem);
 $halfSectionHeight: calc(65vh - 10rem);
-$footerHeight: calc(60vh - 6rem);
+$footerHeight: calc(40vh - 6rem);
 
 * {
     padding: 0;
@@ -309,5 +309,19 @@ body {
 .footer {
     padding-inline: 5rem;
     flex: 0 0 $footerHeight;
-    background-color: green;
+    display: grid;
+    padding-inline: 10rem;
+    padding-top: 2rem;
+    grid-template-columns: 1fr 1fr;
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        span {
+            flex: 1 1 20%;
+        }
+    }
 }

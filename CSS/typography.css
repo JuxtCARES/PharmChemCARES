@@ -139,4 +139,15 @@
 }
 .about-the-areas p a:hover {
   text-decoration: underline;
+}
+
+.footer .motto .motto-latin {
+  font-size: 3rem;
+  font-style: italic;
+}
+.footer .motto .motto-translation {
+  font-size: 1.25rem;
+}
+.footer .contacts a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=typography.css.map */

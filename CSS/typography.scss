@@ -190,3 +190,22 @@
         }
     }
 }
+
+.footer {
+    .motto {
+        .motto-latin {
+            font-size: 3rem;
+            font-style: italic;
+        }
+
+        .motto-translation {
+            font-size: 1.25rem;
+        }
+    }
+
+    .contacts {
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}

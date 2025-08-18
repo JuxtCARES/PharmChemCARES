@@ -135,4 +135,10 @@ body {
 
 .footer {
   background-color: #614071;
+}
+.footer .motto .motto-latin {
+  color: white;
+}
+.footer .motto .motto-translation {
+  color: #96ab41;
 }/*# sourceMappingURL=colors.css.map */
