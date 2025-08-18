@@ -25,4 +25,8 @@
 }
 .areas-display .areas-container .link-to-area::after {
   transition: width 300ms ease-out;
+}
+
+.the-officers .officer .flip-card .flip-card-inner {
+  transition: transform 500ms ease-out;
 }/*# sourceMappingURL=transitions.css.map */

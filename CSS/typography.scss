@@ -191,6 +191,38 @@
     }
 }
 
+.officer {
+    .officer-information {
+        .officer-name {
+            font-size: 2rem;
+        }
+        .officer-nicknames {
+            font-size: .75rem;
+            font-style: italic;
+            opacity: .5;  
+        }
+
+        .officer-position {
+            opacity: .6;
+        }
+
+        .officer-course {
+            opacity: .6;
+
+        }
+
+        .officer-description {
+            padding-block: 2rem;
+        }
+
+        .officer-socials {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
 .footer {
     .motto {
         .motto-latin {

@@ -61,12 +61,12 @@ body {
     }
 
     .join-cares {
-        background-color: $greenMid;
-        color: blacK;
+        background-color: transparent;
+        border: .2rem solid $purpleLight;
+        color: white;
 
         &:active {
-            background-color: $greenDark;
-
+            background-color: $purpleLight;
         }
     }
 }
@@ -77,9 +77,13 @@ body {
     .catch-up-with-cares-subheader {
         &:hover {
             a {
-                color: $greenLight;
+                color: $greenMid;
             }
         }
+    }
+
+    .catch-up-with-cares-date {
+        color: $purpleLight;
     }
 }
 
@@ -198,10 +202,57 @@ body {
 
 .the-officers {
     background-color: $greenDark;
+    .officer {
+        .officer-information {
+            background-color: white;
+
+            * {
+                color: black
+            }
+
+            &::before {
+                background-color: white;
+            }
+        }
+    }
 }
 
 .call-to-action {
     background-color: $purpleMid;
+
+    .call-to-join {
+
+        .call-to-join-subheader {
+            color: $purpleLight
+        }
+
+        .join-cares {
+            background-color: transparent;
+            border: .2rem solid $purpleLight;
+            color: white;
+    
+            &:active {
+                background-color: $purpleLight;
+            }
+        }
+    }
+
+    .faq {
+
+        .faq-subheader {
+            color: $purpleLight
+        }
+
+        .to-faq {
+            background-color: transparent;
+            border: .2rem solid $purpleLight;
+            color: white;
+    
+            &:active {
+                background-color: $purpleLight;
+            }
+        }
+    }
 }
 
 .footer {

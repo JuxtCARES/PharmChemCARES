@@ -141,6 +141,27 @@
   text-decoration: underline;
 }
 
+.officer .officer-information .officer-name {
+  font-size: 2rem;
+}
+.officer .officer-information .officer-nicknames {
+  font-size: 0.75rem;
+  font-style: italic;
+  opacity: 0.5;
+}
+.officer .officer-information .officer-position {
+  opacity: 0.6;
+}
+.officer .officer-information .officer-course {
+  opacity: 0.6;
+}
+.officer .officer-information .officer-description {
+  padding-block: 2rem;
+}
+.officer .officer-information .officer-socials:hover {
+  text-decoration: underline;
+}
+
 .footer .motto .motto-latin {
   font-size: 3rem;
   font-style: italic;

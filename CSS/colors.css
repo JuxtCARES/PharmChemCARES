@@ -26,18 +26,22 @@ body {
   background-color: white;
 }
 .carousel .join-cares {
-  background-color: #96ab41;
-  color: blacK;
+  background-color: transparent;
+  border: 0.2rem solid #e6bbfa;
+  color: white;
 }
 .carousel .join-cares:active {
-  background-color: #5c700c;
+  background-color: #e6bbfa;
 }
 
 .catch-up-with-cares {
   background-color: #614071;
 }
 .catch-up-with-cares .catch-up-with-cares-subheader:hover a {
-  color: #bacb74;
+  color: #96ab41;
+}
+.catch-up-with-cares .catch-up-with-cares-date {
+  color: #e6bbfa;
 }
 
 .about-cares {
@@ -128,9 +132,40 @@ body {
 .the-officers {
   background-color: #5c700c;
 }
+.the-officers .officer .officer-information {
+  background-color: white;
+}
+.the-officers .officer .officer-information * {
+  color: black;
+}
+.the-officers .officer .officer-information::before {
+  background-color: white;
+}
 
 .call-to-action {
   background-color: #ae8abf;
+}
+.call-to-action .call-to-join .call-to-join-subheader {
+  color: #e6bbfa;
+}
+.call-to-action .call-to-join .join-cares {
+  background-color: transparent;
+  border: 0.2rem solid #e6bbfa;
+  color: white;
+}
+.call-to-action .call-to-join .join-cares:active {
+  background-color: #e6bbfa;
+}
+.call-to-action .faq .faq-subheader {
+  color: #e6bbfa;
+}
+.call-to-action .faq .to-faq {
+  background-color: transparent;
+  border: 0.2rem solid #e6bbfa;
+  color: white;
+}
+.call-to-action .faq .to-faq:active {
+  background-color: #e6bbfa;
 }
 
 .footer {
