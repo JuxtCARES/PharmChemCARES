@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 * {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
@@ -13,7 +14,6 @@
 .nav-bar .nav-to-podcares,
 .nav-bar .nav-to-areas {
   text-align: center;
-  transition: font-weight 200ms ease-in-out;
 }
 .nav-bar .nav-to-home:hover,
 .nav-bar .nav-to-podcares:hover,
@@ -51,6 +51,79 @@
 }
 .about-cares p a:hover {
   text-decoration: underline;
+}
+
+.areas-display .areas-container:hover .link-to-area {
+  padding-left: 0;
+  letter-spacing: normal;
+  position: relative;
+}
+.areas-display .areas-container:hover .link-to-area::after {
+  width: 100%;
+}
+.areas-display .areas-container:hover .link-to-area.community {
+  font-size: 1.3rem;
+}
+.areas-display .areas-container:hover .link-to-area.academics {
+  font-size: 1.3rem;
+}
+.areas-display .areas-container:hover .link-to-area.religious {
+  font-size: 1.5rem;
+}
+.areas-display .areas-container:hover .link-to-area.environment {
+  font-size: 1.1rem;
+}
+.areas-display .areas-container:hover .link-to-area.sociocultural {
+  font-size: 1rem;
+}
+.areas-display .link-to-area {
+  font-family: "Poppins", sans-serif;
+  font-size: 8rem;
+  line-height: 1ch;
+  letter-spacing: 5rem;
+  font-weight: 600;
+}
+.areas-display .link-to-area::after {
+  position: absolute;
+  background-color: white;
+  right: 0;
+  content: "";
+  width: 0%;
+}
+.areas-display .link-to-area.community {
+  padding-left: 1.6rem;
+}
+.areas-display .link-to-area.community::after {
+  height: 0.2rem;
+  bottom: -0.3rem;
+}
+.areas-display .link-to-area.academics {
+  padding-left: 1.8rem;
+}
+.areas-display .link-to-area.academics::after {
+  height: 0.2rem;
+  bottom: -0.3rem;
+}
+.areas-display .link-to-area.religious {
+  padding-left: 2.2rem;
+}
+.areas-display .link-to-area.religious::after {
+  height: 0.2rem;
+  bottom: -0.4rem;
+}
+.areas-display .link-to-area.environment {
+  padding-left: 2.4rem;
+}
+.areas-display .link-to-area.environment::after {
+  height: 0.2rem;
+  bottom: -0.35rem;
+}
+.areas-display .link-to-area.sociocultural {
+  padding-left: 2.2rem;
+}
+.areas-display .link-to-area.sociocultural::after {
+  height: 0.17rem;
+  bottom: -0.37rem;
 }
 
 .about-the-areas .about-the-areas-header {

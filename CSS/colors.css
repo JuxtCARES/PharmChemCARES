@@ -13,56 +13,120 @@ body {
 .nav-bar .nav-to-home:hover,
 .nav-bar .nav-to-podcares:hover,
 .nav-bar .nav-to-areas:hover {
-  color: #c1e62e;
+  color: #96ab41;
 }
 
 .carousel .slide-controls i {
   color: white;
-  transition: color 100ms ease-out;
 }
 .carousel .slide-controls:active i {
   color: #e6bbfa;
 }
 .carousel .slide-indicator .slide-dot {
   background-color: white;
-  transition: all 100ms ease-in-out;
 }
 .carousel .join-cares {
-  background-color: #c1e62e;
-  transition: background-color 200ms;
+  background-color: #96ab41;
   color: blacK;
 }
 .carousel .join-cares:active {
-  background-color: #97bd00;
+  background-color: #5c700c;
 }
 
 .catch-up-with-cares {
   background-color: #614071;
 }
 .catch-up-with-cares .catch-up-with-cares-subheader:hover a {
-  color: #d6eb84;
+  color: #bacb74;
 }
 
 .about-cares {
   background-color: #ae8abf;
 }
-.about-cares a:hover {
-  color: #c1e62e;
+.about-cares a:hover.community {
+  color: #ffe600;
+}
+.about-cares a:hover.academics {
+  color: #d10000;
+}
+.about-cares a:hover.religious {
+  color: #196ae3;
+}
+.about-cares a:hover.environment {
+  color: #97bd00;
+}
+.about-cares a:hover.sociocultural {
+  color: #ff8210;
 }
 
 .areas-display {
   background-color: #614071;
 }
+.areas-display .areas-container {
+  border: 0.4rem solid;
+}
+.areas-display .areas-container.community {
+  background-color: #fdef6e;
+  border-color: #fdef6e;
+}
+.areas-display .areas-container:hover.community {
+  background-color: #ffe600;
+  border-color: #ffe600;
+}
+.areas-display .areas-container.academics {
+  background-color: #fc0000;
+  border-color: #fc0000;
+}
+.areas-display .areas-container:hover.academics {
+  background-color: #d10000;
+  border-color: #d10000;
+}
+.areas-display .areas-container.religious {
+  background-color: #accbf8;
+  border-color: #accbf8;
+}
+.areas-display .areas-container:hover.religious {
+  background-color: #196ae3;
+  border-color: #196ae3;
+}
+.areas-display .areas-container.environment {
+  background-color: #c1e62e;
+  border-color: #c1e62e;
+}
+.areas-display .areas-container:hover.environment {
+  background-color: #97bd00;
+  border-color: #97bd00;
+}
+.areas-display .areas-container.sociocultural {
+  background-color: #ff983a;
+  border-color: #ff983a;
+}
+.areas-display .areas-container:hover.sociocultural {
+  background-color: #ff8210;
+  border-color: #ff8210;
+}
 
 .about-the-areas {
   background-color: #ae8abf;
 }
-.about-the-areas a:hover {
-  color: #c1e62e;
+.about-the-areas a:hover.community {
+  color: #ffe600;
+}
+.about-the-areas a:hover.academics {
+  color: #d10000;
+}
+.about-the-areas a:hover.religious {
+  color: #196ae3;
+}
+.about-the-areas a:hover.environment {
+  color: #97bd00;
+}
+.about-the-areas a:hover.sociocultural {
+  color: #ff8210;
 }
 
 .the-officers {
-  background-color: #e6bbfa;
+  background-color: #5c700c;
 }
 
 .call-to-action {

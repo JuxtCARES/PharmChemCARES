@@ -1,9 +1,29 @@
 $purpleDark: #614071;
 $purpleMid: #ae8abf;
 $purpleLight: #e6bbfa;
-$greenDark: #97bd00;
-$greenMid: #c1e62e;
-$greenLight: #d6eb84;
+$greenDark: #5c700c;
+$greenMid: #96ab41;
+$greenLight: #bacb74;
+
+$communityDark: #ffe600;
+$communityMid: #ffec3d;
+$communityLight: #fdef6e;
+
+$academicsDark: #990e0e;
+$academicsMid: #d10000;
+$academicsLight: #fc0000;
+
+$religiousDark: #196ae3;
+$religiousMid: #6f8db8;
+$religiousLight: #accbf8;
+
+$environmentDark: #97bd00;
+$environmentMid: #c1e62e;
+$environmentLight: #d6eb84;
+
+$socioculturalDark: #ff8210;
+$socioculturalMid: #ff983a;
+$socioculturalLight: #fdb069;
 
 body {
     background-color: $purpleDark;
@@ -27,7 +47,6 @@ body {
     .slide-controls {
         i {
             color: white;
-            transition: color 100ms ease-out;
         }
         
         &:active i {
@@ -38,13 +57,11 @@ body {
     .slide-indicator{
         .slide-dot {
             background-color: white;
-            transition: all 100ms ease-in-out;
         }
     }
 
     .join-cares {
         background-color: $greenMid;
-        transition: background-color 200ms;
         color: blacK;
 
         &:active {
@@ -70,24 +87,117 @@ body {
     background-color: $purpleMid;
 
     a:hover {
-        color: $greenMid;
+        &.community {
+            color: $communityDark
+        }
+
+        &.academics {
+            color: $academicsMid
+        }
+
+        &.religious {
+            color: $religiousDark
+        }
+
+        &.environment {
+            color: $environmentDark
+        }
+
+        &.sociocultural {
+            color: $socioculturalDark
+        }
     }
 }
 
 .areas-display {
     background-color: $purpleDark;
+
+    .areas-container {
+        border: .4rem solid; 
+
+        &.community {
+            background-color: $communityLight;
+            border-color: $communityLight;
+        }
+
+        &:hover.community {
+            background-color: $communityDark;
+            border-color: $communityDark;
+
+        }
+
+        &.academics {
+            background-color: $academicsLight;
+            border-color: $academicsLight;
+        }
+
+        &:hover.academics {
+            background-color: $academicsMid;
+            border-color: $academicsMid;
+
+        }
+
+        &.religious {
+            background-color: $religiousLight;
+            border-color: $religiousLight;
+        }
+
+        &:hover.religious {
+            background-color: $religiousDark;
+            border-color: $religiousDark;
+
+        }
+
+        &.environment {
+            background-color: $environmentMid;
+            border-color: $environmentMid;
+        }
+        
+        &:hover.environment {
+            background-color: $environmentDark;
+            border-color: $environmentDark;
+        }
+
+        &.sociocultural {
+            background-color: $socioculturalMid;
+            border-color: $socioculturalMid;
+        }
+
+        &:hover.sociocultural {
+            background-color: $socioculturalDark;
+            border-color: $socioculturalDark;
+        }
+    }
 }
 
 .about-the-areas {
     background-color: $purpleMid;
 
     a:hover {
-        color: $greenMid;
+        &.community {
+            color: $communityDark
+        }
+
+        &.academics {
+            color: $academicsMid
+        }
+
+        &.religious {
+            color: $religiousDark
+        }
+
+        &.environment {
+            color: $environmentDark
+        }
+
+        &.sociocultural {
+            color: $socioculturalDark
+        }
     }
 }
 
 .the-officers {
-    background-color: $purpleLight;
+    background-color: $greenDark;
 }
 
 .call-to-action {

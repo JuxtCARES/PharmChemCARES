@@ -1,0 +1,44 @@
+.nav-bar {
+    .nav-to-home,
+    .nav-to-podcares,
+    .nav-to-areas {
+        transition: font-weight 200ms ease-in-out;
+    }  
+}
+
+.carousel {
+    .slide-contols {
+        i {
+            transition: color 100ms ease-out;
+        }
+    }
+
+    .slide-indicator {
+        .slide-dot {
+            transition: all 100ms ease-in-out;    
+        }
+    }
+
+    .join-cares {
+        transition: background-color 200ms;
+    }
+
+    .slide {
+        transition: all 300ms ease-in-out;
+    }
+}
+
+.areas-display {
+    .areas-container {
+        transition: border-radius 200ms ease-out, transform 200ms ease-out, background-color 200ms ease-out, border-color 200ms ease-out;
+
+
+        .link-to-area {
+            transition: font-size 300ms ease-out, letter-spacing 300ms ease-out, padding-left 300ms ease-out;
+        
+            &::after {
+                transition: width 300ms ease-out; 
+            }
+        }
+    }
+}

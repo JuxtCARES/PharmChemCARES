@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
     font-size: 1rem;
@@ -16,7 +17,6 @@
     .nav-to-podcares,
     .nav-to-areas {
         text-align: center;
-        transition: font-weight 200ms ease-in-out;
 
         &:hover {
             font-weight: 600;
@@ -70,6 +70,103 @@
 
         a:hover {
             text-decoration: underline;       
+        }
+    }
+}
+
+.areas-display {
+
+    .areas-container:hover {
+        .link-to-area {
+            padding-left: 0;
+            letter-spacing: normal;
+            position: relative;
+
+            &::after {
+                width: 100%;
+
+            }
+
+            &.community {
+                font-size: 1.3rem;
+            }
+
+            &.academics {
+                font-size: 1.3rem;
+            }
+
+            &.religious {
+                font-size: 1.5rem;
+            }
+
+            &.environment {
+                font-size: 1.10rem;
+            }
+
+            &.sociocultural {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .link-to-area {
+        font-family: "Poppins", sans-serif;
+        font-size: 8rem;
+        line-height: 1ch;
+        letter-spacing: 5rem;
+        font-weight: 600;
+
+        &::after {
+            position: absolute;
+            background-color: white;
+            right: 0;
+            content: '';
+            width: 0%;
+        }
+
+        &.community {
+            padding-left: 1.6rem;
+
+            &::after {
+                height: .2rem;
+                bottom: -.3rem;
+            }
+        }
+
+        &.academics {
+            padding-left: 1.8rem;
+
+            &::after {
+                height: .2rem;
+                bottom: -.3rem;
+            }
+        }
+
+        &.religious {
+            padding-left: 2.2rem;
+
+            &::after {
+                height: .2rem;
+                bottom: -.4rem;
+            }
+        }
+
+        &.environment {
+            padding-left: 2.4rem;
+
+            &::after {
+                height: .2rem;
+                bottom: -.35rem;
+            }
+        }
+
+        &.sociocultural {
+            padding-left: 2.2rem;
+
+            &::after {
+                height: .17rem;
+                bottom: -.37rem;
+            }
         }
     }
 }

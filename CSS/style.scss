@@ -9,12 +9,19 @@ $footerHeight: calc(60vh - 6rem);
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+}
+
 .nav-bar {
     display: flex;
     flex-direction: row;
     position: sticky;
     top: 0;
-    height: $navbarHeight;
+    flex: 0 0 $navbarHeight;
     align-items: center;
     padding-inline: 5rem;
     justify-content: space-between;
@@ -42,7 +49,7 @@ $footerHeight: calc(60vh - 6rem);
 
 .carousel {
     width: 100vw;
-    max-height: $fullSectionHeight;
+    flex: 0 0 $fullSectionHeight;
     display: grid;
     grid-template-columns: 100vw 100vw 100vw 100vw 100vw;
     position: relative;
@@ -84,7 +91,6 @@ $footerHeight: calc(60vh - 6rem);
         width: 100vw;
         object-fit: cover;
         object-position: center;
-        transition: all 300ms ease-in-out;
         mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 45%, transparent 100%);
 
         &.community {
@@ -182,7 +188,7 @@ $footerHeight: calc(60vh - 6rem);
 }
 
 .catch-up-with-cares {
-    height: $fullSectionHeight;
+    flex: 0 0 $fullSectionHeight;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -219,7 +225,7 @@ $footerHeight: calc(60vh - 6rem);
 
 .about-cares {
     width: 100%;
-    height: $fullSectionHeight;
+    flex: 0 0 $fullSectionHeight;
     background-color: blue;
     padding-inline: 8rem;
 
@@ -244,12 +250,32 @@ $footerHeight: calc(60vh - 6rem);
 }
 
 .areas-display {
-    height: $halfSectionHeight;
+    flex: 0 0 $halfSectionHeight;
+    padding-inline: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .areas-container {
+        aspect-ratio: 1;
+        width: 10rem;
+        max-height: 10rem;
+        border-radius: 50%;
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+
+        &:hover {
+            border-radius: 2rem;
+            transform: scale(110%);
+        }
+    }
 }
 
 .about-the-areas {
     width: 100%;
-    height: $fullSectionHeight;
+    flex: 0 0 $fullSectionHeight;
     background-color: blue;
     padding-inline: 8rem;
 
@@ -273,15 +299,15 @@ $footerHeight: calc(60vh - 6rem);
 }
 
 .the-officers {
-    height: $fullSectionHeight;
+    flex: 0 0 $fullSectionHeight;
 }
 
 .call-to-action {
-    height: $halfSectionHeight;
+    flex: 0 0 $halfSectionHeight;
 }
 
 .footer {
     padding-inline: 5rem;
-    height: $footerHeight;
+    flex: 0 0 $footerHeight;
     background-color: green;
 }

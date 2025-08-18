@@ -4,12 +4,19 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+}
+
 .nav-bar {
   display: flex;
   flex-direction: row;
   position: sticky;
   top: 0;
-  height: 4rem;
+  flex: 0 0 4rem;
   align-items: center;
   padding-inline: 5rem;
   justify-content: space-between;
@@ -34,7 +41,7 @@
 
 .carousel {
   width: 100vw;
-  max-height: calc(100vh - 10rem);
+  flex: 0 0 calc(100vh - 10rem);
   display: grid;
   grid-template-columns: 100vw 100vw 100vw 100vw 100vw;
   position: relative;
@@ -73,7 +80,6 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  transition: all 300ms ease-in-out;
   -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 45%, transparent 100%);
           mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 45%, transparent 100%);
 }
@@ -139,7 +145,7 @@
 }
 
 .catch-up-with-cares {
-  height: calc(100vh - 10rem);
+  flex: 0 0 calc(100vh - 10rem);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -174,7 +180,7 @@
 
 .about-cares {
   width: 100%;
-  height: calc(100vh - 10rem);
+  flex: 0 0 calc(100vh - 10rem);
   background-color: blue;
   padding-inline: 8rem;
   display: grid;
@@ -194,12 +200,30 @@
 }
 
 .areas-display {
-  height: calc(65vh - 10rem);
+  flex: 0 0 calc(65vh - 10rem);
+  padding-inline: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.areas-display .areas-container {
+  aspect-ratio: 1;
+  width: 10rem;
+  max-height: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.areas-display .areas-container:hover {
+  border-radius: 2rem;
+  transform: scale(110%);
 }
 
 .about-the-areas {
   width: 100%;
-  height: calc(100vh - 10rem);
+  flex: 0 0 calc(100vh - 10rem);
   background-color: blue;
   padding-inline: 8rem;
   display: grid;
@@ -219,15 +243,15 @@
 }
 
 .the-officers {
-  height: calc(100vh - 10rem);
+  flex: 0 0 calc(100vh - 10rem);
 }
 
 .call-to-action {
-  height: calc(65vh - 10rem);
+  flex: 0 0 calc(65vh - 10rem);
 }
 
 .footer {
   padding-inline: 5rem;
-  height: calc(60vh - 6rem);
+  flex: 0 0 calc(60vh - 6rem);
   background-color: green;
 }/*# sourceMappingURL=style.css.map */
