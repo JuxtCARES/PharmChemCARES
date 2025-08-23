@@ -258,7 +258,8 @@ body {
   padding-block: 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -267,7 +268,7 @@ body {
 }
 .about-the-areas .feature-article {
   width: 20rem;
-  height: 80%;
+  height: 25rem;
   background-color: red;
   border-radius: 2rem;
   overflow: hidden;
