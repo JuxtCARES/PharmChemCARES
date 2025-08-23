@@ -267,7 +267,7 @@ body {
   flex: 1 1 100%;
 }
 .about-the-areas .feature-article {
-  width: 20rem;
+  flex: 1 0 20rem;
   height: 25rem;
   background-color: red;
   border-radius: 2rem;
@@ -279,6 +279,7 @@ body {
 }
 .about-the-areas .feature-article .feature-image {
   width: 100%;
+  max-height: 75%;
   aspect-ratio: 8/7;
   -o-object-fit: cover;
      object-fit: cover;
