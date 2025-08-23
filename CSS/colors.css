@@ -16,6 +16,16 @@ body {
   color: #96ab41;
 }
 
+.footer {
+  background-color: #614071;
+}
+.footer .motto .motto-latin {
+  color: white;
+}
+.footer .motto .motto-translation {
+  color: #96ab41;
+}
+
 .carousel .slide-controls i {
   color: white;
 }
@@ -68,78 +78,102 @@ body {
 }
 .areas-display .areas-container {
   border: 0.4rem solid;
+  background-size: 100%;
 }
 .areas-display .areas-container.community {
-  background-color: #fdef6e;
-  border-color: #fdef6e;
-}
-.areas-display .areas-container:hover.community {
-  background-color: #ffe600;
+  background-image: url("/Assets/Sigils/Community.png");
   border-color: #ffe600;
 }
-.areas-display .areas-container.academics {
-  background-color: #fc0000;
-  border-color: #fc0000;
+.areas-display .areas-container.community::before {
+  background-color: #ffe600;
 }
-.areas-display .areas-container:hover.academics {
-  background-color: #d10000;
+.areas-display .areas-container.academics {
   border-color: #d10000;
+  background-image: url("/Assets/Sigils/Academics.png");
+}
+.areas-display .areas-container.academics::before {
+  background-color: #d10000;
 }
 .areas-display .areas-container.religious {
-  background-color: #accbf8;
-  border-color: #accbf8;
-}
-.areas-display .areas-container:hover.religious {
-  background-color: #196ae3;
   border-color: #196ae3;
+  background-image: url("/Assets/Sigils/Religious.png");
+}
+.areas-display .areas-container.religious::before {
+  background-color: #196ae3;
 }
 .areas-display .areas-container.environment {
-  background-color: #c1e62e;
-  border-color: #c1e62e;
-}
-.areas-display .areas-container:hover.environment {
-  background-color: #97bd00;
   border-color: #97bd00;
+  background-image: url("/Assets/Sigils/Environment.png");
+}
+.areas-display .areas-container.environment::before {
+  background-color: #97bd00;
 }
 .areas-display .areas-container.sociocultural {
-  background-color: #ff983a;
-  border-color: #ff983a;
-}
-.areas-display .areas-container:hover.sociocultural {
-  background-color: #ff8210;
   border-color: #ff8210;
+  background-image: url("/Assets/Sigils/Sociocultural.png");
+}
+.areas-display .areas-container.sociocultural::before {
+  background-color: #ff8210;
 }
 
 .about-the-areas {
   background-color: #ae8abf;
 }
-.about-the-areas a:hover.community {
-  color: #ffe600;
+.about-the-areas .feature-article {
+  background-color: white;
 }
-.about-the-areas a:hover.academics {
-  color: #d10000;
+.about-the-areas .feature-article .to-article {
+  background-color: #614071;
 }
-.about-the-areas a:hover.religious {
-  color: #196ae3;
-}
-.about-the-areas a:hover.environment {
-  color: #97bd00;
-}
-.about-the-areas a:hover.sociocultural {
-  color: #ff8210;
+.about-the-areas .feature-article .to-article:active {
+  background-color: #5c700c;
+  color: transparent;
 }
 
 .the-officers {
   background-color: #5c700c;
 }
-.the-officers .officer .officer-information {
-  background-color: white;
+.the-officers .directory-controls i {
+  color: white;
 }
-.the-officers .officer .officer-information * {
-  color: black;
+.the-officers .directory-controls:active i {
+  color: #e6bbfa;
 }
-.the-officers .officer .officer-information::before {
-  background-color: white;
+.the-officers .cp .flip-card-back,
+.the-officers .ed .flip-card-back,
+.the-officers .om .flip-card-back,
+.the-officers .qa .flip-card-back,
+.the-officers .aqa .flip-card-back,
+.the-officers .fm .flip-card-back,
+.the-officers .afm .flip-card-back {
+  background-color: #614071;
+}
+.the-officers .commu-otl .flip-card-back,
+.the-officers .commu-ctl .flip-card-back {
+  background-color: #ffe600;
+}
+.the-officers .acad-otl .flip-card-back,
+.the-officers .acad-ctl .flip-card-back {
+  background-color: #d10000;
+}
+.the-officers .relig-otl .flip-card-back,
+.the-officers .relig-ctl .flip-card-back {
+  background-color: #196ae3;
+}
+.the-officers .envi-otl .flip-card-back,
+.the-officers .envi-ctl .flip-card-back {
+  background-color: #97bd00;
+}
+.the-officers .socio-otl .flip-card-back,
+.the-officers .socio.ctl .flip-card-back {
+  background-color: #ff8210;
+}
+.the-officers .cd .flip-card-back,
+.the-officers .md .flip-card-back,
+.the-officers .td .flip-card-back,
+.the-officers .podcares .flip-card-back,
+.the-officers .pc .flip-card-back {
+  background-color: #ffb0f7;
 }
 
 .call-to-action {
@@ -168,12 +202,25 @@ body {
   background-color: #e6bbfa;
 }
 
-.footer {
-  background-color: #614071;
+.faq-page-container {
+  background-color: #ae8abf;
 }
-.footer .motto .motto-latin {
+.faq-page-container .faq-inquiry .to-inquiry {
+  background-color: #ae8abf;
+  border: 0.2rem solid #e6bbfa;
   color: white;
 }
-.footer .motto .motto-translation {
-  color: #96ab41;
+.faq-page-container .faq-inquiry .to-inquiry:active {
+  background-color: #e6bbfa;
+}
+.faq-page-container .faq-list .faq-search {
+  background-color: #ae8abf;
+  border: none;
+  border-bottom: 0.15rem solid white;
+}
+.faq-page-container .faq-list .faq-search:focus {
+  outline: none;
+}
+.faq-page-container .faq-list .faq-item {
+  border-bottom: 0.15rem solid white;
 }/*# sourceMappingURL=colors.css.map */

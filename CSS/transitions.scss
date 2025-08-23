@@ -6,6 +6,8 @@
     }  
 }
 
+//LANDING
+
 .carousel {
     .slide-contols {
         i {
@@ -30,8 +32,11 @@
 
 .areas-display {
     .areas-container {
-        transition: border-radius 200ms ease-out, transform 200ms ease-out, background-color 200ms ease-out, border-color 200ms ease-out;
+        transition: border-radius 200ms ease-out, transform 200ms ease-out;
 
+        &::before {
+            transition: opacity 200ms ease-out;
+        }
 
         .link-to-area {
             transition: font-size 300ms ease-out, letter-spacing 300ms ease-out, padding-left 300ms ease-out;
@@ -43,11 +48,29 @@
     }
 }
 
+.about-the-areas {
+    .feature-article {
+        .to-article {
+            transition: background-color 200ms;
+        }
+    }
+}
+
 .the-officers {
-    .officer {
-        .flip-card {
-            .flip-card-inner {
-                transition: transform 500ms ease-out;
+    .flip-card {
+        .flip-card-inner {
+            transition: transform 500ms ease-out;
+        }
+    }
+}
+
+//FAQ
+.faq-page-container {
+    .faq-list {
+        .faq-item {
+            .faq {
+                .faq-response {
+                }
             }
         }
     }

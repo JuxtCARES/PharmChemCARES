@@ -24,6 +24,27 @@
     }
 }
 
+.footer {
+    .motto {
+        .motto-latin {
+            font-size: 3rem;
+            font-style: italic;
+        }
+
+        .motto-translation {
+            font-size: 1.25rem;
+        }
+    }
+
+    .contacts {
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+//LANDING
+
 .carousel {
     .slide-controls {
         i {
@@ -61,12 +82,16 @@
     }
 
     .about-cares-subtitle {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         opacity: .75;
+        font-style: italic;
     }
 
     p {
         text-align: justify;
+        &, * {
+            font-size: 1.5rem;
+        }
 
         a:hover {
             text-decoration: underline;       
@@ -173,71 +198,80 @@
 
 .about-the-areas {
     .about-the-areas-header {
-        font-size: 2.25rem;
-        text-decoration: underline;
+        font-size: 3rem;
+        text-align: center;
     }
 
-    .about-the-areas-subtitle {
-        font-size: 1.25rem;
-        opacity: .75;
-    }
-
-    p {
-        text-align: justify;
-
-        a:hover {
-            text-decoration: underline;       
+    .feature-article {
+        .feature-header {
+            text-align: center;
         }
     }
 }
 
-.officer {
-    .officer-information {
-        .officer-name {
-            font-size: 2rem;
-        }
-        .officer-nicknames {
-            font-size: .75rem;
-            font-style: italic;
-            opacity: .5;  
-        }
+.the-officers {
+    .the-officers-heading {
+        font-size: 3rem;
+    }
 
-        .officer-position {
-            opacity: .6;
+    .directory-controls {
+        align-items: center;
+        i {
+            font-size: 4.5rem;
         }
+    }
 
-        .officer-course {
-            opacity: .6;
+    .flip-card {
+        .flip-card-inner {
+            .flip-card-back {
+                .rank {
+                    font-size: 2rem;
+                    text-align: center;
+                }
 
-        }
+                .name {
+                    font-size: .9rem;
+                    text-align: center;
+                }
 
-        .officer-description {
-            padding-block: 2rem;
-        }
+                .position {
+                    font-style: italic;
+                    text-align: center;
+                    opacity: .6;
+                }
+                .nickname {
+                    opacity: .6;
+                    font-size: .8rem;
+                    text-align: center;
+                }
 
-        .officer-socials {
-            &:hover {
-                text-decoration: underline;
+                .contact {
+                    i {
+                        font-size: 2rem;
+                    }
+                }
             }
         }
     }
+
 }
 
-.footer {
-    .motto {
-        .motto-latin {
-            font-size: 3rem;
-            font-style: italic;
-        }
-
-        .motto-translation {
-            font-size: 1.25rem;
+//FAQ 
+.faq-page-container {
+    .faq-inquiry {
+        .inquiry-header {
+            font-size: 2rem;
         }
     }
 
-    .contacts {
-        a:hover {
-            text-decoration: underline;
+    .faq-list {
+        list-style: none;
+        .faq-item {
+            .faq {
+                .faq-question {
+                    font-size: 2rem;
+                }
+            }
         }
     }
 }

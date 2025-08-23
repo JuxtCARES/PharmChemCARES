@@ -25,6 +25,10 @@ $socioculturalDark: #ff8210;
 $socioculturalMid: #ff983a;
 $socioculturalLight: #fdb069;
 
+$projectDark: #fb43e9;
+$projectMid: #ff7ef2;
+$projectLight: #ffb0f7;
+
 body {
     background-color: $purpleDark;
 }
@@ -42,6 +46,22 @@ body {
         }
     }
 }
+
+.footer {
+    background-color: $purpleDark;
+
+    .motto {
+        .motto-latin {
+            color: white
+        }
+
+        .motto-translation {
+            color: $greenMid;
+        }
+    }
+}
+
+//LANDING
 
 .carousel {
     .slide-controls {
@@ -118,58 +138,51 @@ body {
 
     .areas-container {
         border: .4rem solid; 
+        background-size: 100%;
 
         &.community {
-            background-color: $communityLight;
-            border-color: $communityLight;
-        }
-
-        &:hover.community {
-            background-color: $communityDark;
+            background-image: url('/Assets/Sigils/Community.png');
             border-color: $communityDark;
 
+            &::before {
+                background-color: $communityDark;
+            }
         }
 
         &.academics {
-            background-color: $academicsLight;
-            border-color: $academicsLight;
-        }
-
-        &:hover.academics {
-            background-color: $academicsMid;
             border-color: $academicsMid;
+            background-image: url('/Assets/Sigils/Academics.png');
 
+            &::before {
+                background-color: $academicsMid;
+            }
         }
 
         &.religious {
-            background-color: $religiousLight;
-            border-color: $religiousLight;
-        }
-
-        &:hover.religious {
-            background-color: $religiousDark;
             border-color: $religiousDark;
-
+            background-image: url('/Assets/Sigils/Religious.png');
+            
+            &::before {
+                background-color: $religiousDark;
+            }
         }
 
         &.environment {
-            background-color: $environmentMid;
-            border-color: $environmentMid;
-        }
-        
-        &:hover.environment {
-            background-color: $environmentDark;
             border-color: $environmentDark;
+            background-image: url('/Assets/Sigils/Environment.png');
+            
+            &::before {
+                background-color: $environmentDark;
+            }
         }
 
         &.sociocultural {
-            background-color: $socioculturalMid;
-            border-color: $socioculturalMid;
-        }
-
-        &:hover.sociocultural {
-            background-color: $socioculturalDark;
             border-color: $socioculturalDark;
+            background-image: url('/Assets/Sigils/Sociocultural.png');
+            
+            &::before {
+                background-color: $socioculturalDark;
+            }
         }
     }
 }
@@ -177,42 +190,86 @@ body {
 .about-the-areas {
     background-color: $purpleMid;
 
-    a:hover {
-        &.community {
-            color: $communityDark
-        }
+    .feature-article {
+        background-color: white;
+        .to-article {
+            background-color: $purpleDark;
 
-        &.academics {
-            color: $academicsMid
-        }
-
-        &.religious {
-            color: $religiousDark
-        }
-
-        &.environment {
-            color: $environmentDark
-        }
-
-        &.sociocultural {
-            color: $socioculturalDark
+            &:active {
+                background-color: $greenDark;
+                color: transparent
+            }
         }
     }
 }
 
 .the-officers {
     background-color: $greenDark;
-    .officer {
-        .officer-information {
-            background-color: white;
 
-            * {
-                color: black
-            }
+    .directory-controls {
+        i {
+            color: white;
+        }
+        
+        &:active i {
+            color: $purpleLight
+        }
+    }
 
-            &::before {
-                background-color: white;
-            }
+    .cp,
+    .ed,
+    .om,
+    .qa,
+    .aqa,
+    .fm,
+    .afm {
+        .flip-card-back {
+            background-color: $purpleDark;
+        }
+    }
+
+    .commu-otl,
+    .commu-ctl {
+        .flip-card-back {
+            background-color: $communityDark;
+        }
+    }
+
+    .acad-otl,
+    .acad-ctl {
+        .flip-card-back {
+            background-color: $academicsMid;
+        }
+    }
+
+    .relig-otl,
+    .relig-ctl {
+        .flip-card-back {
+            background-color: $religiousDark;
+        }
+    }
+
+    .envi-otl,
+    .envi-ctl {
+        .flip-card-back {
+            background-color: $environmentDark;
+        }
+    }
+
+    .socio-otl,
+    .socio.ctl {
+        .flip-card-back {
+            background-color: $socioculturalDark;
+        }
+    }
+
+    .cd,
+    .md,
+    .td,
+    .podcares,
+    .pc {
+        .flip-card-back {
+            background-color: $projectLight
         }
     }
 }
@@ -255,16 +312,33 @@ body {
     }
 }
 
-.footer {
-    background-color: $purpleDark;
-
-    .motto {
-        .motto-latin {
-            color: white
+// FAQ
+.faq-page-container {
+    background-color: $purpleMid;
+    .faq-inquiry {
+        .to-inquiry {
+            background-color: $purpleMid;
+            border: .2rem solid $purpleLight;
+            color: white;
+    
+            &:active {
+                background-color: $purpleLight;
+            }
         }
+    }
 
-        .motto-translation {
-            color: $greenMid;
+    .faq-list {
+        .faq-search {
+            background-color: $purpleMid;
+            border: none;
+            border-bottom: .15rem solid white;
+
+            &:focus {
+                outline: none
+            }
+        }
+        .faq-item {
+            border-bottom: .15rem solid white;
         }
     }
 }

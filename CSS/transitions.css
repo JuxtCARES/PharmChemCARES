@@ -18,7 +18,10 @@
 }
 
 .areas-display .areas-container {
-  transition: border-radius 200ms ease-out, transform 200ms ease-out, background-color 200ms ease-out, border-color 200ms ease-out;
+  transition: border-radius 200ms ease-out, transform 200ms ease-out;
+}
+.areas-display .areas-container::before {
+  transition: opacity 200ms ease-out;
 }
 .areas-display .areas-container .link-to-area {
   transition: font-size 300ms ease-out, letter-spacing 300ms ease-out, padding-left 300ms ease-out;
@@ -27,6 +30,10 @@
   transition: width 300ms ease-out;
 }
 
-.the-officers .officer .flip-card .flip-card-inner {
+.about-the-areas .feature-article .to-article {
+  transition: background-color 200ms;
+}
+
+.the-officers .flip-card .flip-card-inner {
   transition: transform 500ms ease-out;
 }/*# sourceMappingURL=transitions.css.map */

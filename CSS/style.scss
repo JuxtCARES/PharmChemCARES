@@ -35,7 +35,7 @@ body {
 
     .nav-options {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         place-items: center;
         gap: 1.75rem;
         width: 27rem;
@@ -49,6 +49,26 @@ body {
     }
 } 
 
+.footer {
+    padding-inline: 5rem;
+    flex: 0 0 $footerHeight;
+    display: grid;
+    padding-inline: 10rem;
+    padding-top: 2rem;
+    grid-template-columns: 1fr 1fr;
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        span {
+            flex: 1 1 25%;
+        }
+    }
+}
+
+//LANDING
 .carousel {
     width: 100vw;
     flex: 0 0 $fullSectionHeight;
@@ -206,7 +226,7 @@ body {
         aspect-ratio: 2;
         flex: 1 0 10rem;
         max-height: 30rem;
-        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 5%, transparent 100%);
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 35%, transparent 100%);
         border-radius: 2rem 2rem 0rem 0rem;
     }
 
@@ -267,10 +287,26 @@ body {
         overflow: hidden;
         display: grid;
         place-items: center;
+        position: relative;
 
         &:hover {
             border-radius: 2rem;
             transform: scale(110%);
+
+            &::before {
+                opacity: 0;
+            }
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: calc(100% + .8rem);
+            aspect-ratio: 1;
+        }
+
+        a {
+            z-index: 20;
         }
     }
 }
@@ -278,116 +314,121 @@ body {
 .about-the-areas {
     width: 100%;
     flex: 0 0 $fullSectionHeight;
-    background-color: blue;
     padding-inline: 8rem;
+    padding-block: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 
-    display: grid;
-    grid-template-columns: .6fr .4fr;
-    gap: 1rem;
-    place-items: center;
-
-    .cares-rx-logo {
-        width: 100%;
+    .about-the-areas-header {
+        flex: 1 1 100%;
     }
 
-    .about-the-areas-article {
+    .feature-article {
+        width: 20rem;
+        height: 80%;
+        background-color: red;
+        border-radius: 2rem;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 2rem;
 
-        .about-the-areas-subtitle {
-            margin-bottom: 1rem;
+        .feature-image {
+            width: 100%;
+            aspect-ratio: 8 / 7;
+            object-fit: cover;
+            object-position: bottom;
+        }
+
+        .to-article {
+            padding: 1rem 1.25rem;
+            border-radius: 1rem;
         }
     }
+
 }
 
 .the-officers {
-    flex: 0 0 $fullSectionHeight;
+    flex: 0 0 calc($fullSectionHeight + 3rem);
+    position: relative;
     display: grid;
-    place-items: center;
-    grid-template-columns: repeat($officerCount, 100vw);
+    padding-block-start: 7.5rem;
+    padding-block-end: 1rem;
+    gap: 1rem;
 
-    .officer {
-        position: relative;
-        display: grid;
-        place-items: end;
+    .the-officers-heading {
+        position: absolute;
+        padding-top: 1rem;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+
+    .directory-scroll {
+        overflow-x: scroll;
+        display: flex;
+        flex-direction: row;
+        gap: .75rem;
+        width: auto;
+        margin-inline: 2rem;
         align-items: center;
-        justify-items: end;
-        height: 100%;
+        padding-block: 1rem;
+        overflow-y: hidden;
+    }
 
-        .flip-card {
-            position: absolute;
-            left: 0%;
-            height: 30rem;
-            aspect-ratio: 4 / 6;
-            z-index: 200;
-            perspective: 1000px;
+    .flip-card {
+        width: 18rem;
+        background-color: transparent;
+        perspective: 1000px;
 
-            &:hover .flip-card-inner {
-                transform: rotateY(180deg);
-            }
-
-            .flip-card-inner {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                transform-style: preserve-3d;
-
-                .flip-card-front, .flip-card-back {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
-                }
-
-                .flip-card-front {
-                    width: 100%;
-                    height: 100%;
-
-                    .uniform {
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 2rem;
-                    }
-                }
-
-                .flip-card-back {
-                    width: 100%;
-                    height: 100%;
-                    transform: rotateY(180deg);
-
-                    .casual {
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 2rem;
-                    }
-                }
-            }
+        &:hover .flip-card-inner {
+            transform: rotateY(180deg);
         }
 
-        .officer-information {
-            height: calc(0.8 * $fullSectionHeight);
-            width: 60%;
-            padding-inline: 1.5rem;
-            padding-block: 1rem;
-            border-radius: 0rem 2rem 2rem 0rem;
+        .flip-card-inner {
             position: relative;
-            display: flex;
-            flex-direction: column;
-
-            &::before {
-                content: '';
-                height: calc(0.8 * $fullSectionHeight);
+            transform-style: preserve-3d;
+            width: 100%;
+            aspect-ratio: 288 / 456; 
+            .flip-card-front {
                 position: absolute;
-                width: 10rem;
-                top: 0;
-                left: -10rem;
-                border-radius: 2rem 0rem 0rem 2rem;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                
+                .officer-image {
+                    width: 100%;
+                    border-radius: 2rem;
+                }
+            }   
 
-            }
+            .flip-card-back {
+                width: 100%;
+                aspect-ratio: 288 / 456; 
+                border-radius: 2rem;
+                padding: 1.2rem 1.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                transform: rotateY(180deg);
 
-            .officer-socials {
-                align-self: flex-end;
+                .name {
+                    margin-top: 3rem;
+                }
+
+                .nickname {
+                    margin-bottom: 3rem;
+                }
+
+                .contact {
+                    margin-bottom: .75rem;
+                }
             }
         }
     }
@@ -404,6 +445,8 @@ body {
     .call-to-join {
         display: flex;
         flex-direction: column;
+        height: 80%;
+        justify-content: center;
 
         .call-to-join-header {
             text-align: center;
@@ -428,6 +471,8 @@ body {
     .faq {
         display: flex;
         flex-direction: column;
+        height: 80%;
+        justify-content: center;
 
         .faq-header {
             text-align: center;
@@ -450,22 +495,55 @@ body {
     }
 }
 
-.footer {
-    padding-inline: 5rem;
-    flex: 0 0 $footerHeight;
+//FAQ
+.faq-page-container {
     display: grid;
+    grid-template-columns: 4fr 6fr;
+    padding-block: 2rem;
     padding-inline: 10rem;
-    padding-top: 2rem;
-    grid-template-columns: 1fr 1fr;
 
-    .contacts {
+    .faq-inquiry {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        gap: 1rem;
+        align-items: flex-start;
+        position: sticky;
+        top: calc($navbarHeight + 2rem);
+        align-self: self-start;
 
-        span {
-            flex: 1 1 20%;
+        .to-inquiry {
+            display: block;
+            margin-top: 1rem;
+            padding-inline: 2rem;
+            padding-block: .7rem;
+            border-radius: .75rem;    
+        }
+    }
+
+    .faq-list {
+        .faq-search {
+            width: 100%;
+            padding-inline: 1rem;
+            padding-block: .5rem;
+            position: sticky;
+            top: $navbarHeight;
+        }
+        .faq-item {
+            overflow: hidden;
+            margin-inline: 1rem;
+            padding-inline: 1rem;
+            margin-bottom: .5rem;
+
+            .faq {
+                * {
+                    cursor: pointer;
+                }
+                .faq-response {
+                    max-height: 0;
+                    &.expanded {
+                        max-height: 100%;
+                    }
+                }
+            }
         }
     }
 }

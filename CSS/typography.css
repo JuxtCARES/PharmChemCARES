@@ -21,6 +21,17 @@
   font-weight: 600;
 }
 
+.footer .motto .motto-latin {
+  font-size: 3rem;
+  font-style: italic;
+}
+.footer .motto .motto-translation {
+  font-size: 1.25rem;
+}
+.footer .contacts a:hover {
+  text-decoration: underline;
+}
+
 .carousel .slide-controls i {
   font-size: 4.5rem;
 }
@@ -43,11 +54,15 @@
   text-decoration: underline;
 }
 .about-cares .about-cares-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   opacity: 0.75;
+  font-style: italic;
 }
 .about-cares p {
   text-align: justify;
+}
+.about-cares p, .about-cares p * {
+  font-size: 1.5rem;
 }
 .about-cares p a:hover {
   text-decoration: underline;
@@ -127,48 +142,50 @@
 }
 
 .about-the-areas .about-the-areas-header {
-  font-size: 2.25rem;
-  text-decoration: underline;
+  font-size: 3rem;
+  text-align: center;
 }
-.about-the-areas .about-the-areas-subtitle {
-  font-size: 1.25rem;
-  opacity: 0.75;
-}
-.about-the-areas p {
-  text-align: justify;
-}
-.about-the-areas p a:hover {
-  text-decoration: underline;
+.about-the-areas .feature-article .feature-header {
+  text-align: center;
 }
 
-.officer .officer-information .officer-name {
+.the-officers .the-officers-heading {
+  font-size: 3rem;
+}
+.the-officers .directory-controls {
+  align-items: center;
+}
+.the-officers .directory-controls i {
+  font-size: 4.5rem;
+}
+.the-officers .flip-card .flip-card-inner .flip-card-back .rank {
+  font-size: 2rem;
+  text-align: center;
+}
+.the-officers .flip-card .flip-card-inner .flip-card-back .name {
+  font-size: 0.9rem;
+  text-align: center;
+}
+.the-officers .flip-card .flip-card-inner .flip-card-back .position {
+  font-style: italic;
+  text-align: center;
+  opacity: 0.6;
+}
+.the-officers .flip-card .flip-card-inner .flip-card-back .nickname {
+  opacity: 0.6;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.the-officers .flip-card .flip-card-inner .flip-card-back .contact i {
   font-size: 2rem;
 }
-.officer .officer-information .officer-nicknames {
-  font-size: 0.75rem;
-  font-style: italic;
-  opacity: 0.5;
-}
-.officer .officer-information .officer-position {
-  opacity: 0.6;
-}
-.officer .officer-information .officer-course {
-  opacity: 0.6;
-}
-.officer .officer-information .officer-description {
-  padding-block: 2rem;
-}
-.officer .officer-information .officer-socials:hover {
-  text-decoration: underline;
-}
 
-.footer .motto .motto-latin {
-  font-size: 3rem;
-  font-style: italic;
+.faq-page-container .faq-inquiry .inquiry-header {
+  font-size: 2rem;
 }
-.footer .motto .motto-translation {
-  font-size: 1.25rem;
+.faq-page-container .faq-list {
+  list-style: none;
 }
-.footer .contacts a:hover {
-  text-decoration: underline;
+.faq-page-container .faq-list .faq-item .faq .faq-question {
+  font-size: 2rem;
 }/*# sourceMappingURL=typography.css.map */
