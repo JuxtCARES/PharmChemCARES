@@ -15,7 +15,6 @@ body {
   flex-direction: column;
   justify-content: start;
   align-items: stretch;
-  background-color: #614071;
 }
 
 .nav-bar {
@@ -28,7 +27,6 @@ body {
   padding-inline: 5rem;
   justify-content: space-between;
   z-index: 2000;
-  background-color: #614071;
 }
 .nav-bar .nav-cares-logo {
   height: 3rem;
@@ -41,7 +39,6 @@ body {
 }
 .nav-bar .nav-to-home:hover,
 .nav-bar .nav-to-podcares:hover {
-  color: #96ab41;
   font-weight: 600;
 }
 .nav-bar .nav-options {
@@ -61,7 +58,6 @@ body {
   text-align: center;
 }
 .nav-bar .nav-options .nav-to-areas:hover {
-  color: #96ab41;
   font-weight: 600;
 }
 
@@ -72,7 +68,6 @@ body {
   padding-inline: 10rem;
   padding-top: 2rem;
   grid-template-columns: 1fr 1fr;
-  background-color: #614071;
 }
 .footer .motto .motto-latin {
   color: white;
@@ -80,7 +75,6 @@ body {
   font-style: italic;
 }
 .footer .motto .motto-translation {
-  color: #96ab41;
   font-size: 1.25rem;
 }
 .footer .contacts {
@@ -93,6 +87,25 @@ body {
 }
 .footer .contacts a:hover {
   text-decoration: underline;
+}
+
+[data-page=Home] {
+  background-color: #614071;
+}
+[data-page=Home] .nav-bar {
+  background-color: #614071;
+}
+[data-page=Home] .nav-bar .nav-to-home:hover,
+[data-page=Home] .nav-bar .nav-to-podcares:hover,
+[data-page=Home] .nav-bar .nav-to-areas:hover,
+[data-page=Home] .nav-bar .nav-to-faq:hover {
+  color: #96ab41;
+}
+[data-page=Home] .footer {
+  background-color: #614071;
+}
+[data-page=Home] .footer .motto .motto-translation {
+  color: #96ab41;
 }
 
 .carousel {
@@ -221,7 +234,7 @@ body {
 }
 
 .catch-up-with-cares {
-  flex: 0 0 calc(100vh - 10rem);
+  flex: 1 0 calc(100vh - 10rem);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -303,7 +316,7 @@ body {
   font-size: 1.5rem;
 }
 .about-cares .about-cares-article a:hover.community {
-  color: #ffe600;
+  color: #f5be07;
   text-decoration: underline;
 }
 .about-cares .about-cares-article a:hover.academics {
@@ -324,7 +337,7 @@ body {
 }
 
 .areas-display {
-  flex: 0 0 calc(65vh - 10rem);
+  flex: 1 0 calc(65vh - 10rem);
   padding-inline: 10rem;
   display: flex;
   flex-direction: row;
@@ -424,10 +437,10 @@ body {
 }
 .areas-display .areas-container.community {
   background-image: url("/Assets/Sigils/Community.png");
-  border-color: #ffe600;
+  border-color: #f5be07;
 }
 .areas-display .areas-container.community::before {
-  background-color: #ffe600;
+  background-color: #f5be07;
 }
 .areas-display .areas-container.academics {
   border-color: #d10000;
@@ -530,7 +543,7 @@ body {
 }
 
 .the-officers {
-  flex: 0 0 calc(100vh - 10rem + 3rem);
+  flex: 1 0 calc(100vh - 10rem + 3rem);
   position: relative;
   display: grid;
   padding-block-start: 7.5rem;
@@ -624,7 +637,7 @@ body {
 }
 .the-officers .commu-otl .flip-card-back,
 .the-officers .commu-ctl .flip-card-back {
-  background-color: #ffe600;
+  background-color: #f5be07;
 }
 .the-officers .acad-otl .flip-card-back,
 .the-officers .acad-ctl .flip-card-back {
@@ -717,46 +730,266 @@ body {
   background-color: #e6bbfa;
 }
 
-.faq-page-container {
+.intro-to-area {
+  flex: 1 0 calc((100vh - 10rem) * 0.75);
   display: grid;
-  grid-template-columns: 4fr 6fr;
-  padding-block: 2rem;
-  padding-inline: 10rem;
+  grid-template-columns: 3fr 2fr;
+  padding-left: 8rem;
+  gap: 1rem;
+  place-items: center;
 }
-.faq-page-container .faq-inquiry {
+.intro-to-area .area-page-header {
+  padding-left: 2rem;
+  position: relative;
+  font-size: 7.5rem;
+}
+.intro-to-area .area-page-header::before {
+  content: attr(data-preamble);
+  position: absolute;
+  font-size: 2rem;
+}
+.intro-to-area .area-page-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  background-color: white;
+  -webkit-mask-image: linear-gradient(to left, rgb(0, 0, 0) 35%, transparent 100%);
+          mask-image: linear-gradient(to left, rgb(0, 0, 0) 35%, transparent 100%);
+}
+
+.recent-activities {
+  flex: 1 0 calc(100vh - 10rem);
+  display: grid;
+  grid-template-rows: 4rem 1fr;
+  padding-block: 1rem;
+}
+.recent-activities .recent-activities-header {
+  font-size: 3rem;
+  text-align: center;
+}
+.recent-activities .recent-activities-scroll {
+  display: flex;
+  flex-direction: row;
+  gap: 8rem;
+  overflow-x: scroll;
+  padding-inline: 10rem;
+  justify-content: start;
+  align-self: center;
+  align-items: center;
+}
+.recent-activities .recent-activities-scroll .activity {
+  min-width: 18rem;
+  height: 24rem;
+  padding-bottom: 1rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: grid;
+  grid-row: 12rem 1.5rem 1fr 1fr;
+  gap: 0.75rem;
+  background-color: white;
+}
+.recent-activities .recent-activities-scroll .activity .activity-image {
+  width: 100%;
+  height: 12rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  background-color: lightgray;
+}
+.recent-activities .recent-activities-scroll .activity .activity-title {
+  color: black;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.recent-activities .recent-activities-scroll .activity .activity-date {
+  color: black;
+  font-style: italic;
+  text-align: center;
+}
+.recent-activities .recent-activities-scroll .activity .activity-link {
+  place-self: center;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.all-about-area {
+  flex: 1 0 calc(100vh - 10rem);
+  display: grid;
+  position: relative;
+}
+.all-about-area .work-image {
+  width: 100%;
+  height: calc(100vh - 10rem);
+  aspect-ratio: 3/2;
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 35%, transparent 100%);
+          mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 35%, transparent 100%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  background-color: black;
+}
+.all-about-area .work {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  position: sticky;
-  top: 6rem;
-  align-self: self-start;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 2rem;
 }
-.faq-page-container .faq-inquiry .to-inquiry {
-  display: block;
+.all-about-area .work .work-header {
+  font-size: 2rem;
+}
+.all-about-area .work .work-content {
+  width: 60%;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 2;
+}
+
+.area-call-to-action {
+  flex: 1 0 calc(65vh - 10rem + 1rem);
+  padding-block: 2rem;
+  padding-inline: 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.area-call-to-action .for-you {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
   margin-top: 1rem;
-  padding-inline: 2rem;
+}
+.area-call-to-action .for-you .for-you-header {
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: -0.1rem -0.1rem 0 white, 0.1rem -0.1rem 0 white, -0.1rem 0.1rem 0 white, 0.1rem 0.1rem 0 white;
+}
+.area-call-to-action .for-you .for-you-content {
+  width: 60%;
+  text-align: justify;
+  text-shadow: -0.05rem -0.05rem 0 white, 0.05rem -0.05rem 0 white, -0.05rem 0.05rem 0 white, 0.05rem 0.05rem 0 white;
+}
+.area-call-to-action .for-you .join-cares {
+  margin-top: 1rem;
+  padding-inline: 0.95rem;
   padding-block: 0.7rem;
   border-radius: 0.75rem;
+  align-self: center;
+  width: 8rem;
+  text-align: center;
+  background-color: transparent;
+  border: 0.2rem solid;
+  color: white;
+  transition: background-color 200ms, color 200ms;
 }
-.faq-page-container .faq-list .faq-search {
-  width: 100%;
-  padding-inline: 1rem;
-  padding-block: 0.5rem;
-  position: sticky;
-  top: 4rem;
+.area-call-to-action .alternatives {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
 }
-.faq-page-container .faq-list .faq-item {
-  overflow: hidden;
-  margin-inline: 1rem;
-  padding-inline: 1rem;
-  margin-bottom: 0.5rem;
+.area-call-to-action .alternatives .alternatives-header {
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: -0.1rem -0.1rem 0 white, 0.1rem -0.1rem 0 white, -0.1rem 0.1rem 0 white, 0.1rem 0.1rem 0 white;
 }
-.faq-page-container .faq-list .faq-item .faq * {
-  cursor: pointer;
+.area-call-to-action .alternatives .alternatives-content {
+  width: 60%;
+  text-align: justify;
+  text-shadow: -0.05rem -0.05rem 0 white, 0.05rem -0.05rem 0 white, -0.05rem 0.05rem 0 white, 0.05rem 0.05rem 0 white;
 }
-.faq-page-container .faq-list .faq-item .faq .faq-response {
-  max-height: 0;
+.area-call-to-action .alternatives .check-areas {
+  margin-top: 1rem;
+  padding-inline: 0.95rem;
+  padding-block: 0.7rem;
+  border-radius: 0.75rem;
+  align-self: center;
+  width: 10rem;
+  text-align: center;
+  background-color: transparent;
+  border: 0.2rem solid;
+  color: white;
+  transition: background-color 200ms, color 200ms;
 }
-.faq-page-container .faq-list .faq-item .faq .faq-response.expanded {
-  max-height: 100%;
+
+[data-page=Community] {
+  background-color: #f5be07;
+}
+[data-page=Community] .nav-bar {
+  background-color: #f5be07;
+}
+[data-page=Community] .nav-bar .nav-to-home:hover,
+[data-page=Community] .nav-bar .nav-to-podcares:hover,
+[data-page=Community] .nav-bar .nav-to-areas:hover,
+[data-page=Community] .nav-bar .nav-to-faq:hover {
+  color: white;
+  opacity: 0.6rem;
+}
+[data-page=Community] .footer {
+  background-color: #f5be07;
+}
+[data-page=Community] .footer .motto .motto-translation {
+  color: white;
+  opacity: 0.6;
+}
+[data-page=Community] .intro-to-area {
+  background-color: #ffd400;
+}
+[data-page=Community] .recent-activities {
+  background-color: #ffec3d;
+}
+[data-page=Community] .recent-activities .recent-activities-scroll .activity .activity-link {
+  background-color: #ffd400;
+  transition: background-color 200ms;
+}
+[data-page=Community] .recent-activities .recent-activities-scroll .activity .activity-link:active {
+  background-color: #f5be07;
+}
+[data-page=Community] .all-about-area {
+  background-color: #ffd400;
+}
+[data-page=Community] .area-call-to-action {
+  background-color: #ffec3d;
+}
+[data-page=Community] .area-call-to-action .for-you .for-you-header {
+  color: #f5be07;
+}
+[data-page=Community] .area-call-to-action .for-you .for-you-content {
+  color: #f5be07;
+}
+[data-page=Community] .area-call-to-action .for-you .join-cares {
+  background-color: #ffd400;
+  border-color: #ffd400;
+}
+[data-page=Community] .area-call-to-action .for-you .join-cares:active {
+  background-color: #f5be07;
+  border-color: #f5be07;
+  color: white;
+}
+[data-page=Community] .area-call-to-action .alternatives .alternatives-header {
+  color: #f5be07;
+}
+[data-page=Community] .area-call-to-action .alternatives .alternatives-content {
+  color: #f5be07;
+}
+[data-page=Community] .area-call-to-action .alternatives .check-areas {
+  background-color: #ffd400;
+  border-color: #ffd400;
+}
+[data-page=Community] .area-call-to-action .alternatives .check-areas:active {
+  background-color: #f5be07;
+  border-color: #f5be07;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

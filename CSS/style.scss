@@ -8,9 +8,9 @@ $greenDark: #5c700c;
 $greenMid: #96ab41;
 $greenLight: #bacb74;
 
-$communityDark: #ffe600;
-$communityMid: #ffec3d;
-$communityLight: #fdef6e;
+$communityDark: #f5be07;
+$communityMid: #ffd400;
+$communityLight: #ffec3d;
 
 $academicsDark: #990e0e;
 $academicsMid: #d10000;
@@ -61,9 +61,6 @@ body {
     justify-content: start;
     align-items: stretch;
 
-    //COLORS
-    background-color: $purpleDark;
-
 }
 
 .nav-bar {
@@ -77,9 +74,6 @@ body {
     padding-inline: 5rem;
     justify-content: space-between;
     z-index: 2000;
-
-    //COLOR
-    background-color: $purpleDark;
 
     .nav-cares-logo {
         //FORM
@@ -98,9 +92,6 @@ body {
         text-align: center;
 
         &:hover {
-            //COLOR
-            color: $greenMid;
-
             //TYPOGRAPHY
             font-weight: 600;
         }
@@ -132,9 +123,6 @@ body {
 
 
             &:hover {
-                //COLOR
-                color: $greenMid;
-
                 //TYPOGRAPHY
                 font-weight: 600;
             }
@@ -151,9 +139,6 @@ body {
     padding-top: 2rem;
     grid-template-columns: 1fr 1fr;
 
-    //COLOR
-    background-color: $purpleDark;
-
     .motto {
         .motto-latin {
             //COLOR
@@ -165,9 +150,6 @@ body {
         }
 
         .motto-translation {
-            //COLOR
-            color: $greenMid;
-
             //TYPOGRAPHY
             font-size: 1.25rem;
 
@@ -194,6 +176,37 @@ body {
 }
 
 //LANDING
+[data-page="Home"] {
+    //COLORS
+   background-color: $purpleDark;
+   .nav-bar {
+       //COLOR
+       background-color: $purpleDark;
+   
+       .nav-to-home,
+       .nav-to-podcares,
+       .nav-to-areas,
+       .nav-to-faq {
+           &:hover {
+               //COLOR
+               color: $greenMid;
+           }
+       }
+   }
+
+   .footer {
+       //COLOR
+       background-color: $purpleDark;
+
+       .motto {
+           .motto-translation {
+               //COLOR
+               color: $greenMid;
+           }
+       }
+   }
+}
+
 .carousel {
     //FORM
     width: 100vw;
@@ -400,7 +413,7 @@ body {
 
 .catch-up-with-cares {
     //FORM
-    flex: 0 0 $fullSectionHeight;
+    flex: 1 0 $fullSectionHeight;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -565,7 +578,7 @@ body {
 
 .areas-display {
     //FORM
-    flex: 0 0 $halfSectionHeight;
+    flex: 1 0 $halfSectionHeight;
     padding-inline: 10rem;
     display: flex;
     flex-direction: row;
@@ -883,7 +896,7 @@ body {
 
 .the-officers {
     //FORM
-    flex: 0 0 calc($fullSectionHeight + 3rem);
+    flex: 1 0 calc($fullSectionHeight + 3rem);
     position: relative;
     display: grid;
     padding-block-start: 7.5rem;
@@ -1176,55 +1189,403 @@ body {
     }
 }
 
-//FAQ
-.faq-page-container {
+//AREAS
+.intro-to-area {
+    //FORM
+    flex: 1 0 calc($fullSectionHeight * .75);
     display: grid;
-    grid-template-columns: 4fr 6fr;
-    padding-block: 2rem;
-    padding-inline: 10rem;
+    grid-template-columns: 3fr 2fr;
+    padding-left: 8rem;
+    gap: 1rem;
+    place-items: center;
 
-    .faq-inquiry {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position: sticky;
-        top: calc($navbarHeight + 2rem);
-        align-self: self-start;
+    //COLOR
+    // background-color: grey;
 
-        .to-inquiry {
-            display: block;
-            margin-top: 1rem;
-            padding-inline: 2rem;
-            padding-block: .7rem;
-            border-radius: .75rem;    
+    .area-page-header {
+        //FORM
+        padding-left: 2rem;
+        position: relative;
+
+        //TYPOGRAPHY
+        font-size: 7.5rem;
+
+        &::before {
+            //FORM
+            content: attr(data-preamble);
+            position: absolute;
+
+            //TYPOGRAPHY
+            font-size: 2rem;
         }
     }
 
-    .faq-list {
-        .faq-search {
-            width: 100%;
-            padding-inline: 1rem;
-            padding-block: .5rem;
-            position: sticky;
-            top: $navbarHeight;
-        }
-        .faq-item {
-            overflow: hidden;
-            margin-inline: 1rem;
-            padding-inline: 1rem;
-            margin-bottom: .5rem;
+    .area-page-image {
+        //FORM
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        
+        //COLOR
+        background-color: white;
+        mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0) 35%, transparent 100%);
 
-            .faq {
-                * {
-                    cursor: pointer;
-                }
-                .faq-response {
-                    max-height: 0;
-                    &.expanded {
-                        max-height: 100%;
+    }
+}
+
+.recent-activities {
+    //FORM
+    flex: 1 0 $fullSectionHeight;
+    display: grid;
+    grid-template-rows: 4rem 1fr;
+    padding-block: 1rem;
+
+    //COLOR
+    .recent-activities-header {
+        //TYPOGRAPHY
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .recent-activities-scroll {
+        //FORM
+        display: flex;
+        flex-direction: row;
+        gap: 8rem;
+        overflow-x: scroll;
+        padding-inline: 10rem;
+        justify-content: start;
+        align-self: center;
+        align-items: center;
+
+        .activity {
+            //FORM
+            min-width: 18rem;
+            height: 24rem;
+            padding-bottom: 1rem;
+            border-radius: 2rem;
+            overflow: hidden;
+            display: grid;
+            grid-row: 12rem 1.5rem 1fr 1fr;
+            gap: .75rem;
+    
+            //COLOR
+            background-color: white;
+
+            .activity-image {
+                //FORM
+                width: 100%;
+                height: 12rem;
+                object-fit: cover;
+                object-position: top;
+
+                //COLOR
+                background-color: lightgray;
+            }
+
+            .activity-title {
+                //COLORS
+                color: black;
+
+                //TYPOGRAPHY 
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .activity-date {
+                //COLORS
+                color: black;
+
+                //TYPOGRAPHY
+                font-style: italic;
+                text-align: center;
+            }
+
+            .activity-link {
+                //FORM
+                place-self: center;
+                padding: 1rem 1.5rem;
+                border-radius: 1rem;
+
+                //COLORS
+                color: white;
+
+                //TYPOGRAPHY
+                text-align: center;
+            }
+        }
+    }
+}
+
+.all-about-area {
+    //FORM
+    flex: 1 0 calc($fullSectionHeight);
+    display: grid;
+    position: relative;
+
+    .work-image {
+        width: 100%;
+        height: $fullSectionHeight;
+        aspect-ratio: 3 / 2;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 35%, transparent 100%);
+        object-fit: cover;
+        object-position: center;
+
+        //COLOR
+        background-color: black;
+    }
+    //COLOR
+    .work {
+        //FORM
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 2rem;
+
+        .work-header {
+
+            //TYPOGRAPHY
+            font-size: 2rem;
+        }
+
+        .work-content {
+            width: 60%;
+
+            //TYPOGRAPHY
+            font-size: 1rem;
+            text-align: center;
+            line-height: 2;
+        }
+    }
+}
+
+.area-call-to-action {
+    //FORM
+    flex: 1 0 calc($halfSectionHeight + 1rem);
+    padding-block: 2rem;
+    padding-inline: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+
+    .for-you {
+        //FORM
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+
+        .for-you-header {
+            //TYPOGRAPHY
+            text-align: center;
+            font-size: 2rem;
+
+            //COLOR
+            text-shadow: -0.1rem -0.1rem 0 white, 0.1rem -0.1rem 0 white, -0.1rem 0.1rem 0 white, 0.1rem 0.1rem 0 white;
+        }
+
+        .for-you-content {
+            //FORM
+            width: 60%;
+
+            //TYPOGRAPHY
+            text-align: justify;
+            
+            //COLOR
+            text-shadow: -0.05rem -0.05rem 0 white, 0.05rem -0.05rem 0 white, -0.05rem 0.05rem 0 white, 0.05rem 0.05rem 0 white;
+        }
+
+        .join-cares {
+            //FORM
+            margin-top: 1rem;
+            padding-inline: .95rem;
+            padding-block: .7rem;
+            border-radius: .75rem;
+            align-self: center;
+            width: 8rem;
+            text-align: center;
+
+            //COLOR
+            background-color: transparent;
+            border: .2rem solid;
+            color: white;
+
+            //TRANSITION
+            transition: background-color 200ms, color 200ms;
+        }
+    }
+
+    .alternatives {
+        //FORM
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+
+        .alternatives-header {
+            //TYPOGRAPHY
+            text-align: center;
+            font-size: 2rem;
+
+            //COLOR
+            text-shadow: -0.1rem -0.1rem 0 white, 0.1rem -0.1rem 0 white, -0.1rem 0.1rem 0 white, 0.1rem 0.1rem 0 white;
+        }
+
+        .alternatives-content {
+            //FORM
+            width: 60%;
+
+            //TYPOGRAPHY
+            text-align: justify;
+
+            //COLOR
+            text-shadow: -0.05rem -0.05rem 0 white, 0.05rem -0.05rem 0 white, -0.05rem 0.05rem 0 white, 0.05rem 0.05rem 0 white;
+        }
+
+        .check-areas {
+            //FORM
+            margin-top: 1rem;
+            padding-inline: .95rem;
+            padding-block: .7rem;
+            border-radius: .75rem;
+            align-self: center;
+            width: 10rem;
+            text-align: center;
+
+            //COLOR
+            background-color: transparent;
+            border: .2rem solid;
+            color: white;
+
+            //TRANSITION
+            transition: background-color 200ms, color 200ms;
+        }
+    }
+}
+
+//COMMUNITY
+[data-page="Community"]  {
+    //COLORS
+    background-color: $communityDark;
+
+    .nav-bar {
+        //COLOR
+        background-color: $communityDark;
+
+        .nav-to-home,
+        .nav-to-podcares,
+        .nav-to-areas,
+        .nav-to-faq {
+            &:hover {
+                //COLOR
+                color: white;
+                opacity: .6rem;
+            }
+        }
+    }
+
+    .footer {
+        //COLOR
+        background-color: $communityDark;
+
+        .motto {
+            .motto-translation {
+                //COLOR
+                color: white;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .intro-to-area {
+        //COLOR
+        background-color: $communityMid;
+    }
+
+    .recent-activities {
+        background-color: $communityLight;
+
+        .recent-activities-scroll {
+            .activity {
+                .activity-link {
+                    //COLORS
+                    background-color: $communityMid;
+
+                    //TRANSITION
+                    transition: background-color 200ms;
+                    
+                    &:active {
+                        background-color: $communityDark;
                     }
                 }
             }
         }
     }
+
+    .all-about-area {
+        background-color: $communityMid;
+    }
+
+    .area-call-to-action {
+        background-color: $communityLight;
+
+        .for-you {
+            .for-you-header {
+                //COLOR
+                color: $communityDark;
+            }
+
+            .for-you-content {
+                //COLOR
+                color: $communityDark;
+            }
+
+            .join-cares {
+                //COLOR
+                background-color: $communityMid;
+                border-color: $communityMid;
+
+                &:active {
+                    //COLOR
+                    background-color: $communityDark;
+                    border-color: $communityDark;
+                    color: white;
+                }
+            }
+        }
+
+        .alternatives {
+            .alternatives-header {
+                //COLOR
+                color: $communityDark;
+            }
+
+            .alternatives-content {
+                //COLOR
+                color: $communityDark;
+            }
+
+            .check-areas {
+                //COLOR
+                background-color: $communityMid;
+                border-color: $communityMid;
+
+                &:active {
+                    //COLOR
+                    background-color: $communityDark;
+                    border-color: $communityDark;
+                    color: white;
+                }
+            }
+        }
+    }
 }
+
