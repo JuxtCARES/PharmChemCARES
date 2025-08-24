@@ -35,8 +35,8 @@ const DIRECTORY = [
         image  : '/Assets/Officers/AcadsOTL.jpg',
         name : 'Gene Keannu Miguel S. Kinazo',
         position: 'Academics Operations Team Leader',
-        nickname : 'Kian',
-        rank: 'TEAM LEADERS',
+        nickname : 'Gene • Kian • Miggy',
+        rank: 'TEAM LEADER',
         socials : {
             facebook : {socialsLink: 'https://facebook.com/juxtgene', username: 'Gene Kinazo'},
         }
@@ -46,7 +46,7 @@ const DIRECTORY = [
         name : 'Bonna Mae S. Ruales',
         position: 'Academics Compliance Team Leader',
         nickname : 'Bon',
-        rank: 'TEAM LEADERS',
+        rank: 'TEAM LEADER',
         socials : {
             instagram : {socialsLink: 'https://www.instagram.com/bonnnn_m?igsh=MWk1NjNkOWxmMng5ag%3D%3D&utm_source=qr', username: '@bonnnn_m'},
         }
@@ -56,7 +56,7 @@ const DIRECTORY = [
         name : 'Ashley L. Bagnol',
         position: 'Environment Operations Team Leader',
         nickname : 'Ash',
-        rank: 'TEAM LEADERS',
+        rank: 'TEAM LEADER',
         socials : {
             instagram : {socialsLink: 'https://www.instagram.com/ashnaruse_/', username: '@ashnaruse_'},
         }
