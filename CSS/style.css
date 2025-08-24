@@ -324,7 +324,7 @@ body {
   text-decoration: underline;
 }
 .about-cares .about-cares-article a:hover.religious {
-  color: #196ae3;
+  color: #447ed4;
   text-decoration: underline;
 }
 .about-cares .about-cares-article a:hover.environment {
@@ -450,11 +450,11 @@ body {
   background-color: #d10000;
 }
 .areas-display .areas-container.religious {
-  border-color: #196ae3;
+  border-color: #447ed4;
   background-image: url("/Assets/Sigils/Religious.png");
 }
 .areas-display .areas-container.religious::before {
-  background-color: #196ae3;
+  background-color: #447ed4;
 }
 .areas-display .areas-container.environment {
   border-color: #97bd00;
@@ -645,7 +645,7 @@ body {
 }
 .the-officers .relig-otl .flip-card-back,
 .the-officers .relig-ctl .flip-card-back {
-  background-color: #196ae3;
+  background-color: #447ed4;
 }
 .the-officers .envi-otl .flip-card-back,
 .the-officers .envi-ctl .flip-card-back {
@@ -802,7 +802,7 @@ body {
 }
 .recent-activities .recent-activities-scroll .activity .activity-title {
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-align: center;
 }
 .recent-activities .recent-activities-scroll .activity .activity-date {
@@ -991,5 +991,145 @@ body {
 [data-page=Community] .area-call-to-action .alternatives .check-areas:active {
   background-color: #f5be07;
   border-color: #f5be07;
+  color: white;
+}
+
+[data-page=Academics] {
+  background-color: #990e0e;
+}
+[data-page=Academics] .nav-bar {
+  background-color: #990e0e;
+}
+[data-page=Academics] .nav-bar .nav-to-home:hover,
+[data-page=Academics] .nav-bar .nav-to-podcares:hover,
+[data-page=Academics] .nav-bar .nav-to-areas:hover,
+[data-page=Academics] .nav-bar .nav-to-faq:hover {
+  color: white;
+  opacity: 0.6rem;
+}
+[data-page=Academics] .footer {
+  background-color: #990e0e;
+}
+[data-page=Academics] .footer .motto .motto-translation {
+  color: white;
+  opacity: 0.6;
+}
+[data-page=Academics] .intro-to-area {
+  background-color: #d10000;
+}
+[data-page=Academics] .recent-activities {
+  background-color: #fc0000;
+}
+[data-page=Academics] .recent-activities .recent-activities-scroll .activity .activity-link {
+  background-color: #d10000;
+  transition: background-color 200ms;
+}
+[data-page=Academics] .recent-activities .recent-activities-scroll .activity .activity-link:active {
+  background-color: #990e0e;
+}
+[data-page=Academics] .all-about-area {
+  background-color: #d10000;
+}
+[data-page=Academics] .area-call-to-action {
+  background-color: #fc0000;
+}
+[data-page=Academics] .area-call-to-action .for-you .for-you-header {
+  color: #990e0e;
+}
+[data-page=Academics] .area-call-to-action .for-you .for-you-content {
+  color: #990e0e;
+}
+[data-page=Academics] .area-call-to-action .for-you .join-cares {
+  background-color: #d10000;
+  border-color: #d10000;
+}
+[data-page=Academics] .area-call-to-action .for-you .join-cares:active {
+  background-color: #990e0e;
+  border-color: #990e0e;
+  color: white;
+}
+[data-page=Academics] .area-call-to-action .alternatives .alternatives-header {
+  color: #990e0e;
+}
+[data-page=Academics] .area-call-to-action .alternatives .alternatives-content {
+  color: #990e0e;
+}
+[data-page=Academics] .area-call-to-action .alternatives .check-areas {
+  background-color: #d10000;
+  border-color: #d10000;
+}
+[data-page=Academics] .area-call-to-action .alternatives .check-areas:active {
+  background-color: #990e0e;
+  border-color: #990e0e;
+  color: white;
+}
+
+[data-page=Religious] {
+  background-color: #447ed4;
+}
+[data-page=Religious] .nav-bar {
+  background-color: #447ed4;
+}
+[data-page=Religious] .nav-bar .nav-to-home:hover,
+[data-page=Religious] .nav-bar .nav-to-podcares:hover,
+[data-page=Religious] .nav-bar .nav-to-areas:hover,
+[data-page=Religious] .nav-bar .nav-to-faq:hover {
+  color: white;
+  opacity: 0.6rem;
+}
+[data-page=Religious] .footer {
+  background-color: #447ed4;
+}
+[data-page=Religious] .footer .motto .motto-translation {
+  color: white;
+  opacity: 0.6;
+}
+[data-page=Religious] .intro-to-area {
+  background-color: #6a96d2;
+}
+[data-page=Religious] .recent-activities {
+  background-color: #accbf8;
+}
+[data-page=Religious] .recent-activities .recent-activities-scroll .activity .activity-link {
+  background-color: #6a96d2;
+  transition: background-color 200ms;
+}
+[data-page=Religious] .recent-activities .recent-activities-scroll .activity .activity-link:active {
+  background-color: #447ed4;
+}
+[data-page=Religious] .all-about-area {
+  background-color: #6a96d2;
+}
+[data-page=Religious] .area-call-to-action {
+  background-color: #accbf8;
+}
+[data-page=Religious] .area-call-to-action .for-you .for-you-header {
+  color: #447ed4;
+}
+[data-page=Religious] .area-call-to-action .for-you .for-you-content {
+  color: #447ed4;
+}
+[data-page=Religious] .area-call-to-action .for-you .join-cares {
+  background-color: #6a96d2;
+  border-color: #6a96d2;
+}
+[data-page=Religious] .area-call-to-action .for-you .join-cares:active {
+  background-color: #447ed4;
+  border-color: #447ed4;
+  color: white;
+}
+[data-page=Religious] .area-call-to-action .alternatives .alternatives-header {
+  color: #447ed4;
+}
+[data-page=Religious] .area-call-to-action .alternatives .alternatives-content {
+  color: #447ed4;
+}
+[data-page=Religious] .area-call-to-action .alternatives .check-areas {
+  background-color: #6a96d2;
+  border-color: #6a96d2;
+}
+[data-page=Religious] .area-call-to-action .alternatives .check-areas:active {
+  background-color: #447ed4;
+  border-color: #447ed4;
   color: white;
 }/*# sourceMappingURL=style.css.map */

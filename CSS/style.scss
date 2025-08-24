@@ -16,8 +16,8 @@ $academicsDark: #990e0e;
 $academicsMid: #d10000;
 $academicsLight: #fc0000;
 
-$religiousDark: #196ae3;
-$religiousMid: #6f8db8;
+$religiousDark: #447ed4;
+$religiousMid: #6a96d2;
 $religiousLight: #accbf8;
 
 $environmentDark: #97bd00;
@@ -1289,7 +1289,7 @@ body {
                 color: black;
 
                 //TYPOGRAPHY 
-                font-size: 1.5rem;
+                font-size: 1.25rem;
                 text-align: center;
             }
 
@@ -1589,3 +1589,238 @@ body {
     }
 }
 
+//ACADEMICS
+[data-page="Academics"]  {
+    //COLORS
+    background-color: $academicsDark;
+
+    .nav-bar {
+        //COLOR
+        background-color: $academicsDark;
+
+        .nav-to-home,
+        .nav-to-podcares,
+        .nav-to-areas,
+        .nav-to-faq {
+            &:hover {
+                //COLOR
+                color: white;
+                opacity: .6rem;
+            }
+        }
+    }
+
+    .footer {
+        //COLOR
+        background-color: $academicsDark;
+
+        .motto {
+            .motto-translation {
+                //COLOR
+                color: white;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .intro-to-area {
+        //COLOR
+        background-color: $academicsMid;
+    }
+
+    .recent-activities {
+        background-color: $academicsLight;
+
+        .recent-activities-scroll {
+            .activity {
+                .activity-link {
+                    //COLORS
+                    background-color: $academicsMid;
+
+                    //TRANSITION
+                    transition: background-color 200ms;
+                    
+                    &:active {
+                        background-color: $academicsDark
+                    }
+                }
+            }
+        }
+    }
+
+    .all-about-area {
+        background-color: $academicsMid;
+    }
+
+    .area-call-to-action {
+        background-color: $academicsLight;
+
+        .for-you {
+            .for-you-header {
+                //COLOR
+                color: $academicsDark
+            }
+
+            .for-you-content {
+                //COLOR
+                color: $academicsDark
+            }
+
+            .join-cares {
+                //COLOR
+                background-color: $academicsMid;
+                border-color: $academicsMid;
+
+                &:active {
+                    //COLOR
+                    background-color: $academicsDark;
+                    border-color: $academicsDark;
+                    color: white;
+                }
+            }
+        }
+
+        .alternatives {
+            .alternatives-header {
+                //COLOR
+                color: $academicsDark;
+            }
+
+            .alternatives-content {
+                //COLOR
+                color: $academicsDark;
+            }
+
+            .check-areas {
+                //COLOR
+                background-color: $academicsMid;
+                border-color: $academicsMid;
+
+                &:active {
+                    //COLOR
+                    background-color: $academicsDark;
+                    border-color: $academicsDark;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+//RELIGIOUS
+[data-page="Religious"]  {
+    //COLORS
+    background-color: $religiousDark;
+
+    .nav-bar {
+        //COLOR
+        background-color: $religiousDark;
+
+        .nav-to-home,
+        .nav-to-podcares,
+        .nav-to-areas,
+        .nav-to-faq {
+            &:hover {
+                //COLOR
+                color: white;
+                opacity: .6rem;
+            }
+        }
+    }
+
+    .footer {
+        //COLOR
+        background-color: $religiousDark;
+
+        .motto {
+            .motto-translation {
+                //COLOR
+                color: white;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .intro-to-area {
+        //COLOR
+        background-color: $religiousMid;
+    }
+
+    .recent-activities {
+        background-color: $religiousLight;
+
+        .recent-activities-scroll {
+            .activity {
+                .activity-link {
+                    //COLORS
+                    background-color: $religiousMid;
+
+                    //TRANSITION
+                    transition: background-color 200ms;
+                    
+                    &:active {
+                        background-color: $religiousDark
+                    }
+                }
+            }
+        }
+    }
+
+    .all-about-area {
+        background-color: $religiousMid;
+    }
+
+    .area-call-to-action {
+        background-color: $religiousLight;
+
+        .for-you {
+            .for-you-header {
+                //COLOR
+                color: $religiousDark
+            }
+
+            .for-you-content {
+                //COLOR
+                color: $religiousDark
+            }
+
+            .join-cares {
+                //COLOR
+                background-color: $religiousMid;
+                border-color: $religiousMid;
+
+                &:active {
+                    //COLOR
+                    background-color: $religiousDark;
+                    border-color: $religiousDark;
+                    color: white;
+                }
+            }
+        }
+
+        .alternatives {
+            .alternatives-header {
+                //COLOR
+                color: $religiousDark;
+            }
+
+            .alternatives-content {
+                //COLOR
+                color: $religiousDark;
+            }
+
+            .check-areas {
+                //COLOR
+                background-color: $religiousMid;
+                border-color: $religiousMid;
+
+                &:active {
+                    //COLOR
+                    background-color: $religiousDark;
+                    border-color: $religiousDark;
+                    color: white;
+                }
+            }
+        }
+    }
+}
