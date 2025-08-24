@@ -1,3 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+$purpleDark: #614071;
+$purpleMid: #ae8abf;
+$purpleLight: #e6bbfa;
+$greenDark: #5c700c;
+$greenMid: #96ab41;
+$greenLight: #bacb74;
+
+$communityDark: #ffe600;
+$communityMid: #ffec3d;
+$communityLight: #fdef6e;
+
+$academicsDark: #990e0e;
+$academicsMid: #d10000;
+$academicsLight: #fc0000;
+
+$religiousDark: #196ae3;
+$religiousMid: #6f8db8;
+$religiousLight: #accbf8;
+
+$environmentDark: #97bd00;
+$environmentMid: #c1e62e;
+$environmentLight: #d6eb84;
+
+$socioculturalDark: #ff8210;
+$socioculturalMid: #ff983a;
+$socioculturalLight: #fdb069;
+
+$projectDark: #fb43e9;
+$projectMid: #ff7ef2;
+$projectLight: #ffb0f7;
+
 $navbarHeight: 4rem;
 $fullSectionHeight: calc(100vh - 10rem);
 $halfSectionHeight: calc(65vh - 10rem);
@@ -6,19 +40,34 @@ $footerHeight: calc(40vh - 6rem);
 $officerCount: 26;
 
 * {
+    //FORM
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+    //TYPOGRAPHY
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: white;
+
+
 }
 
 body {
+    //FORM
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: stretch;
+
+    //COLORS
+    background-color: $purpleDark;
+
 }
 
 .nav-bar {
+    //FORM
     display: flex;
     flex-direction: row;
     position: sticky;
@@ -29,11 +78,36 @@ body {
     justify-content: space-between;
     z-index: 2000;
 
+    //COLOR
+    background-color: $purpleDark;
+
     .nav-cares-logo {
+        //FORM
         height: 3rem;
     }
 
+    .nav-to-home,
+    .nav-to-podcares {
+        //COLOR
+        color: white;
+
+        //TRANSITION
+        transition: font-weight 200ms ease-in-out;
+
+        //TYPOGRAPHY
+        text-align: center;
+
+        &:hover {
+            //COLOR
+            color: $greenMid;
+
+            //TYPOGRAPHY
+            font-weight: 600;
+        }
+    }
+
     .nav-options {
+        //FORM
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         place-items: center;
@@ -41,15 +115,35 @@ body {
         width: 27rem;
 
         .nav-to-areas {
+            //FORM
             -webkit-appearance: none;
             border: none;
             background-color: transparent;
             cursor: pointer;
+
+            //COLOR
+            color: white;
+
+            //TRANSITION
+            transition: font-weight 200ms ease-in-out;
+
+            //TYPOGRAPHY
+            text-align: center;
+
+
+            &:hover {
+                //COLOR
+                color: $greenMid;
+
+                //TYPOGRAPHY
+                font-weight: 600;
+            }
         }
     }
 } 
 
 .footer {
+    //FORM
     padding-inline: 5rem;
     flex: 0 0 $footerHeight;
     display: grid;
@@ -57,19 +151,51 @@ body {
     padding-top: 2rem;
     grid-template-columns: 1fr 1fr;
 
+    //COLOR
+    background-color: $purpleDark;
+
+    .motto {
+        .motto-latin {
+            //COLOR
+            color: white;
+
+            //TYPOGRAPHY
+            font-size: 3rem;
+            font-style: italic;
+        }
+
+        .motto-translation {
+            //COLOR
+            color: $greenMid;
+
+            //TYPOGRAPHY
+            font-size: 1.25rem;
+
+        }
+    }
+
     .contacts {
+        //FORM
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
 
         span {
+            //FORM
             flex: 1 1 25%;
         }
+
+        a:hover {
+            //TYPOGRAPHY
+            text-decoration: underline;
+        }
+
     }
 }
 
 //LANDING
 .carousel {
+    //FORM
     width: 100vw;
     flex: 0 0 $fullSectionHeight;
     display: grid;
@@ -78,6 +204,7 @@ body {
     overflow: hidden;
 
     .logo {
+        //FORM
         position: absolute;
         width: 30vw;
         left: 50%;
@@ -88,6 +215,7 @@ body {
     }
 
     .slide-controls {
+        //FORM
         position: absolute;
         z-index: 100;
         border: none;
@@ -96,19 +224,39 @@ body {
         transform: translateY(-50%);
 
         &.prev-slide {
+            //FORM
             left: 0rem;
         }
 
         &.next-slide {
+            //FORM
             right: 0rem;
         }
 
         &:disabled {
+            //FORM
             display: none;
+        }
+
+        i {
+            //COLOR
+            color: white;
+
+            //TRANSITION
+            transition: color 100ms ease-out;
+
+            //TYPOGRAPHY
+            font-size: 4.5rem;
+        }
+        
+        &:active i {
+            //COLOR
+            color: $purpleLight
         }
     }
 
     .slide {
+        //FORM
         height: $fullSectionHeight;
         width: 100vw;
         object-fit: cover;
@@ -116,11 +264,13 @@ body {
         mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 45%, transparent 100%);
 
         &.community {
+            //FORM
             object-position: 0rem -6rem;
         }
     }
 
     .slide-indicator {
+        //FORM
         position: absolute;
         bottom: 1rem;
         left: 50%;
@@ -130,14 +280,24 @@ body {
         grid-row: 1rem;
         gap: .5rem;
         z-index: 200;
+
         .slide-dot {
+            //FORM
             width: .75rem;
             aspect-ratio: 1;
             border-radius: 50%;
+            
+            //COLOR
+            background-color: white;
+
+            //TRANSITION
+            transition: all 100ms ease-in-out;    
+
         }
     }
 
     .join-cares {
+        //FORM
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -146,15 +306,36 @@ body {
         padding-inline: .95rem;
         padding-block: .7rem;
         border-radius: .75rem;
+
+        //COLOR
+        background-color: transparent;
+        border: .2rem solid $purpleLight;
+        color: white;
+
+        //TRANSITION
+        transition: background-color 200ms;
+
+        &:active {
+            //COLOR
+            background-color: $purpleLight;
+
+        }
+    }
+
+    .slide {
+        //TRANSITION
+        transition: all 300ms ease-in-out;       
     }
 
     &[data-slide="0"] {
         .slide {
+            //FORM
             transform: translateX(0%);
         }
 
         .slide-indicator {
             .slide-dot.community {
+                //FORM
                 transform: scale(200%);
             }
         }
@@ -162,11 +343,13 @@ body {
 
     &[data-slide="1"] {
         .slide {
+            //FORM
             transform: translateX(-100%);
         }
 
         .slide-indicator {
             .slide-dot.academics {
+                //FORM
                 transform: scale(200%);
             }
         }
@@ -174,11 +357,13 @@ body {
 
     &[data-slide="2"] {
         .slide {
+            //FORM
             transform: translateX(-200%);
         }
 
         .slide-indicator {
             .slide-dot.religious {
+                //FORM
                 transform: scale(200%);
             }
         }
@@ -186,11 +371,13 @@ body {
 
     &[data-slide="3"] {
         .slide {
+            //FORM
             transform: translateX(-300%);
         }
         
         .slide-indicator {
             .slide-dot.environment {
+                //FORM
                 transform: scale(200%);
             }
         }
@@ -198,11 +385,13 @@ body {
 
     &[data-slide="4"] {
         .slide {
+            //FORM
             transform: translateX(-400%);
         }
 
         .slide-indicator {
             .slide-dot.sociocultural {
+                //FORM
                 transform: scale(200%);
             }
         }
@@ -210,6 +399,7 @@ body {
 }
 
 .catch-up-with-cares {
+    //FORM
     flex: 0 0 $fullSectionHeight;
     position: relative;
     display: flex;
@@ -220,7 +410,11 @@ body {
     padding-bottom: 1rem;
     overflow: hidden;
 
+    //COLOR
+    background-color: $purpleDark;
+
     .catch-up-with-cares-image {
+        //FORM
         object-fit: cover;
         object-position: center;
         aspect-ratio: 2;
@@ -230,48 +424,147 @@ body {
         border-radius: 2rem 2rem 0rem 0rem;
     }
 
+    .catch-up-with-cares-header {
+        //TYPOGRAPHY
+        font-size: 2rem;
+    }
 
     .catch-up-with-cares-subheader {
+        //FORM
         position: absolute;
         z-index: 200;
         bottom: 4rem;
 
+        a {
+            //TYPOGRAPHY
+            font-size: 1.5rem;
+        }
+
+        &:hover {
+            a {
+                //COLOR
+                color: $greenMid;
+
+                //TYPOGRAPHY
+                text-decoration: underline;
+            }
+        }
     }
     
     .catch-up-with-cares-date {
+        //FORM
         position: absolute;
         z-index: 200;
         bottom: 2rem;
+
+        //COLOR
+        color: $purpleLight;
+
+        //TYPOGRAPHY
+        font-style: italic;
     }
 }
 
 .about-cares {
+    //FORM
     width: 100%;
-    flex: 0 0 $fullSectionHeight;
-    background-color: blue;
+    flex: 1 0 $fullSectionHeight;
     padding-inline: 8rem;
-
     display: grid;
     grid-template-columns: .4fr .6fr;
     gap: 1rem;
     place-items: center;
 
+    //COLOR
+    background-color: $purpleMid;
+
     .cares-rx-logo {
+        //FORM
         width: 100%;
 
     }
 
     .about-cares-article {
+        //FORM
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .about-cares-header {
+            //TYPOGRAPHY
+            font-size: 2.25rem;
+            text-decoration: underline;
+    
+        }
 
         .about-cares-subtitle {
+            //FORM
             margin-bottom: 1rem;
+
+            //TYPOGRAPHY
+            font-size: 1.5rem;
+            opacity: .75;
+            font-style: italic;
+    
+        }
+
+        p {
+            //TYPOGRAPHY
+            text-align: justify;
+            &, * {
+                //TYPOGRAPHY
+                font-size: 1.5rem;
+            }
+    
+        }
+
+        a:hover {
+            &.community {
+                //COLOR
+                color: $communityDark;
+
+                //TYPOGRAPHY
+                text-decoration: underline;       
+            }
+    
+            &.academics {
+                //COLOR
+                color: $academicsMid;
+
+                //TYPOGRAPHY
+                text-decoration: underline;       
+            }
+    
+            &.religious {
+                //COLOR
+                color: $religiousDark;
+
+                //TYPOGRAPHY
+                text-decoration: underline;       
+            }
+    
+            &.environment {
+                //COLOR
+                color: $environmentDark;
+
+                //TYPOGRAPHY
+                text-decoration: underline;       
+            }
+    
+            &.sociocultural {
+                //COLOR
+                color: $socioculturalDark;
+
+                //TYPOGRAPHY
+                text-decoration: underline;       
+            }
         }
     }
 }
 
 .areas-display {
+    //FORM
     flex: 0 0 $halfSectionHeight;
     padding-inline: 10rem;
     display: flex;
@@ -279,7 +572,11 @@ body {
     justify-content: space-between;
     align-items: center;
 
+    //COLOR
+    background-color: $purpleDark;
+
     .areas-container {
+        //FORM
         aspect-ratio: 1;
         width: 10rem;
         max-height: 10rem;
@@ -289,16 +586,210 @@ body {
         place-items: center;
         position: relative;
 
+        //COLOR
+        border: .4rem solid; 
+        background-size: 100%;
+
+        //TRANSITION
+        transition: border-radius 200ms ease-out, transform 200ms ease-out;
+
         &:hover {
+            .link-to-area {
+                //TYPOGRAPHY
+                padding-left: 0;
+                letter-spacing: normal;
+                position: relative;
+    
+                &::after {
+
+                    width: 100%;
+    
+                }
+    
+                &.community {
+                    //TYPOGRAPHY
+                    font-size: 1.3rem;
+                }
+    
+                &.academics {
+                    //TYPOGRAPHY
+                    font-size: 1.3rem;
+                }
+    
+                &.religious {
+                    //TYPOGRAPHY
+                    font-size: 1.5rem;
+                }
+    
+                &.environment {
+                    //TYPOGRAPHY
+                    font-size: 1.10rem;
+                }
+    
+                &.sociocultural {
+                    //TYPOGRAPHY
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        &::before {
+            //TRANSITION
+            transition: opacity 200ms ease-out;
+        }
+
+        .link-to-area {
+            //TRANSITION
+            transition: font-size 300ms ease-out, letter-spacing 300ms ease-out, padding-left 300ms ease-out;
+        
+            //TYPOGRAPHY
+            font-family: "Poppins", sans-serif;
+            font-size: 8rem;
+            line-height: 1ch;
+            letter-spacing: 5rem;
+            font-weight: 600;
+
+            &::after {
+                //FORM 
+                position: absolute;
+                right: 0;
+                content: '';
+                width: 0%;
+                
+                //COLOR
+                background-color: white;
+
+                //TRANSITION
+                transition: width 300ms ease-out; 
+            }
+
+            &.community {
+                //FORM
+                padding-left: 1.6rem;
+    
+                &::after {
+                    //FORM
+                    height: .2rem;
+                    bottom: -.3rem;
+                }
+            }
+    
+            &.academics {
+                //FORM
+                padding-left: 1.8rem;
+    
+                &::after {
+                    //FORM
+                    height: .2rem;
+                    bottom: -.3rem;
+                }
+            }
+    
+            &.religious {
+                //FORM
+                padding-left: 2.2rem;
+    
+                &::after {
+                    //FORM
+                    height: .2rem;
+                    bottom: -.4rem;
+                }
+            }
+    
+            &.environment {
+                //FORM
+                padding-left: 2.4rem;
+    
+                &::after {
+                    //FORM
+                    height: .2rem;
+                    bottom: -.35rem;
+                }
+            }
+    
+            &.sociocultural {
+                //FORM
+                padding-left: 2.2rem;
+    
+                &::after {
+                    //FORM
+                    height: .17rem;
+                    bottom: -.37rem;
+                }
+            }
+    
+        }
+
+        &.community {
+            //COLOR
+            background-image: url('/Assets/Sigils/Community.png');
+            border-color: $communityDark;
+
+            &::before {
+                //COLOR
+                background-color: $communityDark;
+            }
+
+            
+        }
+
+        &.academics {
+            //COLOR
+            border-color: $academicsMid;
+            background-image: url('/Assets/Sigils/Academics.png');
+
+            &::before {
+                //COLOR
+                background-color: $academicsMid;
+            }
+        }
+
+        &.religious {
+            //COLOR
+            border-color: $religiousDark;
+            background-image: url('/Assets/Sigils/Religious.png');
+            
+            &::before {
+                //COLOR
+                background-color: $religiousDark;
+            }
+        }
+
+        &.environment {
+            //COLOR
+            border-color: $environmentDark;
+            background-image: url('/Assets/Sigils/Environment.png');
+            
+            &::before {
+                //COLOR
+                background-color: $environmentDark;
+            }
+        }
+
+        &.sociocultural {
+            //COLOR
+            border-color: $socioculturalDark;
+            background-image: url('/Assets/Sigils/Sociocultural.png');
+            
+            &::before {
+                //COLOR
+                background-color: $socioculturalDark;
+            }
+        }
+
+        &:hover {
+            //FORM
             border-radius: 2rem;
             transform: scale(110%);
 
             &::before {
+                //FORM
                 opacity: 0;
             }
         }
 
         &::before {
+            //FORM
             position: absolute;
             content: '';
             width: calc(100% + .8rem);
@@ -306,30 +797,40 @@ body {
         }
 
         a {
+            //FORM
             z-index: 20;
         }
     }
 }
 
 .about-the-areas {
+    //FORM
     width: 100%;
-    flex: 0 0 $fullSectionHeight;
-    padding-inline: 8rem;
+    flex: 1 0 $fullSectionHeight;
+    padding-inline: 12rem;
     padding-block: 1rem;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2rem;
     align-items: center;
     flex-wrap: wrap;
 
+    //COLOR
+    background-color: $purpleMid;
+
     .about-the-areas-header {
+        //FORM
         flex: 1 1 100%;
+
+        //TYPOGRAPHY
+        font-size: 3rem;
+        text-align: center;
     }
 
     .feature-article {
+        //FORM
         flex: 1 0 20rem;
-        max-width: 40rem;
         height: 25rem;
         background-color: red;
         border-radius: 2rem;
@@ -339,7 +840,15 @@ body {
         align-items: center;
         gap: 2rem;
 
+        //COLOR
+        background-color: white;
+
+        //TYPOGRAPHY
+        font-size: 3rem;
+        text-align: center;
+
         .feature-image {
+            //FORM
             width: 100%;
             max-height: 75%;
             aspect-ratio: 8 / 7;
@@ -348,14 +857,28 @@ body {
         }
 
         .to-article {
+            //FORM
             padding: 1rem 1.25rem;
             border-radius: 1rem;
+
+            //COLOR
+            background-color: $purpleDark;
+
+            //TRANSITION
+            transition: background-color 200ms;
+
+            &:active {
+                //COLOR
+                background-color: $greenDark;
+                color: white
+            }
         }
     }
 
 }
 
 .the-officers {
+    //FORM
     flex: 0 0 calc($fullSectionHeight + 3rem);
     position: relative;
     display: grid;
@@ -363,15 +886,23 @@ body {
     padding-block-end: 1rem;
     gap: 1rem;
 
+    //COLOR
+    background-color: $greenDark;
+
     .the-officers-heading {
+        //FORM
         position: absolute;
         padding-top: 1rem;
         top: 0;
         left: 50%;
-        transform: translateX(-50%)
+        transform: translateX(-50%);
+
+        //TYPOGRAPHY
+        font-size: 3rem;
     }
 
     .directory-scroll {
+        //FORM
         overflow-x: scroll;
         display: flex;
         flex-direction: row;
@@ -384,31 +915,41 @@ body {
     }
 
     .flip-card {
+        //FORM
         width: 18rem;
         background-color: transparent;
         perspective: 1000px;
 
         &:hover .flip-card-inner {
+            //FORM
             transform: rotateY(180deg);
         }
 
         .flip-card-inner {
+            //FORM
             position: relative;
             transform-style: preserve-3d;
             width: 100%;
             aspect-ratio: 288 / 456; 
+
+            //TRANSITION
+            transition: transform 500ms ease-out;
+
             .flip-card-front {
+                //FORM
                 position: absolute;
                 -webkit-backface-visibility: hidden;
                 backface-visibility: hidden;
                 
                 .officer-image {
+                    //FORM
                     width: 100%;
                     border-radius: 2rem;
                 }
             }   
 
             .flip-card-back {
+                //FORM
                 width: 100%;
                 aspect-ratio: 288 / 432; 
                 border-radius: 2rem;
@@ -421,23 +962,112 @@ body {
                 backface-visibility: hidden;
                 transform: rotateY(180deg);
 
+                .rank {
+                    //TYPOGRAPHY
+                    font-size: 2rem;
+                    text-align: center;
+                }
+
                 .name {
+                    //FORM
                     margin-top: 3rem;
+
+                    //TYPOGRAPHY
+                    font-size: .9rem;
+                    text-align: center;
+                }
+
+                .position {
+                    //TYPOGRAPHY
+                    font-style: italic;
+                    text-align: center;
+                    opacity: .6;
                 }
 
                 .nickname {
+                    //FORM
                     margin-bottom: 3rem;
+                    opacity: .6;
+
+                    //TYPOGRAPHY
+                    font-size: .8rem;
+                    text-align: center;
+
                 }
 
                 .contact {
+                    //FORM
                     margin-bottom: .75rem;
+
+                    i {
+                        //TYPOGRAPHY
+                        font-size: 2rem;
+                    }
                 }
             }
         }
     }
+
+    .cp, .ed, .om, .qa,
+    .aqa, .fm, .afm {
+        .flip-card-back {
+            //COLOR
+            background-color: $purpleDark;
+        }
+    }
+
+    .commu-otl,
+    .commu-ctl {
+        .flip-card-back {
+            //COLOR
+            background-color: $communityDark;
+        }
+    }
+
+    .acad-otl,
+    .acad-ctl {
+        .flip-card-back {
+            //COLOR
+            background-color: $academicsMid;
+        }
+    }
+
+    .relig-otl,
+    .relig-ctl {
+        .flip-card-back {
+            //COLOR
+            background-color: $religiousDark;
+        }
+    }
+
+    .envi-otl,
+    .envi-ctl {
+        .flip-card-back {
+            //COLOR
+            background-color: $environmentDark;
+        }
+    }
+
+    .socio-otl,
+    .socio.ctl {
+        .flip-card-back {
+            //COLOR
+            background-color: $socioculturalDark;
+        }
+    }
+
+    .cd, .md, .td,
+    .podcares, .pc {
+        .flip-card-back {
+            //COLOR
+            background-color: $projectLight
+        }
+    }
+
 }
 
 .call-to-action {
+    //FORM
     flex: 0 0 $halfSectionHeight;
     padding-inline: 10rem;
     place-items: center;
@@ -445,22 +1075,34 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 
+    //COLOR
+    background-color: $purpleMid;
+
+
     .call-to-join {
+        //FORM
         display: flex;
         flex-direction: column;
         height: 80%;
         justify-content: center;
 
         .call-to-join-header {
+            //FORM
             text-align: center;
             font-size: 2rem;
         }
 
         .call-to-join-subheader {
+            //FORM
             text-align: center;
+
+            //COLOR
+            color: $purpleLight
+
         }
 
         .join-cares {
+            //FORM
             margin-top: 1rem;
             padding-inline: .95rem;
             padding-block: .7rem;
@@ -468,25 +1110,45 @@ body {
             align-self: center;
             width: 8rem;
             text-align: center;
+
+            //COLOR
+            background-color: transparent;
+            border: .2rem solid $purpleLight;
+            color: white;
+
+            //TRANSITION
+            transition: background-color 200ms;
+
+            &:active {
+                background-color: $purpleLight;
+            }
         }
     }
 
     .faq {
+        //FORM
         display: flex;
         flex-direction: column;
         height: 80%;
         justify-content: center;
 
         .faq-header {
+            //FORM
             text-align: center;
             font-size: 2rem;
         }
 
         .faq-subheader {
+            //FORM
             text-align: center;
+
+            //COLOR
+            color: $purpleLight
+
         }
 
         .to-faq {
+            //FORM
             margin-top: 1rem;
             padding-inline: .95rem;
             padding-block: .7rem;
@@ -494,6 +1156,18 @@ body {
             align-self: center;
             width: 8rem;
             text-align: center;
+
+            //COLOR
+            background-color: transparent;
+            border: .2rem solid $purpleLight;
+            color: white;
+
+            //TRANSITION
+            transition: background-color 200ms;
+    
+            &:active {
+                background-color: $purpleLight;
+            }
         }
     }
 }

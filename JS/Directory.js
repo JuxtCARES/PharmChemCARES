@@ -1,6 +1,6 @@
 const DIRECTORY = [
     {
-        image  : '/Assets/Officers/QA_Casual.jpg',
+        image  : '/Assets/Officers/QA.jpg',
         name : 'Rene Jr. P. Amantillo',
         position: 'Quality Assurance Manager',
         nickname : 'Rjr',
@@ -12,7 +12,7 @@ const DIRECTORY = [
         }
     },
     {
-        image  : '/Assets/Officers/AQA_Casual.jpg',
+        image  : '/Assets/Officers/AQA.jpg',
         name : 'Niño Jan Michael O. Bautista',
         position: 'Assistance Quality Assurance Manager',
         nickname : 'Nins',
@@ -22,8 +22,8 @@ const DIRECTORY = [
         }
     },
     {
-        image  : '/Assets/Officers/FM_Casual.jpg',
-        name : 'LANABAN, Irrah B.',
+        image  : '/Assets/Officers/FM.jpg',
+        name : 'Irrah B. Lanaban',
         position: 'Finance Manager',
         nickname : 'Ai',
         rank: 'CORE',
@@ -32,8 +32,8 @@ const DIRECTORY = [
         }
     },
     {
-        image  : '/Assets/Officers/AcadsOTL_Casual.jpg',
-        name : 'KINAZO, Gene Keannu Miguel S.',
+        image  : '/Assets/Officers/AcadsOTL.jpg',
+        name : 'Gene Keannu Miguel S. Kinazo',
         position: 'Academics Operations Team Leader',
         nickname : 'Kian',
         rank: 'TEAM LEADERS',
@@ -42,8 +42,8 @@ const DIRECTORY = [
         }
     },
     {
-        image  : '/Assets/Officers/AcadsCTL_Casual.jpg',
-        name : 'RUALES, Bonna Mae S.',
+        image  : '/Assets/Officers/AcadsCTL.jpg',
+        name : 'Bonna Mae S. Ruales',
         position: 'Academics Compliance Team Leader',
         nickname : 'Bon',
         rank: 'TEAM LEADERS',
@@ -52,8 +52,8 @@ const DIRECTORY = [
         }
     },
     {
-        image  : '/Assets/Officers/EnviOTL_Casual.jpg',
-        name : 'BAGNOL, Ashley L.',
+        image  : '/Assets/Officers/EnviOTL.jpg',
+        name : 'Ashley L. Bagnol',
         position: 'Environment Operations Team Leader',
         nickname : 'Ash',
         rank: 'TEAM LEADERS',
@@ -62,8 +62,8 @@ const DIRECTORY = [
         }
     },
     {
-        image  : '/Assets/Officers/CD1_Casual.jpg',
-        name : 'MAGLASANG, Niña Elizabeth G.',
+        image  : '/Assets/Officers/CD1.jpg',
+        name : 'Niña Elizabeth G. Maglasang',
         position: 'Communications Director',
         nickname : 'Nema',
         rank: 'PROJECT HEAD',
@@ -73,8 +73,8 @@ const DIRECTORY = [
         }
     },
     {
-        image  : '/Assets/Officers/CD2_Casual.jpg',
-        name : 'BARCEBAL, Jan Marynoie R.',
+        image  : '/Assets/Officers/CD2.jpg',
+        name : 'Jan Marynoie R. Barcebal',
         position: 'Communications Director',
         nickname : 'Jam',
         rank: 'PROJECT HEAD',
@@ -94,7 +94,7 @@ DIRECTORY.forEach(officer => {
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="${officer.image}" alt="PharmChem ${officer.position}" class="officer-image">
+                            <img src="${officer.image}" alt="PharmChem CARES ${officer.position}" class="officer-image">
                         </div>
                         <div class="flip-card-back">
                             <h2 class="rank">${officer.rank}</h2>
