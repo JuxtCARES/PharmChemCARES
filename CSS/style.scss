@@ -81,7 +81,8 @@ body {
     }
 
     .nav-to-home,
-    .nav-to-podcares {
+    .nav-to-podcares,
+    .nav-to-faq {
         //COLOR
         color: white;
 
@@ -1818,6 +1819,250 @@ body {
                     //COLOR
                     background-color: $religiousDark;
                     border-color: $religiousDark;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+//ENVIRONMENT
+[data-page="Environment"]  {
+    //COLORS
+    background-color: $environmentDark;
+
+    .nav-bar {
+        //COLOR
+        background-color: $environmentDark;
+
+        .nav-to-home,
+        .nav-to-podcares,
+        .nav-to-areas,
+        .nav-to-faq {
+            &:hover {
+                //COLOR
+                color: white;
+                opacity: .6rem;
+            }
+        }
+    }
+
+    .footer {
+        //COLOR
+        background-color: $environmentDark;
+
+        .motto {
+            .motto-translation {
+                //COLOR
+                color: white;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .intro-to-area {
+        //COLOR
+        background-color: $environmentMid;
+
+        .area-page-header {
+            font-size: 6rem;
+        }
+    }
+
+    .recent-activities {
+        background-color: $environmentLight;
+
+        .recent-activities-scroll {
+            .activity {
+                .activity-link {
+                    //COLORS
+                    background-color: $environmentMid;
+
+                    //TRANSITION
+                    transition: background-color 200ms;
+                    
+                    &:active {
+                        background-color: $environmentDark
+                    }
+                }
+            }
+        }
+    }
+
+    .all-about-area {
+        background-color: $environmentMid;
+    }
+
+    .area-call-to-action {
+        background-color: $environmentLight;
+
+        .for-you {
+            .for-you-header {
+                //COLOR
+                color: $environmentDark
+            }
+
+            .for-you-content {
+                //COLOR
+                color: $environmentDark
+            }
+
+            .join-cares {
+                //COLOR
+                background-color: $environmentMid;
+                border-color: $environmentMid;
+
+                &:active {
+                    //COLOR
+                    background-color: $environmentDark;
+                    border-color: $environmentDark;
+                    color: white;
+                }
+            }
+        }
+
+        .alternatives {
+            .alternatives-header {
+                //COLOR
+                color: $environmentDark;
+            }
+
+            .alternatives-content {
+                //COLOR
+                color: $environmentDark;
+            }
+
+            .check-areas {
+                //COLOR
+                background-color: $environmentMid;
+                border-color: $environmentMid;
+
+                &:active {
+                    //COLOR
+                    background-color: $environmentDark;
+                    border-color: $environmentDark;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+//SOCIOCULTURAL
+[data-page="Sociocultural"]  {
+    //COLORS
+    background-color: $socioculturalDark;
+
+    .nav-bar {
+        //COLOR
+        background-color: $socioculturalDark;
+
+        .nav-to-home,
+        .nav-to-podcares,
+        .nav-to-areas,
+        .nav-to-faq {
+            &:hover {
+                //COLOR
+                color: white;
+                opacity: .6rem;
+            }
+        }
+    }
+
+    .footer {
+        //COLOR
+        background-color: $socioculturalDark;
+
+        .motto {
+            .motto-translation {
+                //COLOR
+                color: white;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .intro-to-area {
+        //COLOR
+        background-color: $socioculturalMid;
+
+        .area-page-header {
+            font-size: 6rem;
+        }
+    }
+
+    .recent-activities {
+        background-color: $socioculturalLight;
+
+        .recent-activities-scroll {
+            .activity {
+                .activity-link {
+                    //COLORS
+                    background-color: $socioculturalMid;
+
+                    //TRANSITION
+                    transition: background-color 200ms;
+                    
+                    &:active {
+                        background-color: $socioculturalDark
+                    }
+                }
+            }
+        }
+    }
+
+    .all-about-area {
+        background-color: $socioculturalMid;
+    }
+
+    .area-call-to-action {
+        background-color: $socioculturalLight;
+
+        .for-you {
+            .for-you-header {
+                //COLOR
+                color: $socioculturalDark
+            }
+
+            .for-you-content {
+                //COLOR
+                color: $socioculturalDark
+            }
+
+            .join-cares {
+                //COLOR
+                background-color: $socioculturalMid;
+                border-color: $socioculturalMid;
+
+                &:active {
+                    //COLOR
+                    background-color: $socioculturalDark;
+                    border-color: $socioculturalDark;
+                    color: white;
+                }
+            }
+        }
+
+        .alternatives {
+            .alternatives-header {
+                //COLOR
+                color: $socioculturalDark;
+            }
+
+            .alternatives-content {
+                //COLOR
+                color: $socioculturalDark;
+            }
+
+            .check-areas {
+                //COLOR
+                background-color: $socioculturalMid;
+                border-color: $socioculturalMid;
+
+                &:active {
+                    //COLOR
+                    background-color: $socioculturalDark;
+                    border-color: $socioculturalDark;
                     color: white;
                 }
             }

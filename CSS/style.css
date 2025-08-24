@@ -32,13 +32,15 @@ body {
   height: 3rem;
 }
 .nav-bar .nav-to-home,
-.nav-bar .nav-to-podcares {
+.nav-bar .nav-to-podcares,
+.nav-bar .nav-to-faq {
   color: white;
   transition: font-weight 200ms ease-in-out;
   text-align: center;
 }
 .nav-bar .nav-to-home:hover,
-.nav-bar .nav-to-podcares:hover {
+.nav-bar .nav-to-podcares:hover,
+.nav-bar .nav-to-faq:hover {
   font-weight: 600;
 }
 .nav-bar .nav-options {
@@ -1131,5 +1133,151 @@ body {
 [data-page=Religious] .area-call-to-action .alternatives .check-areas:active {
   background-color: #447ed4;
   border-color: #447ed4;
+  color: white;
+}
+
+[data-page=Environment] {
+  background-color: #97bd00;
+}
+[data-page=Environment] .nav-bar {
+  background-color: #97bd00;
+}
+[data-page=Environment] .nav-bar .nav-to-home:hover,
+[data-page=Environment] .nav-bar .nav-to-podcares:hover,
+[data-page=Environment] .nav-bar .nav-to-areas:hover,
+[data-page=Environment] .nav-bar .nav-to-faq:hover {
+  color: white;
+  opacity: 0.6rem;
+}
+[data-page=Environment] .footer {
+  background-color: #97bd00;
+}
+[data-page=Environment] .footer .motto .motto-translation {
+  color: white;
+  opacity: 0.6;
+}
+[data-page=Environment] .intro-to-area {
+  background-color: #c1e62e;
+}
+[data-page=Environment] .intro-to-area .area-page-header {
+  font-size: 6rem;
+}
+[data-page=Environment] .recent-activities {
+  background-color: #d6eb84;
+}
+[data-page=Environment] .recent-activities .recent-activities-scroll .activity .activity-link {
+  background-color: #c1e62e;
+  transition: background-color 200ms;
+}
+[data-page=Environment] .recent-activities .recent-activities-scroll .activity .activity-link:active {
+  background-color: #97bd00;
+}
+[data-page=Environment] .all-about-area {
+  background-color: #c1e62e;
+}
+[data-page=Environment] .area-call-to-action {
+  background-color: #d6eb84;
+}
+[data-page=Environment] .area-call-to-action .for-you .for-you-header {
+  color: #97bd00;
+}
+[data-page=Environment] .area-call-to-action .for-you .for-you-content {
+  color: #97bd00;
+}
+[data-page=Environment] .area-call-to-action .for-you .join-cares {
+  background-color: #c1e62e;
+  border-color: #c1e62e;
+}
+[data-page=Environment] .area-call-to-action .for-you .join-cares:active {
+  background-color: #97bd00;
+  border-color: #97bd00;
+  color: white;
+}
+[data-page=Environment] .area-call-to-action .alternatives .alternatives-header {
+  color: #97bd00;
+}
+[data-page=Environment] .area-call-to-action .alternatives .alternatives-content {
+  color: #97bd00;
+}
+[data-page=Environment] .area-call-to-action .alternatives .check-areas {
+  background-color: #c1e62e;
+  border-color: #c1e62e;
+}
+[data-page=Environment] .area-call-to-action .alternatives .check-areas:active {
+  background-color: #97bd00;
+  border-color: #97bd00;
+  color: white;
+}
+
+[data-page=Sociocultural] {
+  background-color: #ff8210;
+}
+[data-page=Sociocultural] .nav-bar {
+  background-color: #ff8210;
+}
+[data-page=Sociocultural] .nav-bar .nav-to-home:hover,
+[data-page=Sociocultural] .nav-bar .nav-to-podcares:hover,
+[data-page=Sociocultural] .nav-bar .nav-to-areas:hover,
+[data-page=Sociocultural] .nav-bar .nav-to-faq:hover {
+  color: white;
+  opacity: 0.6rem;
+}
+[data-page=Sociocultural] .footer {
+  background-color: #ff8210;
+}
+[data-page=Sociocultural] .footer .motto .motto-translation {
+  color: white;
+  opacity: 0.6;
+}
+[data-page=Sociocultural] .intro-to-area {
+  background-color: #ff983a;
+}
+[data-page=Sociocultural] .intro-to-area .area-page-header {
+  font-size: 6rem;
+}
+[data-page=Sociocultural] .recent-activities {
+  background-color: #fdb069;
+}
+[data-page=Sociocultural] .recent-activities .recent-activities-scroll .activity .activity-link {
+  background-color: #ff983a;
+  transition: background-color 200ms;
+}
+[data-page=Sociocultural] .recent-activities .recent-activities-scroll .activity .activity-link:active {
+  background-color: #ff8210;
+}
+[data-page=Sociocultural] .all-about-area {
+  background-color: #ff983a;
+}
+[data-page=Sociocultural] .area-call-to-action {
+  background-color: #fdb069;
+}
+[data-page=Sociocultural] .area-call-to-action .for-you .for-you-header {
+  color: #ff8210;
+}
+[data-page=Sociocultural] .area-call-to-action .for-you .for-you-content {
+  color: #ff8210;
+}
+[data-page=Sociocultural] .area-call-to-action .for-you .join-cares {
+  background-color: #ff983a;
+  border-color: #ff983a;
+}
+[data-page=Sociocultural] .area-call-to-action .for-you .join-cares:active {
+  background-color: #ff8210;
+  border-color: #ff8210;
+  color: white;
+}
+[data-page=Sociocultural] .area-call-to-action .alternatives .alternatives-header {
+  color: #ff8210;
+}
+[data-page=Sociocultural] .area-call-to-action .alternatives .alternatives-content {
+  color: #ff8210;
+}
+[data-page=Sociocultural] .area-call-to-action .alternatives .check-areas {
+  background-color: #ff983a;
+  border-color: #ff983a;
+}
+[data-page=Sociocultural] .area-call-to-action .alternatives .check-areas:active {
+  background-color: #ff8210;
+  border-color: #ff8210;
   color: white;
 }/*# sourceMappingURL=style.css.map */
