@@ -464,6 +464,9 @@ body {
 .areas-display .areas-container:hover::before {
   opacity: 0;
 }
+.areas-display .areas-container:hover .link-to-area {
+  padding: 0;
+}
 .areas-display .areas-container::before {
   position: absolute;
   content: "";
