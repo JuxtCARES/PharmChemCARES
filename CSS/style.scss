@@ -134,10 +134,9 @@ body {
 .footer {
     //FORM
     padding-inline: 5rem;
-    flex: 0 0 $footerHeight;
     display: grid;
     padding-inline: 10rem;
-    padding-top: 2rem;
+    padding-block: 3rem;
     grid-template-columns: 1fr 1fr;
 
     .motto {
@@ -277,6 +276,9 @@ body {
         object-position: center;
         mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 45%, transparent 100%);
 
+        //TRANSITION
+        transition: all 300ms ease-in-out;       
+
         &.community {
             //FORM
             object-position: 0rem -6rem;
@@ -334,11 +336,6 @@ body {
             background-color: $purpleLight;
 
         }
-    }
-
-    .slide {
-        //TRANSITION
-        transition: all 300ms ease-in-out;       
     }
 
     &[data-slide="0"] {
@@ -482,7 +479,6 @@ body {
 .about-cares {
     //FORM
     width: 100%;
-    flex: 1 0 $fullSectionHeight;
     padding-inline: 8rem;
     display: grid;
     grid-template-columns: .4fr .6fr;
@@ -579,8 +575,8 @@ body {
 
 .areas-display {
     //FORM
-    flex: 1 0 $halfSectionHeight;
     padding-inline: 10rem;
+    padding-block: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -599,6 +595,7 @@ body {
         display: grid;
         place-items: center;
         position: relative;
+        cursor: pointer;
 
         //COLOR
         border: .4rem solid; 
@@ -824,13 +821,11 @@ body {
 .about-the-areas {
     //FORM
     width: 100%;
-    flex: 1 0 $fullSectionHeight;
     padding-inline: 12rem;
-    padding-block: 1rem;
+    padding-block: 1.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 
@@ -840,6 +835,7 @@ body {
     .about-the-areas-header {
         //FORM
         flex: 1 1 100%;
+        margin-bottom: 2rem;
 
         //TYPOGRAPHY
         font-size: 3rem;
@@ -848,7 +844,7 @@ body {
 
     .feature-article {
         //FORM
-        flex: 1 0 20rem;
+        flex: 0 0 16rem;
         height: 25rem;
         background-color: red;
         border-radius: 2rem;
@@ -897,10 +893,10 @@ body {
 
 .the-officers {
     //FORM
-    flex: 1 0 calc($fullSectionHeight + 3rem);
+    width: 100vw;
     position: relative;
     display: grid;
-    padding-block-start: 7.5rem;
+    padding-top: 7rem;
     padding-block-end: 1rem;
     gap: 1rem;
 
@@ -1086,8 +1082,8 @@ body {
 
 .call-to-action {
     //FORM
-    flex: 0 0 $halfSectionHeight;
     padding-inline: 10rem;
+    padding-block: 4rem;
     place-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1237,10 +1233,11 @@ body {
 
 .recent-activities {
     //FORM
-    flex: 1 0 $fullSectionHeight;
+    // flex: 1 0 $fullSectionHeight;
     display: grid;
     grid-template-rows: 4rem 1fr;
-    padding-block: 1rem;
+    padding-block: 1rem 2rem;
+    gap: 2rem 0rem;
 
     //COLOR
     .recent-activities-header {
@@ -1321,7 +1318,7 @@ body {
 
 .all-about-area {
     //FORM
-    flex: 1 0 calc($fullSectionHeight);
+    // flex: 1 0 calc($fullSectionHeight);
     display: grid;
     position: relative;
 
@@ -1365,8 +1362,7 @@ body {
 
 .area-call-to-action {
     //FORM
-    flex: 1 0 calc($halfSectionHeight + 1rem);
-    padding-block: 2rem;
+    padding-block: 2rem 1rem;
     padding-inline: 10rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2065,6 +2061,305 @@ body {
                     border-color: $socioculturalDark;
                     color: white;
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .nav-bar {
+        padding-inline: .5rem;
+        max-height: 2.5rem;
+
+        .nav-cares-logo {
+            height: 1.5rem;
+        }
+        
+        .nav-options {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 0;
+            width: 70%;
+
+            .nav-to-areas,
+            .nav-to-home,
+            .nav-to-podcares,
+            .nav-to-faq {
+                font-size: .75rem;
+            }
+
+            .nav-to-areas {
+                width: 2.5rem;
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        padding-inline: 1rem;
+        padding-block: 2rem 3rem;
+        gap: 1rem;
+
+        .motto {
+            .motto-latin {
+                font-size: 1rem;
+                text-align: center;
+            }
+
+            .motto-translation {
+                display: block;
+
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+
+        .contacts {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0.5rem 0rem;
+
+            span {
+                flex-basis: 50%;
+
+                &, * {
+                    font-size: .65rem;
+                }
+            }
+        }
+    }
+
+    .carousel {
+        flex-basis: 70svh;
+
+        .logo {
+            width: 70svw;
+        }
+
+        .slide.community,
+        .slide.academics,
+        .slide.religious,
+        .slide.environment,
+        .slide.sociocultural {
+            height: 120%;
+            object-fit: cover;
+            object-position: bottom;
+            mask-image: linear-gradient(to top, transparent 10%,  rgba(0, 0, 0, 1.0) 100%);
+        }
+
+        .slide-controls {
+            i {
+                font-size: 3.5rem;
+            }
+        }
+    }
+
+    .catch-up-with-cares {
+        flex-basis: auto;
+        gap: .75rem;
+
+        .catch-up-with-cares-header {
+            font-size: 1.5rem;
+        }
+
+        .catch-up-with-cares-subheader {
+            width: 80svw;
+            bottom: 1.75rem;
+
+            text-align: center;
+            line-height: 1.1;
+
+            a {
+                font-size: .75rem;
+                text-align: center;
+            }
+        }
+
+        .catch-up-with-cares-date {
+            bottom: .5rem;
+
+            font-size: .75rem;
+        }
+
+        .catch-up-with-cares-image {
+            width: 90svw;
+        }
+    }
+
+    .about-cares {
+        padding: 1rem;
+        grid-template-columns: 1fr;
+        grid-row: 1fr 1fr;
+
+        .cares-rx-logo {
+            width: 10rem;
+        }
+
+        .about-cares-article {
+            .about-cares-header {
+                font-size: 1.5rem;
+            }
+
+            .about-cares-subtitle {
+                font-size: 1rem;
+            }
+
+            .about-cares-paragraph,
+            .about-cares-paragraph * {
+                font-size: 1rem;
+                
+            }
+        }
+
+    }
+
+    .areas-display {
+        padding-inline: 1rem;
+        gap: 1rem;
+
+        .areas-container {
+            border-width: .2rem;
+
+            .link-to-area::after {
+                display: none;
+            }
+
+            .link-to-area {
+                &.community {
+                    padding-left: .6rem;
+
+                    font-size: 3rem;
+                }
+
+                &.academics {
+                    padding-left: .7rem;
+
+                    font-size: 3rem;
+                }
+                
+                &.religious {
+                    padding-left: .9rem;
+
+                    font-size: 3rem;
+                }
+
+                &.environment {
+                    padding-left: 1rem;
+
+                    font-size: 3rem;
+                }
+
+                &.sociocultural {
+                    padding-left: .9rem;
+
+                    font-size: 3rem;
+                }
+            }
+            
+            &:hover {
+                border-radius: .5rem;
+
+                .link-to-area.community {
+                    padding-left: 0;
+
+                    font-size: .5rem;
+                }
+
+                .link-to-area.academics {
+                    padding-left: 0;
+
+                    font-size: .5rem;
+                }
+
+                .link-to-area.religious {
+                    padding-left: 0;
+
+                    font-size: .6rem;
+                }
+
+                .link-to-area.environment {
+                    padding-left: 0;
+
+                    font-size: .5rem;
+                }
+
+                .link-to-area.sociocultural {
+                    padding-left: 0;
+
+                    font-size: .4rem;
+                }
+            }
+        }
+    }
+
+    .about-the-areas {
+        padding-inline: 1rem;
+        padding-block: 1rem;
+        gap: 1rem;
+
+        .about-the-areas-header {
+            font-size: 2rem;
+        }
+
+        .feature-article {
+            height: 20rem;
+            gap: .75rem;
+        }
+    }
+
+    .the-officers {
+        .the-officers-heading {
+            font-size: 2rem;
+        }
+
+        .directory-scroll {
+            gap: 2rem;
+
+            .officer:nth-child(1) {
+                margin-left: 2rem;
+            }
+
+            .officer:nth-last-child(1) {
+                margin-right: 2rem;
+            }
+        }
+    }
+
+    .call-to-action {
+        padding: 1rem;
+
+        .call-to-join {
+            .call-to-join-header {
+                font-size: 1rem;
+            }
+
+            .call-to-join-subheader {
+                font-size: .75rem;
+            }
+
+            .join-cares {
+                padding-block: .5rem;
+                width: 6.5rem;
+
+                font-size: .75rem;
+            }
+        }
+
+        .faq {
+            .faq-header {
+                font-size: 1rem;
+            }
+
+            .faq-subheader {
+                font-size: .75rem;
+            }
+
+            .to-faq {
+                padding-block: .5rem;
+                width: 6.5rem;
+
+                font-size: .75rem;
             }
         }
     }

@@ -108,7 +108,7 @@ DIRECTORY.forEach(officer => {
             </article>`
 })
 
-THE_OFFICERS.innerHTML = `<h2 class="the-officers-heading">The Officers</h2>${content}
+THE_OFFICERS.innerHTML = `${content}
 `
 
 function directoryToClass(position) {
