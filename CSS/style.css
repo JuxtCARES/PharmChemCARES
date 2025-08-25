@@ -540,6 +540,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   font-size: 3rem;
+  text-align: center;
 }
 .the-officers .directory-scroll {
   overflow-x: scroll;
@@ -634,7 +635,7 @@ body {
   background-color: #97bd00;
 }
 .the-officers .socio-otl .flip-card-back,
-.the-officers .socio.ctl .flip-card-back {
+.the-officers .socio-ctl .flip-card-back {
   background-color: #ff8210;
 }
 .the-officers .cd .flip-card-back, .the-officers .md .flip-card-back, .the-officers .td .flip-card-back,
@@ -1308,7 +1309,7 @@ body {
     flex-basis: 50%;
   }
   .footer .contacts span, .footer .contacts span * {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
   }
   .carousel {
     flex-basis: 70svh;
@@ -1430,10 +1431,10 @@ body {
     gap: 2rem;
   }
   .the-officers .directory-scroll .officer:nth-child(1) {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
   .the-officers .directory-scroll .officer:nth-last-child(1) {
-    margin-right: 2rem;
+    margin-right: 0.5rem;
   }
   .call-to-action {
     padding: 1rem;

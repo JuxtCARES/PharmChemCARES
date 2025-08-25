@@ -900,6 +900,7 @@ body {
 
         //TYPOGRAPHY
         font-size: 3rem;
+        text-align: center;
     }
 
     .directory-scroll {
@@ -1050,7 +1051,7 @@ body {
     }
 
     .socio-otl,
-    .socio.ctl {
+    .socio-ctl {
         .flip-card-back {
             //COLOR
             background-color: $socioculturalDark;
@@ -2111,7 +2112,7 @@ body {
                 flex-basis: 50%;
 
                 &, * {
-                    font-size: .65rem;
+                    font-size: .6rem;
                 }
             }
         }
@@ -2277,11 +2278,11 @@ body {
             gap: 2rem;
 
             .officer:nth-child(1) {
-                margin-left: 2rem;
+                margin-left: 1rem;
             }
 
             .officer:nth-last-child(1) {
-                margin-right: 2rem;
+                margin-right:.5rem;
             }
         }
     }
