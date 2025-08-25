@@ -655,7 +655,6 @@ body {
 .call-to-action .call-to-join {
   display: flex;
   flex-direction: column;
-  height: 80%;
   justify-content: center;
 }
 .call-to-action .call-to-join .call-to-join-header {
@@ -685,7 +684,6 @@ body {
 .call-to-action .faq {
   display: flex;
   flex-direction: column;
-  height: 80%;
   justify-content: center;
 }
 .call-to-action .faq .faq-header {
