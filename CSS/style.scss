@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 $purpleDark: #614071;
@@ -606,8 +605,9 @@ body {
 
         &:hover {
             .link-to-area {
+                width: auto;
+
                 //TYPOGRAPHY
-                padding-left: 0;
                 letter-spacing: normal;
                 position: relative;
     
@@ -650,13 +650,18 @@ body {
         }
 
         .link-to-area {
+            //FORM
+            width: 1ch;
+            display: inline-block;
+            vertical-align: middle;
+
             //TRANSITION
             transition: font-size 300ms ease-out, letter-spacing 300ms ease-out, padding-left 300ms ease-out;
         
             //TYPOGRAPHY
-            font-family: "Poppins", sans-serif;
+            font-family: "Roboto Mono", monospace;
             font-size: 8rem;
-            line-height: 1ch;
+            line-height: .55;
             letter-spacing: 5rem;
             font-weight: 600;
 
@@ -675,9 +680,6 @@ body {
             }
 
             &.community {
-                //FORM
-                padding-left: 1.6rem;
-    
                 &::after {
                     //FORM
                     height: .2rem;
@@ -686,9 +688,6 @@ body {
             }
     
             &.academics {
-                //FORM
-                padding-left: 1.8rem;
-    
                 &::after {
                     //FORM
                     height: .2rem;
@@ -697,9 +696,6 @@ body {
             }
     
             &.religious {
-                //FORM
-                padding-left: 2.2rem;
-    
                 &::after {
                     //FORM
                     height: .2rem;
@@ -708,9 +704,6 @@ body {
             }
     
             &.environment {
-                //FORM
-                padding-left: 2.4rem;
-    
                 &::after {
                     //FORM
                     height: .2rem;
@@ -719,9 +712,6 @@ body {
             }
     
             &.sociocultural {
-                //FORM
-                padding-left: 2.2rem;
-    
                 &::after {
                     //FORM
                     height: .17rem;
@@ -798,9 +788,6 @@ body {
                 opacity: 0;
             }
 
-            .link-to-area {
-                padding: 0;
-            }
         }
 
         &::before {
@@ -2199,6 +2186,7 @@ body {
         .about-cares-article {
             .about-cares-header {
                 font-size: 1.5rem;
+                text-align: center;
             }
 
             .about-cares-subtitle {
@@ -2226,35 +2214,7 @@ body {
             }
 
             .link-to-area {
-                &.community {
-                    padding-left: .6rem;
-
-                    font-size: 3rem;
-                }
-
-                &.academics {
-                    padding-left: .7rem;
-
-                    font-size: 3rem;
-                }
-                
-                &.religious {
-                    padding-left: .9rem;
-
-                    font-size: 3rem;
-                }
-
-                &.environment {
-                    padding-left: 1rem;
-
-                    font-size: 3rem;
-                }
-
-                &.sociocultural {
-                    padding-left: .9rem;
-
-                    font-size: 3rem;
-                }
+                font-size: 3rem;
             }
             
             &:hover {
