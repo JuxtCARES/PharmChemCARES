@@ -601,7 +601,7 @@ body {
         background-size: 100%;
 
         //TRANSITION
-        transition: border-radius 200ms ease-out, transform 200ms ease-out;
+        transition: border-radius 100ms, transform 100ms;
 
         &:hover {
             .link-to-area {
