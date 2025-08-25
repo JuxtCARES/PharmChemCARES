@@ -1259,13 +1259,13 @@ body {
   color: white;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
   .nav-bar {
     padding-inline: 0.5rem;
-    max-height: 2.5rem;
+    max-height: 4rem;
   }
   .nav-bar .nav-cares-logo {
-    height: 1.5rem;
+    height: 3rem;
   }
   .nav-bar .nav-options {
     display: flex;
@@ -1277,10 +1277,10 @@ body {
   .nav-bar .nav-options .nav-to-home,
   .nav-bar .nav-options .nav-to-podcares,
   .nav-bar .nav-options .nav-to-faq {
-    font-size: 0.75rem;
+    font-size: 1.75svh;
   }
   .nav-bar .nav-options .nav-to-areas {
-    width: 2.5rem;
+    width: 3.5rem;
   }
   .footer {
     display: flex;
@@ -1356,7 +1356,8 @@ body {
     width: 90svw;
   }
   .about-cares {
-    padding: 1rem;
+    padding: 1.5rem;
+    padding-inline: calc(1rem + 6svw);
     grid-template-columns: 1fr;
     grid-row: 1fr 1fr;
   }
@@ -1385,30 +1386,30 @@ body {
     display: none;
   }
   .areas-display .areas-container .link-to-area {
-    font-size: 3rem;
+    font-size: 12svw;
   }
   .areas-display .areas-container:hover {
     border-radius: 0.5rem;
   }
   .areas-display .areas-container:hover .link-to-area.community {
     padding-left: 0;
-    font-size: 0.5rem;
+    font-size: 2svw;
   }
   .areas-display .areas-container:hover .link-to-area.academics {
     padding-left: 0;
-    font-size: 0.5rem;
+    font-size: 2svw;
   }
   .areas-display .areas-container:hover .link-to-area.religious {
     padding-left: 0;
-    font-size: 0.6rem;
+    font-size: 2.2svw;
   }
   .areas-display .areas-container:hover .link-to-area.environment {
     padding-left: 0;
-    font-size: 0.5rem;
+    font-size: 1.75svw;
   }
   .areas-display .areas-container:hover .link-to-area.sociocultural {
     padding-left: 0;
-    font-size: 0.4rem;
+    font-size: 1.75svw;
   }
   .about-the-areas {
     padding-inline: 1rem;

@@ -2051,13 +2051,13 @@ body {
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
     .nav-bar {
         padding-inline: .5rem;
-        max-height: 2.5rem;
+        max-height: 4rem;
 
         .nav-cares-logo {
-            height: 1.5rem;
+            height: 3rem;
         }
         
         .nav-options {
@@ -2070,11 +2070,11 @@ body {
             .nav-to-home,
             .nav-to-podcares,
             .nav-to-faq {
-                font-size: .75rem;
+                font-size: 1.75svh;
             }
 
             .nav-to-areas {
-                width: 2.5rem;
+                width: 3.5rem;
             }
         }
     }
@@ -2173,7 +2173,8 @@ body {
     }
 
     .about-cares {
-        padding: 1rem;
+        padding: 1.5rem;
+        padding-inline: calc(1rem + 6svw);
         grid-template-columns: 1fr;
         grid-row: 1fr 1fr;
 
@@ -2212,7 +2213,7 @@ body {
             }
 
             .link-to-area {
-                font-size: 3rem;
+                font-size: 12svw;
             }
             
             &:hover {
@@ -2221,31 +2222,31 @@ body {
                 .link-to-area.community {
                     padding-left: 0;
 
-                    font-size: .5rem;
+                    font-size: 2svw;
                 }
 
                 .link-to-area.academics {
                     padding-left: 0;
 
-                    font-size: .5rem;
+                    font-size: 2svw;
                 }
 
                 .link-to-area.religious {
                     padding-left: 0;
 
-                    font-size: .6rem;
+                    font-size: 2.2svw;
                 }
 
                 .link-to-area.environment {
                     padding-left: 0;
 
-                    font-size: .5rem;
+                    font-size: 1.75svw;
                 }
 
                 .link-to-area.sociocultural {
                     padding-left: 0;
 
-                    font-size: .4rem;
+                    font-size: 1.75svw;
                 }
             }
         }
