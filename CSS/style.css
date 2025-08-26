@@ -1277,7 +1277,7 @@ body {
   .nav-bar .nav-options .nav-to-home,
   .nav-bar .nav-options .nav-to-podcares,
   .nav-bar .nav-options .nav-to-faq {
-    font-size: 1.75svh;
+    font-size: calc(0.3rem + 1.75svh);
   }
   .nav-bar .nav-options .nav-to-areas {
     width: 3.5rem;
