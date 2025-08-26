@@ -542,6 +542,18 @@ body {
   font-size: 3rem;
   text-align: center;
 }
+.the-officers .the-officers-heading::after {
+  content: attr(data-subtitle);
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.6;
+  font-style: italic \;;
+}
 .the-officers .directory-scroll {
   overflow-x: scroll;
   display: flex;
@@ -1417,6 +1429,7 @@ body {
     gap: 1rem;
   }
   .about-the-areas .about-the-areas-header {
+    margin-bottom: 0;
     font-size: 2rem;
   }
   .about-the-areas .feature-article {
@@ -1425,6 +1438,9 @@ body {
   }
   .the-officers .the-officers-heading {
     font-size: 2rem;
+  }
+  .the-officers .the-officers-heading::after {
+    width: 100svw;
   }
   .the-officers .directory-scroll {
     gap: 2rem;
