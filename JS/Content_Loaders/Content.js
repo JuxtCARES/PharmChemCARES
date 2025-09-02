@@ -460,30 +460,38 @@ export const CONTENT = {
             ],
             Environment : [
                 {
-                    question: `Environment 1`,
-                    response: `Response 1`,
+                    question: `What are the programs done under the Environment Area?`,
+                    response: `The Environment Area organizes projects that promote sustainability and responsible environmental stewardship, including:
+                                <ul>
+                                    <li>Mangrove Tree Planting</li>
+                                    <li>Waste Reduction and Segregation Projects</li>
+                                    <li>Proper Medicine Disposal Initiatives</li>
+                                    <li>Other Eco-Friendly Programs and Awareness Campaigns</li>
+                                </ul>
+                                These initiatives aim to raise awareness, encourage eco-conscious practices, and protect both the environment and public health.
+`,
                 },
                 {
-                    question: `Environment 2`,
-                    response: `Response 2`,
+                    question: `Why focus on the environment?`,
+                    response: `The Environment Area focuses on the external factors that affect our planet and all living beings within it. At PharmChem CARES, we emphasize the importance of this area, recognizing that caring for the environment is just as vital as caring for human life.`,
                 },
                 {
-                    question: `Environment 3`,
-                    response: `Response 3`,
+                    question: `How are activities sustained?`,
+                    response: `The activities are sustained through various initiatives such as raising awareness through informative posts, promoting educational practices both inside and outside the campus, engaging in community outreach programs like tree planting, fostering collaborations with external affiliates, and many more impactful efforts.`,
                 },
             ],
             Sociocultural : [
                 {
-                    question: `Sociocultural 1`,
-                    response: `Response 1`,
+                    question: `What is the main goal of the Sociocultural Area?`,
+                    response: `The Sociocultural Area aims to foster unity, respect, and compassion by celebrating the richness of Filipino culture and embracing diversity beyond its borders. Recognizing that people come from different cultures and backgrounds, this area creates meaningful engagements and initiatives that promote inclusivity and strengthen our shared sense of humanity.`,
                 },
                 {
-                    question: `Sociocultural 2`,
-                    response: `Response 2`,
+                    question: `When are Sociocultural events conducted? `,
+                    response: `The events are conducted throughout the academic year, aligning with the values of celebrating Filipino pride and honoring its cultural significance. Each activity under this area highlights the deeper meaning of being Filipino, showcasing its impact beyond traditions and heritage.`,
                 },
                 {
-                    question: `Sociocultural 3`,
-                    response: `Response 3`,
+                    question: `How does this area benefit students? `,
+                    response: `This area benefits students by providing opportunities that go beyond the study of chemistry, embracing a more artistic and holistic perspective. It enhances leadership, communication, and interpersonal skills while engaging students in meaningful social and cultural events that create a lasting impact.`,
                 },
             ],
             PodCARES : [
