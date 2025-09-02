@@ -8,6 +8,7 @@ AREA_SELECTOR.addEventListener('change', e => {
     let redirectTo = `/Subpages/${value}.html`
 
     window.location.href = redirectTo;
+    DEFAULT.selected = true
 })
 
 const AREA_DISPLAY = Array.from(document.querySelectorAll('.areas-container'))

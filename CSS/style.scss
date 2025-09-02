@@ -11,9 +11,9 @@ $communityDark: #f5be07;
 $communityMid: #ffd400;
 $communityLight: #ffec3d;
 
-$academicsDark: #990e0e;
-$academicsMid: #d10000;
-$academicsLight: #fc0000;
+$academicsDark: #800000;
+$academicsMid: #D10000;
+$academicsLight: #FC0000;
 
 $religiousDark: #447ed4;
 $religiousMid: #6a96d2;
@@ -175,7 +175,8 @@ body {
 }
 
 //LANDING
-[data-page="Home"] {
+[data-page="Home"],
+[data-page="FAQ"] {
     //COLORS
    background-color: $purpleDark;
    .nav-bar {
@@ -479,6 +480,7 @@ body {
     //FORM
     width: 100%;
     padding-inline: 8rem;
+    padding-block: 1rem;
     display: grid;
     grid-template-columns: .4fr .6fr;
     gap: 1rem;
@@ -504,6 +506,7 @@ body {
             //TYPOGRAPHY
             font-size: 2.25rem;
             text-decoration: underline;
+            text-align: center;
     
         }
 
@@ -1469,6 +1472,310 @@ body {
     }
 }
 
+// FAQ
+.faq-query {
+    padding-inline: 10rem;
+    padding-block: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem 0rem;
+
+    background-color: $purpleMid;
+
+    .faq-header {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .faq-search-box {
+        white-space: nowrap;
+        position: sticky;
+        top: 1rem;
+        
+        input[type="text"] {
+            width: 40rem;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem 0rem 0rem 1rem;
+            border: none;
+            outline: none;
+
+            color: black;
+        }
+
+        input[type="submit"] {
+            width: 7.5rem;
+            padding: 1rem 1.5rem;
+            border-radius: 0rem 1rem 1rem 0rem;
+            border: none;
+
+            background-color: $greenMid;
+
+            text-align: center;
+
+            transition: background-color 200ms;
+
+            &:active {
+
+                background-color: $greenDark;
+            }
+        }
+    }
+}
+
+.faq-questions {
+    display: flex;
+    flex-direction: column;
+
+    background-color: $purpleLight;
+    
+    .question-categories {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-inline: 10rem;
+
+        background-color: $purpleMid;
+
+        .category {
+            flex: 1 1 14.29%;
+            padding-block: 1rem;
+            padding-inline: .5rem;
+            cursor: pointer;
+            border: .5rem solid transparent;
+
+            text-align: center;
+
+            transition: border-color 200ms, color 200ms, font-weight 200ms;
+        }
+    }
+
+    .category-set {
+        display: grid;
+
+        .question-scroll {
+            padding-inline: 20rem;
+            flex-direction: column-reverse;
+            display: none;
+
+            .question-container {
+                padding-block: 1rem;
+                cursor: pointer;
+                transition: height 200ms;
+
+                &:not(.question-container:focus) {
+                    opacity: .7;
+                }
+
+                .question {
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                    position: relative;
+
+                    &::after {
+                        position: absolute;
+                        bottom: -.5rem;
+                        left: 0;
+                        content: '';
+                        height: .2rem;
+                        background-color: $purpleMid;
+                        width: 100%
+                    }
+
+                    &::before {
+                        position: absolute;
+                        border-radius: 50%;
+                        aspect-ratio: 1;
+                        height: 1.5rem;
+                        content: '?';
+                        left: calc(-1rem - 1em);
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        background-color: $purpleMid;
+
+                        font-size: 1rem;
+                        text-align: center;
+                        font-weight: 500;
+                    }
+                }
+
+                .response {
+                    max-height: 0;
+                    overflow: hidden;
+
+                    transition: max-height 200ms;
+
+                    ul {
+                        padding-inline: 1.5rem;
+                    }
+                }
+
+                &:focus {
+                    .response {
+                        max-height: unset;
+                    }
+                }
+            }
+        }
+    }
+
+    &[data-category="General"] {
+        .question-categories {
+            .category.general {
+                border-bottom-color: $purpleDark;
+
+                color: $purpleDark;
+                font-weight: 600;
+            }
+        }
+
+        .category-set {
+            .question-scroll.general {
+                display: flex;
+            }
+        }
+    }
+
+    &[data-category="Community"] {
+        .question-categories {
+            .category.community {
+                border-bottom-color: $purpleDark;
+
+                color: $purpleDark;
+                font-weight: 600;
+            }
+        }
+
+        .category-set {
+            .question-scroll.community {
+                display: flex;
+            }
+        }
+    }
+
+    &[data-category="Academics"] {
+        .question-categories {
+            .category.academics {
+                border-bottom-color: $purpleDark;
+
+                color: $purpleDark;
+                font-weight: 600;
+            }
+        }
+
+        .category-set {
+            .question-scroll.academics {
+                display: flex;
+            }
+        }
+    }
+
+
+    &[data-category="Religious"] {
+        .question-categories {
+            .category.religious {
+                border-bottom-color: $purpleDark;
+
+                color: $purpleDark;
+                font-weight: 600;
+            }
+        }
+
+        .category-set {
+            .question-scroll.religious {
+                display: flex;
+            }
+        }
+    }
+
+    &[data-category="Environment"] {
+        .question-categories {
+            .category.environment {
+                border-bottom-color: $purpleDark;
+
+                color: $purpleDark;
+                font-weight: 600;
+            }
+        }
+
+        .category-set {
+            .question-scroll.environment {
+                display: flex;
+            }
+        }
+    }
+
+
+    &[data-category="Sociocultural"] {
+        .question-categories {
+            .category.sociocultural {
+                border-bottom-color: $purpleDark;
+
+                color: $purpleDark;
+                font-weight: 600;
+            }
+        }
+
+        .category-set {
+            .question-scroll.sociocultural {
+                display: flex;
+            }
+        }
+    }
+
+    &[data-category="PodCARES"] {
+        .question-categories {
+            .category.podcares {
+                border-bottom-color: $purpleDark;
+
+                color: $purpleDark;
+                font-weight: 600;
+            }
+        }
+
+        .category-set {
+            .question-scroll.podcares {
+                display: flex;
+            }
+        }
+    }
+}
+
+[data-page="PodCARES"] {
+    background-color: $projectDark;
+
+    .nav-bar {
+        //COLOR
+        background-color: $projectDark;
+
+        .nav-to-home,
+        .nav-to-podcares,
+        .nav-to-areas,
+        .nav-to-faq {
+            &:hover {
+                //COLOR
+                color: white;
+                opacity: .6rem;
+            }
+        }
+    }
+
+    .footer {
+        //COLOR
+        background-color: $projectDark;
+
+        .motto {
+            .motto-translation {
+                //COLOR
+                color: white;
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
 //COMMUNITY
 [data-page="Community"]  {
     //COLORS
@@ -2086,7 +2393,7 @@ body {
             .nav-to-home,
             .nav-to-podcares,
             .nav-to-faq {
-                font-size: calc(.3rem + 1.75svh);
+                font-size: 1rem;
             }
 
             .nav-to-areas {
@@ -2409,11 +2716,49 @@ body {
     }
 
     .area-call-to-action {
+        height: 70svh;
         padding: 1.5rem 1rem;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-    }
+        gap: 4rem;
 
+        .for-you {
+            position: relative;
+            align-items: stretch;
+
+            .for-you-content {
+                width: auto;
+                padding-inline: 1.5rem;
+            }
+
+            .join-cares {
+                margin-top: .5rem;
+            }
+
+            &::after {
+                width: 100%;
+                height: .2rem;
+                content: '';
+                position: absolute;
+                bottom: -4.2rem;
+                
+                background-color: white;
+            }
+        }
+
+        .alternatives {
+            position: relative;
+            align-items: stretch;
+            .alternatives-content {
+                width: auto;
+                padding-inline: 1.5rem;
+            }
+
+            .check-areas {
+                margin-top: .5rem;
+            }
+        }
+    }
 
     [data-page="Environment"] .intro-to-area .area-page-header {
         font-size: 3.25rem;
@@ -2421,5 +2766,61 @@ body {
 
     [data-page="Sociocultural"] .intro-to-area .area-page-header {
         font-size: 2.75rem;
+    }
+
+    .faq-query {
+        padding-inline: 1rem;
+        .faq-header {
+            font-size: 2rem;
+        }
+
+        .faq-search-box {
+            width: 100%;
+            padding-inline: 1rem;
+            input[type="text"] {
+                width: 80%;
+            }
+            
+            input[type="submit"] {
+                width: 20%;
+                padding-inline: 0;
+            }
+        }
+    }
+
+    .faq-questions {
+        .question-categories {
+            padding-inline: 1rem;
+            font-size: .75rem;
+            flex-wrap: wrap;
+
+            .category {
+                padding-block: .5rem;
+                padding-inline: .25rem;
+
+                &.general,
+                &.podcares {
+                    flex: 0 1 50%;
+                    order: 1
+                }
+
+                &.community,
+                &.academics,
+                &.religious,
+                &.environment,
+                &.sociocultural {
+                    flex: 0 1 33%;
+                    order: 2
+                }
+            }
+        }
+
+        .category-set {
+            .question-scroll {
+                padding-inline-start: 2.5rem;
+                padding-inline-end: 1rem;
+
+            }
+        }
     }
 }

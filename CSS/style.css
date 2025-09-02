@@ -89,22 +89,30 @@ body {
   text-decoration: underline;
 }
 
-[data-page=Home] {
+[data-page=Home],
+[data-page=FAQ] {
   background-color: #614071;
 }
-[data-page=Home] .nav-bar {
+[data-page=Home] .nav-bar,
+[data-page=FAQ] .nav-bar {
   background-color: #614071;
 }
 [data-page=Home] .nav-bar .nav-to-home:hover,
 [data-page=Home] .nav-bar .nav-to-podcares:hover,
 [data-page=Home] .nav-bar .nav-to-areas:hover,
-[data-page=Home] .nav-bar .nav-to-faq:hover {
+[data-page=Home] .nav-bar .nav-to-faq:hover,
+[data-page=FAQ] .nav-bar .nav-to-home:hover,
+[data-page=FAQ] .nav-bar .nav-to-podcares:hover,
+[data-page=FAQ] .nav-bar .nav-to-areas:hover,
+[data-page=FAQ] .nav-bar .nav-to-faq:hover {
   color: #96ab41;
 }
-[data-page=Home] .footer {
+[data-page=Home] .footer,
+[data-page=FAQ] .footer {
   background-color: #614071;
 }
-[data-page=Home] .footer .motto .motto-translation {
+[data-page=Home] .footer .motto .motto-translation,
+[data-page=FAQ] .footer .motto .motto-translation {
   color: #96ab41;
 }
 
@@ -281,6 +289,7 @@ body {
 .about-cares {
   width: 100%;
   padding-inline: 8rem;
+  padding-block: 1rem;
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
   gap: 1rem;
@@ -299,6 +308,7 @@ body {
 .about-cares .about-cares-article .about-cares-header {
   font-size: 2.25rem;
   text-decoration: underline;
+  text-align: center;
 }
 .about-cares .about-cares-article .about-cares-subtitle {
   margin-bottom: 1rem;
@@ -317,7 +327,7 @@ body {
   text-decoration: underline;
 }
 .about-cares .about-cares-article a:hover.academics {
-  color: #d10000;
+  color: #D10000;
   text-decoration: underline;
 }
 .about-cares .about-cares-article a:hover.religious {
@@ -429,11 +439,11 @@ body {
   background-color: #f5be07;
 }
 .areas-display .areas-container.academics {
-  border-color: #d10000;
+  border-color: #D10000;
   background-image: url("/Assets/Sigils/Academics.png");
 }
 .areas-display .areas-container.academics::before {
-  background-color: #d10000;
+  background-color: #D10000;
 }
 .areas-display .areas-container.religious {
   border-color: #447ed4;
@@ -636,7 +646,7 @@ body {
 }
 .the-officers .acad-otl .flip-card-back,
 .the-officers .acad-ctl .flip-card-back {
-  background-color: #d10000;
+  background-color: #D10000;
 }
 .the-officers .relig-otl .flip-card-back,
 .the-officers .relig-ctl .flip-card-back {
@@ -915,6 +925,200 @@ body {
   transition: background-color 200ms, color 200ms;
 }
 
+.faq-query {
+  padding-inline: 10rem;
+  padding-block: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem 0rem;
+  background-color: #ae8abf;
+}
+.faq-query .faq-header {
+  font-size: 3rem;
+  text-align: center;
+}
+.faq-query .faq-search-box {
+  white-space: nowrap;
+  position: sticky;
+  top: 1rem;
+}
+.faq-query .faq-search-box input[type=text] {
+  width: 40rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem 0rem 0rem 1rem;
+  border: none;
+  outline: none;
+  color: black;
+}
+.faq-query .faq-search-box input[type=submit] {
+  width: 7.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0rem 1rem 1rem 0rem;
+  border: none;
+  background-color: #96ab41;
+  text-align: center;
+  transition: background-color 200ms;
+}
+.faq-query .faq-search-box input[type=submit]:active {
+  background-color: #5c700c;
+}
+
+.faq-questions {
+  display: flex;
+  flex-direction: column;
+  background-color: #e6bbfa;
+}
+.faq-questions .question-categories {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-inline: 10rem;
+  background-color: #ae8abf;
+}
+.faq-questions .question-categories .category {
+  flex: 1 1 14.29%;
+  padding-block: 1rem;
+  padding-inline: 0.5rem;
+  cursor: pointer;
+  border: 0.5rem solid transparent;
+  text-align: center;
+  transition: border-color 200ms, color 200ms, font-weight 200ms;
+}
+.faq-questions .category-set {
+  display: grid;
+}
+.faq-questions .category-set .question-scroll {
+  padding-inline: 20rem;
+  flex-direction: column-reverse;
+  display: none;
+}
+.faq-questions .category-set .question-scroll .question-container {
+  padding-block: 1rem;
+  cursor: pointer;
+  transition: height 200ms;
+}
+.faq-questions .category-set .question-scroll .question-container:not(.question-container:focus) {
+  opacity: 0.7;
+}
+.faq-questions .category-set .question-scroll .question-container .question {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.faq-questions .category-set .question-scroll .question-container .question::after {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  content: "";
+  height: 0.2rem;
+  background-color: #ae8abf;
+  width: 100%;
+}
+.faq-questions .category-set .question-scroll .question-container .question::before {
+  position: absolute;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  height: 1.5rem;
+  content: "?";
+  left: calc(-1rem - 1em);
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ae8abf;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+.faq-questions .category-set .question-scroll .question-container .response {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 200ms;
+}
+.faq-questions .category-set .question-scroll .question-container .response ul {
+  padding-inline: 1.5rem;
+}
+.faq-questions .category-set .question-scroll .question-container:focus .response {
+  max-height: unset;
+}
+.faq-questions[data-category=General] .question-categories .category.general {
+  border-bottom-color: #614071;
+  color: #614071;
+  font-weight: 600;
+}
+.faq-questions[data-category=General] .category-set .question-scroll.general {
+  display: flex;
+}
+.faq-questions[data-category=Community] .question-categories .category.community {
+  border-bottom-color: #614071;
+  color: #614071;
+  font-weight: 600;
+}
+.faq-questions[data-category=Community] .category-set .question-scroll.community {
+  display: flex;
+}
+.faq-questions[data-category=Academics] .question-categories .category.academics {
+  border-bottom-color: #614071;
+  color: #614071;
+  font-weight: 600;
+}
+.faq-questions[data-category=Academics] .category-set .question-scroll.academics {
+  display: flex;
+}
+.faq-questions[data-category=Religious] .question-categories .category.religious {
+  border-bottom-color: #614071;
+  color: #614071;
+  font-weight: 600;
+}
+.faq-questions[data-category=Religious] .category-set .question-scroll.religious {
+  display: flex;
+}
+.faq-questions[data-category=Environment] .question-categories .category.environment {
+  border-bottom-color: #614071;
+  color: #614071;
+  font-weight: 600;
+}
+.faq-questions[data-category=Environment] .category-set .question-scroll.environment {
+  display: flex;
+}
+.faq-questions[data-category=Sociocultural] .question-categories .category.sociocultural {
+  border-bottom-color: #614071;
+  color: #614071;
+  font-weight: 600;
+}
+.faq-questions[data-category=Sociocultural] .category-set .question-scroll.sociocultural {
+  display: flex;
+}
+.faq-questions[data-category=PodCARES] .question-categories .category.podcares {
+  border-bottom-color: #614071;
+  color: #614071;
+  font-weight: 600;
+}
+.faq-questions[data-category=PodCARES] .category-set .question-scroll.podcares {
+  display: flex;
+}
+
+[data-page=PodCARES] {
+  background-color: #fb43e9;
+}
+[data-page=PodCARES] .nav-bar {
+  background-color: #fb43e9;
+}
+[data-page=PodCARES] .nav-bar .nav-to-home:hover,
+[data-page=PodCARES] .nav-bar .nav-to-podcares:hover,
+[data-page=PodCARES] .nav-bar .nav-to-areas:hover,
+[data-page=PodCARES] .nav-bar .nav-to-faq:hover {
+  color: white;
+  opacity: 0.6rem;
+}
+[data-page=PodCARES] .footer {
+  background-color: #fb43e9;
+}
+[data-page=PodCARES] .footer .motto .motto-translation {
+  color: white;
+  opacity: 0.6;
+}
+
 [data-page=Community] {
   background-color: #f5be07;
 }
@@ -986,10 +1190,10 @@ body {
 }
 
 [data-page=Academics] {
-  background-color: #990e0e;
+  background-color: #800000;
 }
 [data-page=Academics] .nav-bar {
-  background-color: #990e0e;
+  background-color: #800000;
 }
 [data-page=Academics] .nav-bar .nav-to-home:hover,
 [data-page=Academics] .nav-bar .nav-to-podcares:hover,
@@ -999,59 +1203,59 @@ body {
   opacity: 0.6rem;
 }
 [data-page=Academics] .footer {
-  background-color: #990e0e;
+  background-color: #800000;
 }
 [data-page=Academics] .footer .motto .motto-translation {
   color: white;
   opacity: 0.6;
 }
 [data-page=Academics] .intro-to-area {
-  background-color: #d10000;
+  background-color: #D10000;
 }
 [data-page=Academics] .recent-activities {
-  background-color: #fc0000;
+  background-color: #FC0000;
 }
 [data-page=Academics] .recent-activities .recent-activities-scroll .activity .activity-link {
-  background-color: #d10000;
+  background-color: #D10000;
   transition: background-color 200ms;
 }
 [data-page=Academics] .recent-activities .recent-activities-scroll .activity .activity-link:active {
-  background-color: #990e0e;
+  background-color: #800000;
 }
 [data-page=Academics] .all-about-area {
-  background-color: #d10000;
+  background-color: #D10000;
 }
 [data-page=Academics] .area-call-to-action {
-  background-color: #fc0000;
+  background-color: #FC0000;
 }
 [data-page=Academics] .area-call-to-action .for-you .for-you-header {
-  color: #990e0e;
+  color: #800000;
 }
 [data-page=Academics] .area-call-to-action .for-you .for-you-content {
-  color: #990e0e;
+  color: #800000;
 }
 [data-page=Academics] .area-call-to-action .for-you .join-cares {
-  background-color: #d10000;
-  border-color: #d10000;
+  background-color: #D10000;
+  border-color: #D10000;
 }
 [data-page=Academics] .area-call-to-action .for-you .join-cares:active {
-  background-color: #990e0e;
-  border-color: #990e0e;
+  background-color: #800000;
+  border-color: #800000;
   color: white;
 }
 [data-page=Academics] .area-call-to-action .alternatives .alternatives-header {
-  color: #990e0e;
+  color: #800000;
 }
 [data-page=Academics] .area-call-to-action .alternatives .alternatives-content {
-  color: #990e0e;
+  color: #800000;
 }
 [data-page=Academics] .area-call-to-action .alternatives .check-areas {
-  background-color: #d10000;
-  border-color: #d10000;
+  background-color: #D10000;
+  border-color: #D10000;
 }
 [data-page=Academics] .area-call-to-action .alternatives .check-areas:active {
-  background-color: #990e0e;
-  border-color: #990e0e;
+  background-color: #800000;
+  border-color: #800000;
   color: white;
 }
 
@@ -1289,7 +1493,7 @@ body {
   .nav-bar .nav-options .nav-to-home,
   .nav-bar .nav-options .nav-to-podcares,
   .nav-bar .nav-options .nav-to-faq {
-    font-size: calc(0.3rem + 1.75svh);
+    font-size: 1rem;
   }
   .nav-bar .nav-options .nav-to-areas {
     width: 3.5rem;
@@ -1527,14 +1731,84 @@ body {
     text-align: justify;
   }
   .area-call-to-action {
+    height: 70svh;
     padding: 1.5rem 1rem;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 4rem;
+  }
+  .area-call-to-action .for-you {
+    position: relative;
+    align-items: stretch;
+  }
+  .area-call-to-action .for-you .for-you-content {
+    width: auto;
+    padding-inline: 1.5rem;
+  }
+  .area-call-to-action .for-you .join-cares {
+    margin-top: 0.5rem;
+  }
+  .area-call-to-action .for-you::after {
+    width: 100%;
+    height: 0.2rem;
+    content: "";
+    position: absolute;
+    bottom: -4.2rem;
+    background-color: white;
+  }
+  .area-call-to-action .alternatives {
+    position: relative;
+    align-items: stretch;
+  }
+  .area-call-to-action .alternatives .alternatives-content {
+    width: auto;
+    padding-inline: 1.5rem;
+  }
+  .area-call-to-action .alternatives .check-areas {
+    margin-top: 0.5rem;
   }
   [data-page=Environment] .intro-to-area .area-page-header {
     font-size: 3.25rem;
   }
   [data-page=Sociocultural] .intro-to-area .area-page-header {
     font-size: 2.75rem;
+  }
+  .faq-query {
+    padding-inline: 1rem;
+  }
+  .faq-query .faq-header {
+    font-size: 2rem;
+  }
+  .faq-query .faq-search-box {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+  .faq-query .faq-search-box input[type=text] {
+    width: 80%;
+  }
+  .faq-query .faq-search-box input[type=submit] {
+    width: 20%;
+    padding-inline: 0;
+  }
+  .faq-questions .question-categories {
+    padding-inline: 1rem;
+    font-size: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .faq-questions .question-categories .category {
+    padding-block: 0.5rem;
+    padding-inline: 0.25rem;
+  }
+  .faq-questions .question-categories .category.general, .faq-questions .question-categories .category.podcares {
+    flex: 0 1 50%;
+    order: 1;
+  }
+  .faq-questions .question-categories .category.community, .faq-questions .question-categories .category.academics, .faq-questions .question-categories .category.religious, .faq-questions .question-categories .category.environment, .faq-questions .question-categories .category.sociocultural {
+    flex: 0 1 33%;
+    order: 2;
+  }
+  .faq-questions .category-set .question-scroll {
+    padding-inline-start: 2.5rem;
+    padding-inline-end: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
